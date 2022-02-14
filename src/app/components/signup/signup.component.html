@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h2 class="col-12 text-center mt-5 mb-4">Sign up</h2>
+        
+        <form [formGroup]="signupForm" class="col-12" *ngIf="!showAfterSignUp" (ngSubmit)="signup()">
+            <div class="form">
+                <div class="form-group">
+                    <label for="email">NAME</label>
+                    <input type="text" name="name" formControlName="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="text" name="email"  formControlName="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">PASSWORD </label>
+                    <em> * min 7 characters</em>
+                    <div class="password">
+                        <input [type]="showpassword ? 'text' : 'password'" name="password" formControlName="password" class="form-control" required>
+                        <fa-icon [icon]='faEye' (click)="togglepassword()" *ngIf='!showpassword'></fa-icon>
+                        <fa-icon [icon]='faEyeSlash' (click)="togglepassword()" *ngIf='showpassword'></fa-icon>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Sign Up">
+                    <a routerLink="/login" class="btn btn-secondary">Back to Log in</a>
+                </div>
+            </div>
+        </form>
+
+        <div *ngIf="showAfterSignUp" class="mt-5 col-12 showAfterSignUp">
+            <h3><b>Thank you for signing up!</b></h3>
+            <h5>Wait for the Admin to accept your registration</h5>
+            <a routerLink="/login" class="btn btn-info mt-5">Back to Log in</a>
+        </div>
+    </div>
+</div>

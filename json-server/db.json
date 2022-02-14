@@ -1,0 +1,470 @@
+{
+  "resource": [
+    {
+      "id": "1173",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150004",
+      "category": "gNodeB",
+      "description": "Big Black Box 23",
+      "name": "AmarisoftClassic_www1",
+      "resource_version": "MAr2021",
+      "administrative_state": "locked",
+      "operational_state": "enable",
+      "resource_characteristic": [
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190001"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.2880923964281,
+              21.789761781692505
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        },
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "restart"
+          }
+        }
+      ],
+      "resource_status": "available",
+      "usage_state": "active"
+    },
+    {
+      "id": "1174",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac140004",
+      "category": "gNodeB",
+      "description": "Big Black Box 21",
+      "name": "AmarisoftClassic_www2",
+      "resource_version": "MAr2021",
+      "administrative_state": "unlocked",
+      "operational_state": "enable",
+      "resource_characteristic": [
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "restart"
+          }
+        },
+        {
+          "id": "string",
+          "name": "action_parameters",
+          "value_type": "object",
+          "value": {
+            "value": {
+              "PRMT_TDD": "1w",
+              "PRMT_TDD_CONFIG": "12",
+              "PRMT_N_ANTENNA_DL": "abcd",
+              "PRMT_BANDWIDTH": "888",
+              "PRMT_PLMN": "abcdk",
+              "PRMT_TAC": "abcd",
+              "PRMT_MOD_UL": "a",
+              "PRMT_MOD_DL": "abcd",
+              "PRMT_BAND": "888",
+              "PRMT_NR_ARFCN": "abcd"
+            }
+          }
+        },
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190002"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.28596182210468,
+              21.789965629577637
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        }
+      ],
+      "resource_status": "available",
+      "usage_state": "busy"
+    },
+    {
+      "id": "1175",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150005",
+      "category": "gNodeB",
+      "description": "Big Black Box 3",
+      "name": "AmarisoftClassic_www3",
+      "resource_version": "MAr2021",
+      "administrative_state": "locked",
+      "operational_state": "disable",
+      "resource_characteristic": [
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "stop"
+          }
+        },
+        {
+          "id": "string",
+          "name": "action_parameters",
+          "value_type": "object",
+          "value": {
+            "value": {
+              "PRMT_TAC": "dddd",
+              "PRMT_BAND": "eeeee",
+              "PRMT_TDD_CONFIG": "1231"
+            }
+          }
+        },
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190003"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.28714080376708,
+              21.7863929271698
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        }
+      ],
+      "resource_status": "available",
+      "usage_state": "idle"
+    },
+    {
+      "id": "1176",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150006",
+      "category": "gNodeB",
+      "description": "Big Black Box 4",
+      "name": "AmarisoftClassic_www4",
+      "resource_version": "MAr2021",
+      "administrative_state": "shutdown",
+      "operational_state": "enable",
+      "resource_characteristic": [
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "start/stop"
+          }
+        },
+        {
+          "id": "string",
+          "name": "action_parameters",
+          "value_type": "object",
+          "value": {
+            "value": {
+              "PRMT_TAC": "dddd",
+              "PRMT_BAND": "eeeee"
+            }
+          }
+        },
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190004"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.284673341673624,
+              21.78777694702148
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        }
+      ],
+      "resource_status": "reserved",
+      "usage_state": "idle"
+    },
+    {
+      "id": "1177",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150007",
+      "category": "gNodeB",
+      "description": "Big Black Box 5",
+      "name": "AmarisoftClassic_www5",
+      "resource_version": "MAr2021",
+      "administrative_state": "unlocked",
+      "operational_state": "disable",
+      "resource_characteristic": [
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "restart"
+          }
+        },
+        {
+          "id": "string",
+          "name": "action_parameters",
+          "value_type": "object",
+          "value": {
+            "value": {
+              "PRMT_TAC": "ddddszc",
+              "PRMT_BAND": "eeed vxds",
+              "PRMT_BANDWIDTH": "rrrxxcx",
+              "PRMT_AMF_ADDR": "ss"
+            }
+          }
+        },
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190005"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.294492164525956,
+              21.794428825378418
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        }
+      ],
+      "resource_status": "unknown",
+      "usage_state": "active",
+      "PRMT_TAC": "dddds",
+      "PRMT_BAND": "eeeee",
+      "PRMT_BANDWIDTH": "rrr",
+      "PRMT_MOD_DL": "ee"
+    },
+    {
+      "id": "1178",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150008",
+      "category": "gNodeB",
+      "description": "Big Black Box 6",
+      "name": "AmarisoftClassic_www6",
+      "resource_version": "MAr2021",
+      "administrative_state": "shutdown",
+      "operational_state": "disable",
+      "resource_characteristic": [
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "start/stop"
+          }
+        },
+        {
+          "id": "string",
+          "name": "action_parameters",
+          "value_type": "object",
+          "value": {
+            "value": {
+              "PRMT_TAC": "dddd",
+              "PRMT_BAND": "eeeee"
+            }
+          }
+        },
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190006"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.29184811822965,
+              21.790040731430054
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        }
+      ],
+      "resource_status": "suspended",
+      "usage_state": "busy"
+    },
+    {
+      "id": "1179",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150009",
+      "category": "gNodeB",
+      "description": "Big Black Box 9",
+      "name": "AmarisoftClassic_www9",
+      "resource_version": "MAr2021",
+      "administrative_state": null,
+      "operational_state": null,
+      "resource_characteristic": [
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "start/stop"
+          }
+        },
+        {
+          "id": "string",
+          "name": "action_parameters",
+          "value_type": "object",
+          "value": {
+            "value": {
+              "PRMT_TAC": "dddd",
+              "PRMT_BAND": "eeeee"
+            }
+          }
+        },
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190007"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.290290275152216,
+              21.786285638809204
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        }
+      ],
+      "resource_status": null,
+      "usage_state": null
+    }
+  ]
+}

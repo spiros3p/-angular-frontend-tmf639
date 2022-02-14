@@ -1,0 +1,47 @@
+@import "/src/variables";
+
+.generic-list {
+  margin-bottom: 50px;
+  padding-bottom: 145px;
+  @media only screen and (max-width: 1200px) {
+    overflow-x: scroll;
+    overflow-y: clip;
+  }
+
+  &.noOverflow > * {
+    min-width: unset !important;
+  }
+
+  //min width for children to enable scroll on oveflow
+  & > * {
+    min-width: 680px;
+  }
+
+  & .regular-weight {
+    font-weight: 600;
+  }
+
+  & .generic-list-head-wrapper {
+    margin-bottom: 10px;
+    padding: 0 18px 10px;
+    font-size: 11px;
+    // color: rgb(0, 255, 242);
+    border-bottom: 1px solid rgba(88, 88, 88, 0.7);
+
+    & .generic-list-head {
+
+      & > div{
+        font-family: $titleFont;
+        color: $titleColor;
+        font-weight: 600;
+        font-size: 14px;
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+
+      & .centered {
+        text-align: center;
+      }
+    }
+  }
+}

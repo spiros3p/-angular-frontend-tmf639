@@ -1,0 +1,49 @@
+<div class="block" [ngStyle]="{'background-color': resource.operational_state=='disable' ? '#cbcbcb' : '' }">
+    <div class="map-container">
+        <div class="map-frame">
+            <div id="map-{{counter}}">
+            </div>
+        </div>
+    </div>
+    <div class="context">
+        <span class="name">Category: </span>
+        <span class="value">{{ resource.category ? resource.category : "null" }}</span>
+    </div>
+    <div class="context">
+        <span class="name">Description: </span>
+        <span class="value">{{ resource.description ? resource.description : "null" }}</span>
+    </div>
+    <div class="context">
+        <span class="name">Name: </span>
+        <span class="value">{{ resource.name ? resource.name : "null" }}</span>
+    </div>
+    <div class="context">
+        <span class="name">IP: </span>
+        <span class="value">{{ indexIP != -1 ? resource.resource_characteristic[indexIP].value.value : "null" }}</span>
+    </div>
+    <div class="context">
+        <span class="name">Resource Status: </span>
+        <span class="value" [ngStyle]="{'color': resource.resource_status=='available' ? 'green' : '' }">
+            {{ resource.resource_status ? resource.resource_status : "null" }}</span>
+    </div>
+    <div class="context">
+        <span class="name">Operational State: </span>
+        <span class="value" [ngStyle]="{'color': resource.operational_state=='enable' ? 'green' : 'red' }">
+            {{ resource.operational_state ? resource.operational_state : "null" }}</span>
+    </div>
+    <div class="btn-container row">
+        <div class="col-7 col-md-6 pr-1">
+            <button [disabled]="resource.operational_state=='disable'" [routerLink]="['/resource', resource.id ]"
+                class="btn">
+                <fa-icon [icon]='faPencilAlt'></fa-icon>
+                MORE
+            </button>
+        </div>
+        <div class="col-5 col-md-5 pl-1" *ngIf="isAdmin">
+            <button class="btn btn-delete" (click)=openDeleteModal()>
+                <fa-icon [icon]='faTrashAlt'></fa-icon>
+                DELETE
+            </button>
+        </div>
+    </div>
+</div>

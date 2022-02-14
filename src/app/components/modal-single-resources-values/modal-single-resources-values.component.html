@@ -1,0 +1,60 @@
+<form>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Modify Resource</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+        <div class="row">
+
+            <div class="col-12 col-sm-6">
+                <label for="category">
+                    Category
+                    <span *ngIf="empty" style="color: red;">
+                        * Can not be empty!
+                    </span>
+                </label><br>
+                <input type="text" name="category" class="w-100" [(ngModel)]="resourceUpdate.category" id="category">
+            </div>
+            <div class="col-12 col-sm-6">
+                <label for="description">
+                    Description
+                    <span *ngIf="empty" style="color: red;">
+                        * Can not be empty!
+                    </span>
+                </label><br>
+                <input type="text" name="description" class="w-100" [(ngModel)]="resourceUpdate.description"
+                    id="description">
+            </div>
+            <!-- <div class="col-12 col-sm-6">
+                <label for="name">
+                    Name
+                    <span *ngIf="empty" style="color: red;">
+                        * Can not be empty!
+                    </span>
+                </label><br>
+                <input type="text" name="name" class="w-100" [(ngModel)]="resourceUpdate.name" id="name">
+            </div> -->
+            <div class="col-12 col-sm-6">
+                <label for="resource_version">
+                    Resource Version
+                    <span *ngIf="empty" style="color: red;">
+                        * Can not be empty!
+                    </span>
+                </label><br>
+                <input type="text" name="resource_version" class="w-100" [(ngModel)]="resourceUpdate.resource_version"
+                    id="resource_version">
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button (click)="activeModal.dismiss('Cross click')" type="submit" class="btn btn-danger">Close</button>
+        <button (click)="passBack()" type="submit" class="btn btn-primary">
+            <fa-icon [icon]='faUpload'></fa-icon>
+            Save Cahnges & Upload
+        </button>
+    </div>
+</form>

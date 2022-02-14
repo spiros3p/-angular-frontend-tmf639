@@ -1,0 +1,116 @@
+@import "/src/variables";
+
+.filter-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 80px 0 0;
+    // padding-top: 5px;
+    margin-bottom: 20px;
+    min-height: 46px;
+    background-color: $bgColor;
+    position: relative;
+
+    & .search-option-container{
+        padding: 0 5px;
+        & .search-option {
+            height: 33px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 8px;
+            // max-width: 200px;
+            width: 100%;
+            margin-bottom: 5px;
+            &:focus{
+                outline: $babyblue solid 1px;
+            }
+            &::placeholder{
+                font-size: 13px;
+                color: rgba(0, 0, 0, 0.8);
+            }
+            @media (max-width: 576px){
+    
+            }
+        }
+    }
+
+    & .select-option-container {
+        position: relative;
+        padding: 0 5px;
+        margin-bottom: 5px;
+
+        & label {
+            position: absolute;
+            color: rgba(0, 0, 0, 0.8);
+            top: 0;
+            left: 5px;
+            margin: 0;
+            font-size: 13px;
+            font-weight: 500;
+            pointer-events: none;
+            background-color: white;
+            transition: background-color 0.2s linear;
+            height: 33px;
+            width: 145px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 5px;
+            align-items: center;
+            border: 1px solid black;
+            & fa-icon{
+                position: absolute;
+                right: 7px;
+            }
+        }
+
+        & .select-option {
+            cursor: pointer;
+            height: 33px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 8px;
+            max-width: 200px;
+            width: 145px;
+            &:hover{
+                & + label{
+                    background-color: rgb(251, 251, 251);
+                    outline: $babyblue solid 1px;
+                }
+            }
+        }
+    }
+
+    & .view-option-container{
+        padding: 0;
+        text-align: end;
+        right: 0;
+        position: absolute;
+
+        & .view-option {
+            border: 1px solid black;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1px;
+            padding: 3px;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            margin-right: 5px;
+            font-size: 17px;
+            background-color: $secondaryBgColor;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: all 0.25s;
+            &:hover {
+                opacity: 1;
+                transition: all 0.25s;
+            }
+    
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}

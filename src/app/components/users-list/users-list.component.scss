@@ -1,0 +1,138 @@
+@import "/src/variables";
+
+:host {
+  display: block !important;
+}
+
+.generic-list-item-wrapper {
+  min-height: 50px;
+  padding: 5px 18px;
+  border: 1px solid $bgColor;
+  background-color: $secondaryBgColor;
+  margin-bottom: 7px;
+
+  &.mapPageCurrent {
+    background-color: #2a82cb;
+    & .generic-list-item {
+      & div {
+        color: white;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    background-color: $bgColor;
+    border: none;
+  }
+
+  //this is.row
+  & .generic-list-item {
+    height: 100%;
+    align-items: center;
+    min-height: 40px;
+
+    & > div {
+      font-weight: 500;
+      color: $textColor;
+      font-weight: 400;
+      font-size: 14px;
+      word-break: break-all;
+      padding-left: 6px;
+      padding-right: 6px;
+
+      &[data-name="location"] {
+        position: relative;
+        
+        & span, fa-icon{
+          cursor: pointer;
+        }
+        
+        & .map-container {
+          height: 135px;
+          padding: 2px;
+          position: absolute;
+          left: calc(100%);
+          top: -15px;
+          width: 250px;
+          height: 185px;
+          background-color: $bgColor;
+          z-index: 100;
+          transition: all 0.3s;
+          -webkit-box-shadow: 5px 3px 29px -8px rgba(0, 0, 0, 0.41);
+          box-shadow: 5px 3px 20px -8px rgba(0, 0, 0, 0.41);
+          border: 1px solid black;
+          border-radius: 5px;
+
+          & .map-frame {
+            border-radius: 5px;
+            padding: 1px;
+            height: 100%;
+            position: relative;
+            & .close-button{
+              position: absolute;
+              z-index: 1000;
+              color: black;
+              top: 1px;
+              right: 5px;
+              font-size: 20px;
+            }
+
+            & [id*="map"] {
+              border-radius: 5px;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      &[data-name="actions"] {
+        display: flex;
+        justify-content: space-evenly;
+
+        & fa-icon {
+          font-size: 16px;
+          cursor: pointer;
+          font-size: 16px;
+          width: 33px;
+          height: 33px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          border: 1px solid black;
+          margin-right: 2px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &:hover {
+            color: white;
+            background-color: $reverseBgColor;
+          }
+
+          &.delete {
+            color: white;
+            background-color: $reverseBgColor;
+          }
+        }
+      }
+    }
+
+    & a:hover {
+      text-decoration: underline;
+    }
+
+    & i {
+      font-size: 14px;
+    }
+
+    & .centered {
+      text-align: center;
+    }
+
+    & .btn-col {
+      height: 100%;
+    }
+  }
+}

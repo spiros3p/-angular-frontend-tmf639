@@ -1,0 +1,47 @@
+<div class="generic-list-item-wrapper" [ngClass]="{'mapPageCurrent' : mapPageCurrent}"
+    [ngStyle]="{'background-color': resource.operational_state=='disable' ? '#cbcbcb' : '' }">
+    <div class="row generic-list-item">
+        <div class="col-1 regular-weight" data-name="category">
+            {{ resource.category ? resource.category : "null" }}
+        </div>
+        <div class="col-1 centered" data-name="location" *ngIf="!mapPageCurrent">
+            <span (click)="toggleMap()">SHOW </span>
+            <fa-icon [icon]="faEye" (click)="toggleMap()"></fa-icon>
+            <div class="map-container"
+                [ngStyle]="{'opacity': showMap ? '1' : '0', 'visibility': showMap ? 'visible' : 'hidden'}">
+                <div class="map-frame">
+                    <fa-icon class="close-button" (click)="toggleMap()" [icon]="faTimes">
+                    </fa-icon>
+                    <div id="map-{{counter}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" data-name="description">
+            {{ resource.description ? resource.description : "null" }}
+        </div>
+        <div class="col-2 pl-1" data-name="name">
+            {{ resource.name ? resource.name : "null" }}
+        </div>
+        <div class="col regular-weight" data-name="ip">
+            {{ indexIP != -1 ? resource.resource_characteristic[indexIP].value.value : "null" }}
+        </div>
+        <div class="col" data-name="resource status"
+            [ngStyle]="{'color': resource.resource_status=='available' ? 'green' : '' }">
+            {{ resource.resource_status ? resource.resource_status : "null" }}
+        </div>
+        <div class="col" data-name="usage status"
+            [ngStyle]="{'color': resource.operational_state=='enable' ? 'green' : 'red' }">
+            {{ resource.operational_state ? resource.operational_state : "null" }}
+        </div>
+        <div class="col-1 justify-content-end" data-name="actions">
+            <button class="btn" [disabled]="resource.operational_state=='disable'"
+                [routerLink]="['/resource', resource.id ]">
+                <fa-icon [icon]="faPencilAlt"></fa-icon>
+            </button>
+            <button class="btn delete" *ngIf="isAdmin" (click)=openDeleteModal()>
+                <fa-icon [icon]="faTrashAlt"></fa-icon>
+            </button>
+        </div>
+    </div>
+</div>

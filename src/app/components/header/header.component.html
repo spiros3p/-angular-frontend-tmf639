@@ -1,0 +1,35 @@
+<section id="header">
+  <div class="container navbar-container">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <button (click)="isMenuCollapsed = !isMenuCollapsed" *ngIf="isAuthenticated" class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div [ngbCollapse]="isMenuCollapsed" *ngIf="isAuthenticated" class="collapse navbar-collapse">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" (click)="isMenuCollapsed = true" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" routerLink="/">
+            <fa-icon [icon]='faHome'></fa-icon>
+            Home
+          </a>
+          <a class="nav-item nav-link" (click)="isMenuCollapsed = true" routerLinkActive="active" *ngIf="isAdmin"
+            routerLink="/createResource">
+            <fa-icon [icon]='faPlusCircle'></fa-icon>
+            Create Resource
+          </a>
+          <a class="nav-item nav-link" (click)="isMenuCollapsed = true" routerLinkActive="active" routerLink="/map">
+            <fa-icon [icon]='faMapMarkedAlt'></fa-icon>
+            Map
+          </a>
+          <a class="nav-item nav-link" (click)="isMenuCollapsed = true" routerLinkActive="active" routerLink="/account">
+            <fa-icon [icon]='faUser'></fa-icon>
+            Account
+          </a>
+        </div>
+      </div>
+      <div class="navbar-brand">
+        <fa-icon [icon]="faBroadcastTower"></fa-icon>
+        <h3>Radio <br> Management <br> Server</h3>
+      </div>
+    </nav>
+  </div>
+</section>

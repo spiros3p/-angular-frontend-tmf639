@@ -1,0 +1,45 @@
+<div class="filter-container">
+    <div class="row m-0">
+        <div class="col-auto search-option-container">
+            <input class="search-option" type="text" (keyup)='onSearchTermChange($event)' placeholder="Search (name, description)">
+        </div>
+        <div class="col-auto select-option-container">
+            <select [id]="opStateList" [(ngModel)]="selectedOpState" class="select-option" (change)="onOpStateChange($event.target)" title="Operational State">
+                <option [value]="null">All (Operational State)</option>
+                <ng-container *ngFor="let opState of opStateList;">
+                    <option [value]="opState" *ngIf="opState">
+                        {{opState}}
+                    </option>
+                </ng-container>
+            </select>
+            <label for="opStateList" *ngIf="showOpStateLabel">
+                Operational State
+                <fa-icon [icon]='faAngleDown'></fa-icon>
+            </label>
+        </div>
+        <div class="col-auto select-option-container">
+            <select [id]="resourceStatusList" [(ngModel)]="selectedResourceStatus" class="select-option" (change)="onResourceStatusChange($event.target)" title="Resource Status">
+                <option [value]="null">All (Resource Status)</option>
+                <ng-container *ngFor="let resourceStatus of resourceStatusList;">
+                    <option [value]="resourceStatus" *ngIf="resourceStatus">
+                        {{resourceStatus}}
+                    </option>
+                </ng-container>                
+            </select>
+            <label for="resourceStatusList" *ngIf="showResourceStatusLabel">
+                Resource Status
+                <fa-icon [icon]='faAngleDown'></fa-icon>
+            </label>
+        </div>
+        <div class="col-auto col-sm-auto view-option-container">
+            <div class="view-option" [ngClass]="{'active' : !showListView}" (click)="toggleListView(false)">
+                <fa-icon [icon]='faGripHorizontal'>
+                </fa-icon>
+            </div>
+            <div class="view-option" [ngClass]="{'active' : showListView}" (click)="toggleListView(true)">
+                <fa-icon [icon]='faList'>
+                </fa-icon>
+            </div>
+        </div>
+    </div>
+</div>

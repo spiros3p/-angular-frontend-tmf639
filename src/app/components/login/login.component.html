@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h2 class="col-12 text-center mt-5 mb-4">Log In</h2>
+        <form action="#" (ngSubmit)="login()" class="col-12">
+            <div class="form">
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="text" required name="email" [(ngModel)]="email" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" required name="password" [(ngModel)]="password" class="form-control">
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Log in">
+                    <a routerLink="/signup" class="btn btn-info">Sign Up</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

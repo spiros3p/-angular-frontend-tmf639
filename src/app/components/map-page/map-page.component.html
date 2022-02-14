@@ -1,0 +1,20 @@
+<div class="container">
+
+    <h2 class="page-title">Map View of Resources</h2>
+    <h4 class="page-subtitle">Click on a marker to get more details about the resource.</h4>
+
+    <div class="map-container">
+        <div class="map-frame">
+            <div id="map">
+                
+            </div>
+        </div>
+    </div>
+
+    <app-resources-view-list
+        [resources]="selectedResources"
+        [mapPageCurrent]="true">
+    </app-resources-view-list>
+
+</div>
+

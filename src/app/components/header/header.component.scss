@@ -1,0 +1,75 @@
+@import "/src/variables";
+
+section {
+  &#header {
+    background-color: $bgColor;
+    border-bottom: 1px solid rgba(88, 88, 88, 0.7);
+
+    & .navbar-container {
+
+      & .navbar {
+        padding-bottom: 0;
+
+        @media (max-width: 767px) {
+          & .navbar-toggler{
+            order: 1;
+          }
+          & .navbar-brand{
+            order: 2;
+            transform: scale(0.7);
+          }
+          & .navbar-collapse{
+            order: 3;
+            padding-bottom: 12px;
+          }
+        }
+
+        & .navbar-toggler{
+          border: 1px solid rgba(88, 88, 88, 0.7);
+        }
+
+        & .navbar-collapse {
+          align-self: flex-end;
+
+          & .navbar-nav{
+
+            & > a{
+              padding-bottom: 12px;
+              padding-left: 12px;
+              padding-right: 12px;
+
+              &.active{
+                background-color: $secondaryBgColor;
+                border: 1px solid rgba(88, 88, 88, 0.7);
+                border-bottom: 1px solid white;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                margin-bottom: -1px;
+                @media (max-width: 767px) {
+                  border-bottom: 1px solid rgba(88, 88, 88, 0.7);
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
+
+        & .navbar-brand {
+          display: flex;
+          margin-right: 0;
+          max-width: 70%;
+
+          & fa-icon {
+            font-size: 65px;
+            margin-right: 18px;
+            align-self: self-end;
+          }
+
+          & h3{
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}

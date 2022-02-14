@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import '~leaflet/dist/leaflet.css';
+@import 'variables';
+
+
+body{
+    font-family: $textFont;
+
+    & .container, .container-xl{
+        padding-top: 24px !important;
+
+        & .page-title{
+        }
+        & .page-subtitle{
+            font-size: 18px;
+            color: rgba($color: #000000, $alpha: 0.5);
+        }
+    }
+
+    & .modal-dialog{
+        max-width: 780px !important;
+    }
+
+    & .alertify-notifier{
+        left: 0 !important;
+        &  .ajs-message{
+            min-width: 260px;
+            max-width: 355px !important;
+            width: fit-content !important;
+            right: unset !important;
+            left: 10px !important;
+            border-radius: 5px !important;
+            border: 1px solid black !important;
+        }
+    }
+}

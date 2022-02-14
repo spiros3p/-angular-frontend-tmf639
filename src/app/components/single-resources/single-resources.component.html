@@ -1,0 +1,130 @@
+<div class="container-xl">
+
+    <a routerLink="/" class="back-btn-container">
+        <fa-icon [icon]='faLongArrowAltLeft'></fa-icon>
+        Back
+    </a>
+
+    <div class="row justify-content-center">
+
+        <div class="section-title col-11">
+            <h2>RESOURCE:
+                <br>{{ resource.name }}
+            </h2>
+        </div>
+
+        <div class="col-md-5 mb-3 text-center">
+            <div class="w-100 map-container">
+                <div class="map-frame">
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <button class="btn-delete modify" (click)=openModifyModal() *ngIf="resource.resource_status==='available'">
+                <fa-icon [icon]='faEdit'></fa-icon>
+                MODIFY
+            </button>
+
+            <button class="btn-delete" (click)=openDeleteModal() *ngIf="isAdmin">
+                <fa-icon [icon]='faTrashAlt'></fa-icon>
+                DELETE
+            </button>
+        </div>
+
+        <div class="col-md-6">
+            <div class="context-container">
+                <div class="context">
+                    <span class="name">Category: </span>
+                    <span class="value">{{ resource.category ? resource.category : "null" }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">Description: </span>
+                    <span class="value">{{ resource.description ? resource.description : "null" }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">Name: </span>
+                    <span class="value">{{ resource.name ? resource.name : "null" }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">Resource Version: </span>
+                    <span class="value">{{ resource.resource_version ? resource.resource_version : "null" }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">Administrative State: </span>
+                    <span class="value">{{ resource.administrative_state ? resource.administrative_state : "null"
+                        }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">Operational State: </span>
+                    <span class="value">{{ resource.operational_state ? resource.operational_state : "null" }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">IP: </span>
+                    <span class="value">{{ indexIP != -1 ?
+                        resource.resource_characteristic[indexIP].value.value : "null" }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">Resource Status: </span>
+                    <span class="value">{{ resource.resource_status ? resource.resource_status : "null" }}</span>
+                </div>
+                <div class="context">
+                    <span class="name">Operetional State: </span>
+                    <span class="value">{{ resource.operational_state ? resource.operational_state : "null" }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-11">
+            <div class="section-title">
+                <h2>ACTIONS</h2>
+            </div>
+
+            <div *ngIf="resource.resource_status!=='available'">Resource not available to perform actions at the moment
+            </div>
+
+            <div class="actions-container row"
+                *ngIf="resource.resource_status==='available' && indexSupportedActions != -1">
+                <button *ngFor="let action of resource.resource_characteristic[indexSupportedActions].value.value;"
+                    class="btn mb-2 col-5 col-sm-3 col-lg-2 action" (click)="openPatchModal(action)" [ngStyle]="{'background': 
+                                    action=='start' ? 'green':
+                                    action=='restart'? 'orange':
+                                    action=='stop'? 'red':
+                                    action=='status' ? '#00aaff':
+                                    action=='touch' ? 'blue':''}">
+                    {{action}}
+                </button>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-11">
+            <div class="section-title">
+                <h2>PARAMETERS</h2>
+            </div>
+            <button *ngIf="!parametersChanged && resource.resource_status==='available' && !noActionParametersSet"
+                class="btn-delete modify mt-0 mb-3" (click)=openParametersModal()>
+                <fa-icon [icon]='faEdit'></fa-icon>
+                MODIFY
+            </button>
+            <button *ngIf='parametersChanged' class="btn-delete modify mt-0 mb-3" (click)=resetParameters()>
+                RESET
+            </button>
+            <button *ngIf='parametersChanged' class="btn-delete save mt-0 mb-3" (click)=uploadParameters()>
+                <fa-icon [icon]='faUpload'></fa-icon>
+                SAVE CHANGES
+            </button>
+            <div class="parameters-container">
+                <div *ngIf='noActionParametersSet'>No Parameters set.</div>
+
+                <div *ngIf='!noActionParametersSet' class="row justify-content-start">
+                    <div class="col-6 col-sm-4 col-lg-3 parameter"
+                        *ngFor="let item of resource.resource_characteristic[indexActionParameters].value.value | keyvalue">
+                        <div class="name">{{item.key}}</div>
+                        <div class="value">{{item.value}}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

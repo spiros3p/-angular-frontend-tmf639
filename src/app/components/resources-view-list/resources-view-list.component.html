@@ -1,0 +1,25 @@
+<!-- <p>resources-view-list works!</p> -->
+
+<div class="row">
+    <div class="generic-list col-12">
+
+        <div class="generic-list-head-wrapper">
+            <div class="row generic-list-head">
+                <div class="col-1">CATEGORY</div>
+                <div class="col-1 centered" *ngIf="!mapPageCurrent">LOCATION</div>
+                <div class="col-2">DESCRIPTION</div>
+                <div class="col-2">NAME</div>
+                <div class="col">IP</div>
+                <div class="col">RESOURCE STATUS</div>
+                <div class="col">OPERATIONAL STATE</div>
+                <div class="col-1 centered">ACTIONS</div>
+            </div>
+        </div>
+
+        <app-resource-item-list *ngFor="let resource of resources; let counter = index;"
+            (onDeleteResource)="toDeleteTask($event)" [resource]="resource" [counter]='counter'
+            [mapPageCurrent]="mapPageCurrent" [isAdmin]="isAdmin">
+        </app-resource-item-list>
+
+    </div>
+</div>

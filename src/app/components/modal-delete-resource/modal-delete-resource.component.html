@@ -1,0 +1,35 @@
+<div *ngIf="!toggleType">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Are you sure you want to delete this?</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="w-100 text-center py-5">
+        <b>ID:</b> {{resource.id}}
+        <br><br>
+        <b>NAME:</b> {{resource.name}}
+    </div>
+    <div class="modal-footer">
+        <button (click)="activeModal.dismiss('Cross click')" type="submit" class="btn btn-secondary">No</button>
+        <button (click)="passBack()" type="submit" class="btn btn-danger">Yes, DELETE</button>
+    </div>
+</div>
+
+<div *ngIf="toggleType">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Toggle the Acceptance of this user?</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="w-100 text-center py-5">
+        <b>ID:</b> {{resource.id}}
+        <br><br>
+        <b>NAME:</b> {{resource.name}}
+    </div>
+    <div class="modal-footer">
+        <button (click)="activeModal.dismiss('Cross click')" type="submit" class="btn btn-secondary">No</button>
+        <button (click)="passBack()" type="submit" class="btn btn-primary px-4">Yes</button>
+    </div>
+</div>

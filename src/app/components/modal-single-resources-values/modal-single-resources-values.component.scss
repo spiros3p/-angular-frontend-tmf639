@@ -1,0 +1,16 @@
+
+.modal-body{
+
+    // & .col-12{
+
+        & label{
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+        & input{
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 8px;
+        }
+    // }
+}

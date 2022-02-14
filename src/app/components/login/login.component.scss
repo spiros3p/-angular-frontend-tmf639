@@ -1,0 +1,19 @@
+form {
+    max-width: 500px;
+    width: 100%;
+
+    .form {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 23px 45px;
+        background-color: #f6f6f6;
+        box-shadow: 5px 3px 20px -8px rgb(0 0 0 / 41%);
+
+        & .form-group {
+            & .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@import '/src/variables';
+
+.section-title {
+    margin: 20px 0 15px;
+    & h2 {
+        overflow: hidden;
+    }
+}
+
+.map-container {
+    height: 280px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: $bgColor;
+    // -webkit-box-shadow: 5px 3px 29px -8px rgba(0, 0, 0, 0.41);
+    // box-shadow: 5px 3px 20px -8px rgba(0, 0, 0, 0.41);
+    @media (max-width: 767px) {
+        height: 255px;
+    }
+
+    & .map-frame {
+        border-radius: 5px;
+        padding: 1px;
+        height: 100%;
+
+        & [id*="map"] {
+            border-radius: 5px;
+            height: 100%;
+        }
+    }
+}
+
+form{
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 23px 45px;
+    background-color: $bgColor;
+    -webkit-box-shadow: 5px 3px 29px -8px rgba(0, 0, 0, 0.41);
+    box-shadow: 5px 3px 20px -8px rgba(0, 0, 0, 0.41);
+    @media (max-width: 767px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    & > div > div{
+        margin-bottom: 10px;
+    }
+}
+
+label{
+    padding-left: 10px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input{
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+.actions-container{
+    & .btn{
+
+        &.green{
+            background-color: green;
+            border: 1px solid green;
+            color: white;
+        }
+        &.orange{
+            background-color: orange;
+            border: 1px solid orange;
+            color: white;
+        }
+        &.red{
+            background-color: red;
+            border: 1px solid red;
+            color: white;
+        }
+        &.lightblue{
+            background-color: #00aaff;
+            border: 1px solid #00aaff;
+            color: white;
+        }
+        &.blue{
+            background-color: blue;
+            border: 1px solid blue;
+            color: white;
+        }
+        &.outline{
+            color: black !important;
+            background-color: white !important;
+        }
+    }
+}

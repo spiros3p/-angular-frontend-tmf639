@@ -1,0 +1,19 @@
+<div class="container-xl">
+
+	<div class="row">
+		<div class="col-12">
+			<app-resources-filter [resources]="resources" (searchTermChange)="onSearchTermChange($event)"
+				(resourceStatusFilterChange)="onResourceStatusFilterChange($event)" (opStateFilterChange)="onOpStateFilterChange($event)">
+			</app-resources-filter>
+		</div>
+	</div>
+
+	<app-resources-view-block (onDeleteResource)="deleteResource($event)" *ngIf="!showListView" [resources]="resources"
+		[isAdmin]="isAdmin">
+	</app-resources-view-block>
+
+	<app-resources-view-list (onDeleteResource)="deleteResource($event)" *ngIf="showListView" [resources]="resources"
+		[mapPageCurrent]="false" [isAdmin]="isAdmin">
+	</app-resources-view-list>
+
+</div>

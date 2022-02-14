@@ -1,0 +1,21 @@
+
+.map-container {
+	padding: 15px 0;
+	height: 430px;
+	margin-bottom: 10px;
+
+	& .map-frame {
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 5px;
+		height: 100%;
+
+		& #map {
+			height: 100%;
+		}
+	}
+}
+
+.generic-list-item-wrapper[_ngcontent-fho-c117]{
+	border:1px solid #2b81ca !important;
+}
