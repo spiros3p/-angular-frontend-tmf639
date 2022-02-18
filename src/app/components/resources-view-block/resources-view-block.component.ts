@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Resource } from 'model/resource';
+import { Resource } from 'src/app/models/resource';
 
 @Component({
   selector: 'app-resources-view-block',

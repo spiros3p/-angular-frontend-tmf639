@@ -6,7 +6,7 @@ import { AdminService } from 'src/app/services/admin.service';
 import { AlertifyService } from 'src/app/services/alertify.service';
 import { UiService } from 'src/app/services/ui.service';
 
-import { User } from 'model/User';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-account',

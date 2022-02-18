@@ -4,9 +4,9 @@ import { Observable, BehaviorSubject } from "rxjs";
 
 import { environment } from 'src/environments/environment';
 
-import { User } from 'model/User';
-import { loginResponse } from 'model/loginResponse';
-import { signupResponse } from 'model/signupResponse';
+import { User } from 'src/app/models/User';
+import { loginResponse } from 'src/app/models/loginResponse';
+import { signupResponse } from 'src/app/models/signupResponse';
 
 @Injectable({
   providedIn: 'root'

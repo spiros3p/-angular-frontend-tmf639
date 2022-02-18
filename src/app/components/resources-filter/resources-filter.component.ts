@@ -4,7 +4,7 @@ import { UiService } from '../../services/ui.service';
 import { faGripHorizontal, faList, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { environment } from 'src/environments/environment';
 
-import { Resource } from 'model/resource';
+import { Resource } from 'src/app/models/resource';
 
 @Component({
   selector: 'app-resources-filter',

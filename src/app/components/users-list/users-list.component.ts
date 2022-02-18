@@ -5,7 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertifyService } from 'src/app/services/alertify.service';
 
 import { ModalDeleteResourceComponent } from '../modal-delete-resource/modal-delete-resource.component';
-import { User } from 'model/User';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-users-list',

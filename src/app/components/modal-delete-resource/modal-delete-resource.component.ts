@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { Resource } from 'model/resource';
+import { Resource } from 'src/app/models/resource';
 
 @Component({
   selector: 'app-modal-delete-resource',

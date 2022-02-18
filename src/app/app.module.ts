@@ -4,7 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from 'src/app/router/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,7 +25,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { ModalSingleResourcesValuesComponent } from './components/modal-single-resources-values/modal-single-resources-values.component';
 import { ModalSingleResourcesParametersComponent } from './components/modal-single-resources-parameters/modal-single-resources-parameters.component';
 
-import { HttpRequestInterceptor } from './HttpeInterceptor';
+import { HttpRequestInterceptor } from 'src/app/interceptors/HttpInterceptor';
 import { AccountComponent } from './components/account/account.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 

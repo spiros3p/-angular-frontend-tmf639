@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faTrashAlt, 	faPencilAlt, faEye } from '@fortawesome/free-solid-svg-icons';
 
-import { Resource } from 'model/resource';
+import { Resource } from 'src/app/models/resource';
 
 @Component({
   selector: 'app-resources-view-list',

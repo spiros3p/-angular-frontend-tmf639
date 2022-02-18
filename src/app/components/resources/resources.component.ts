@@ -4,10 +4,10 @@ import { timer } from 'rxjs/internal/observable/timer';
 import { switchMap } from 'rxjs/operators';
 
 import { UiService } from 'src/app/services/ui.service';
-import { ResourceService } from 'api/resource.service';
+import { ResourceService } from 'src/app/services/resource.service';
 import { AlertifyService } from 'src/app/services/alertify.service';
 
-import { Resource } from 'model/resource';
+import { Resource } from 'src/app/models/resource';
 import { environment } from 'src/environments/environment';
 
 @Component({

@@ -4,8 +4,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
 
-import { Resource } from 'model/resource';
-import { ResourceUpdate } from 'model/resourceUpdate';
+import { Resource } from 'src/app/models/resource';
+import { ResourceUpdate } from 'src/app/models/resourceUpdate';
 
 @Component({
   selector: 'app-modal-single-resources-values',

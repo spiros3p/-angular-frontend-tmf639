@@ -4,8 +4,8 @@ import { faLongArrowAltLeft, faTrashAlt, faEdit, faUpload } from '@fortawesome/f
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 
-import { UiService } from '../../services/ui.service';
-import { ResourceService } from 'api/resource.service';
+import { UiService } from 'src/app/services/ui.service';
+import { ResourceService } from 'src/app/services/resource.service';
 import { AlertifyService } from 'src/app/services/alertify.service';
 
 import { ModalSingleResourcesParametersComponent } from '../modal-single-resources-parameters/modal-single-resources-parameters.component';
@@ -13,8 +13,8 @@ import { ModalSingleResourcesValuesComponent } from '../modal-single-resources-v
 import { ModalSingleResourcesComponent } from '../modal-single-resources/modal-single-resources.component';
 import { ModalDeleteResourceComponent } from '../modal-delete-resource/modal-delete-resource.component';
 
-import { Resource } from 'model/resource';
-import { ResourceUpdate } from 'model/resourceUpdate';
+import { Resource } from 'src/app/models/resource';
+import { ResourceUpdate } from 'src/app/models/resourceUpdate';
 import * as L from 'leaflet';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';

@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ResourceCreate } from 'model/resourceCreate';
+import { ResourceCreate } from 'src/app/models/resourceCreate';
 
-import { ResourceService } from 'api/resource.service';
+import { ResourceService } from 'src/app/services/resource.service';
 import { AlertifyService } from 'src/app/services/alertify.service';
 
 import * as L from 'leaflet';

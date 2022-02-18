@@ -13,16 +13,16 @@
 
 import { Inject, Injectable, Optional } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpEvent } from '@angular/common/http';
-import { CustomHttpUrlEncodingCodec } from './encoder';
+import { CustomHttpUrlEncodingCodec } from 'api/encoder';
 
 import { Observable } from 'rxjs';
 
-import { Resource } from '../model/resource';
-import { ResourceCreate } from '../model/resourceCreate';
-import { ResourceUpdate } from '../model/resourceUpdate';
+import { Resource } from 'src/app/models/resource';
+import { ResourceCreate } from 'src/app/models/resourceCreate';
+import { ResourceUpdate } from 'src/app/models/resourceUpdate';
 
-import { BASE_PATH, COLLECTION_FORMATS } from './variables';
-import { Configuration } from './configuration';
+import { BASE_PATH, COLLECTION_FORMATS } from 'api/variables';
+import { Configuration } from 'api/configuration';
 import { environment } from 'src/environments/environment';
 
 

@@ -4,7 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ModalDeleteResourceComponent } from '../modal-delete-resource/modal-delete-resource.component';
 
-import { Resource } from 'model/resource';
+import { Resource } from 'src/app/models/resource';
 import * as L from 'leaflet';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
