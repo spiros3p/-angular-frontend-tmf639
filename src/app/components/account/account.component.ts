@@ -101,7 +101,7 @@ export class AccountComponent implements OnInit {
         () => {
           console.debug("Succesfully Logged Out!");
           this.router.navigate(['/login']);
-          this.uiService.toggleAuth();
+          this.uiService.checkAuth();
         }
       )
   }

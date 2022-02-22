@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
           }
         },
         () => {
-          this.uiService.toggleAuth();
+          this.uiService.checkAuth();
           this.router.navigate(['/']);
           console.debug("Succesful Log in!");
         }

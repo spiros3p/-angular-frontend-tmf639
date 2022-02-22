@@ -70,14 +70,14 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
   ) {
     this.subscriptionToIsAdmin =
       this.uiService
-        .onToggleAdmin()
+        .onCheckAdmin()
         .subscribe(
           (value) => (this.isAdmin = value)
         )
   }
 
   ngOnInit(): void {
-    this.uiService.toggleAdmin();
+    this.uiService.checkAdmin();
     this.resourceService
       .retrieveResource(this._Activatedroute.snapshot.paramMap.get("id"))
       .subscribe(

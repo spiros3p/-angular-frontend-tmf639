@@ -43,14 +43,14 @@ export class ResourcesComponent implements OnInit, OnDestroy {
 
     this.isAdminSubscription =
       this.uiService
-        .onToggleAdmin()
+        .onCheckAdmin()
         .subscribe(
           (value) => (this.isAdmin = value)
         )
   }
 
   ngOnInit(): void {
-    this.uiService.toggleAdmin();
+    this.uiService.checkAdmin();
     // GET /resource - 1 time - the first time
     this.resourceService
       .listResource()

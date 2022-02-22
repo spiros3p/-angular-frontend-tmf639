@@ -16,28 +16,28 @@ import { PagenotfoundComponent } from 'src/app/components/pagenotfound/pagenotfo
 // AUTH Routes
 // canActivate: [AdminGuard]
 // canActivate: [AuthGuard]
-const appRoutes: Routes = [
-  { path: '', component: ResourcesComponent, canActivate: [AuthGuard] },
-  { path: 'map', component: MapPageComponent, canActivate: [AuthGuard] },
-  { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
-  { path: 'resource/:id', component: SingleResourcesComponent, canActivate: [AuthGuard] },
-  { path: 'createResource', component: CreateResourceComponent, canActivate: [AdminGuard] },
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent },
-  { path: '**', pathMatch: 'full', component: PagenotfoundComponent, canActivate: [AuthGuard] },
-]
+// const appRoutes: Routes = [
+//   { path: '', component: ResourcesComponent, canActivate: [AuthGuard] },
+//   { path: 'map', component: MapPageComponent, canActivate: [AuthGuard] },
+//   { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
+//   { path: 'resource/:id', component: SingleResourcesComponent, canActivate: [AuthGuard] },
+//   { path: 'createResource', component: CreateResourceComponent, canActivate: [AdminGuard] },
+//   { path: 'signup', component: SignupComponent },
+//   { path: 'login', component: LoginComponent },
+//   { path: '**', pathMatch: 'full', component: PagenotfoundComponent, canActivate: [AuthGuard] },
+// ]
 
 // No AUTH Routes
-// const appRoutes: Routes = [
-//     { path: '', component: ResourcesComponent },
-//     { path: 'map', component: MapPageComponent },
-//     { path: 'account', component: AccountComponent },
-//     { path: 'resource/:id', component: SingleResourcesComponent },
-//     { path: 'createResource', component: CreateResourceComponent },
-//     { path: 'signup', component: SignupComponent },
-//     { path: 'login', component: LoginComponent },
-//     { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
-//   ]
+const appRoutes: Routes = [
+    { path: '', component: ResourcesComponent },
+    { path: 'map', component: MapPageComponent },
+    { path: 'account', component: AccountComponent },
+    { path: 'resource/:id', component: SingleResourcesComponent },
+    { path: 'createResource', component: CreateResourceComponent },
+    { path: 'signup', component: SignupComponent },
+    { path: 'login', component: LoginComponent },
+    { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
+  ]
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes, { enableTracing: true })],

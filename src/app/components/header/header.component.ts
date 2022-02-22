@@ -30,13 +30,13 @@ export class HeaderComponent implements OnInit {
   ) {
     this.subscriptionToIsAuthenticated =
       this.uiService
-        .onToggleAuth()
+        .onCheckAuth()
         .subscribe(
           (value) => (this.isAuthenticated = value)
         )
     this.subscriptionToIsAdmin =
       this.uiService
-        .onToggleAdmin()
+        .onCheckAdmin()
         .subscribe(
           (value) => (this.isAdmin = value)
         )
@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
 
   // maybe no need to call them here
   ngOnInit(): void {
-    this.uiService.toggleAuth();
-    this.uiService.toggleAdmin();
+    this.uiService.checkAuth();
+    this.uiService.checkAdmin();
   }
 }

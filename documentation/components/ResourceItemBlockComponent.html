@@ -1,0 +1,985 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend-web-server-tmf639 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend-web-server-tmf639 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ResourceItemBlockComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/resource-item-block/resource-item-block.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-resource-item-block</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./resource-item-block.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./resource-item-block.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#faPencilAlt" >faPencilAlt</a>
+                            </li>
+                            <li>
+                                <a href="#faTrashAlt" >faTrashAlt</a>
+                            </li>
+                            <li>
+                                <a href="#indexIP" >indexIP</a>
+                            </li>
+                            <li>
+                                <a href="#indexLocation" >indexLocation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#map" >map</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initMap" >initMap</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openDeleteModal" >openDeleteModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#counter" >counter</a>
+                            </li>
+                            <li>
+                                <a href="#isAdmin" >isAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#resource" >resource</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onDeleteResource" >onDeleteResource</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(modalService: NgbModal)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="counter"></a>
+                        <b>counter</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:34</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isAdmin"></a>
+                        <b>isAdmin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:32</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resource"></a>
+                        <b>resource</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Resource.html" target="_self" >Resource</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:33</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onDeleteResource"></a>
+                        <b>onDeleteResource</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Resource.html" target="_self" >EventEmitter&lt;Resource&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initMap"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>initMap</b></span>
+                        <a href="#initMap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initMap()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDeleteModal"></a>
+                    <span class="name">
+                        <span ><b>openDeleteModal</b></span>
+                        <a href="#openDeleteModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDeleteModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faPencilAlt"></a>
+                    <span class="name">
+                        <span ><b>faPencilAlt</b></span>
+                        <a href="#faPencilAlt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>faPencilAlt</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faTrashAlt"></a>
+                    <span class="name">
+                        <span ><b>faTrashAlt</b></span>
+                        <a href="#faTrashAlt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>faTrashAlt</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="indexIP"></a>
+                    <span class="name">
+                        <span ><b>indexIP</b></span>
+                        <a href="#indexIP"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="indexLocation"></a>
+                    <span class="name">
+                        <span ><b>indexLocation</b></span>
+                        <a href="#indexLocation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="map"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>map</b></span>
+                        <a href="#map"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/resource-item-block/resource-item-block.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, AfterViewInit, OnInit, Input, Output, EventEmitter } from &#x27;@angular/core&#x27;;
+import { faTrashAlt, faPencilAlt } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { NgbModal } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+
+import { ModalDeleteResourceComponent } from &#x27;../modal-delete-resource/modal-delete-resource.component&#x27;;
+
+import { Resource } from &#x27;src/app/models/resource&#x27;;
+import * as L from &#x27;leaflet&#x27;;
+
+const iconRetinaUrl &#x3D; &#x27;assets/marker-icon-2x.png&#x27;;
+const iconUrl &#x3D; &#x27;assets/marker-icon.png&#x27;;
+const shadowUrl &#x3D; &#x27;assets/marker-shadow.png&#x27;;
+const iconDefault &#x3D; L.icon({
+  iconRetinaUrl,
+  iconUrl,
+  shadowUrl,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  tooltipAnchor: [16, -28],
+  shadowSize: [41, 41]
+});
+L.Marker.prototype.options.icon &#x3D; iconDefault;
+
+@Component({
+  selector: &#x27;app-resource-item-block&#x27;,
+  templateUrl: &#x27;./resource-item-block.component.html&#x27;,
+  styleUrls: [&#x27;./resource-item-block.component.scss&#x27;]
+})
+export class ResourceItemBlockComponent implements OnInit, AfterViewInit {
+
+  @Input() isAdmin!: boolean;
+  @Input() resource!: Resource;
+  @Input() counter!: number;
+  @Output() onDeleteResource: EventEmitter&lt;Resource&gt; &#x3D; new EventEmitter();
+
+  faTrashAlt &#x3D; faTrashAlt;
+  faPencilAlt &#x3D; faPencilAlt;
+  public map: any;
+  indexIP!: number;
+  indexLocation!: number;
+
+  constructor(
+    private modalService: NgbModal,
+  ) { }
+
+  openDeleteModal() {
+    const modalRef &#x3D; this.modalService.open(ModalDeleteResourceComponent);
+    modalRef.componentInstance.resource &#x3D; this.resource;
+    modalRef.result.then((result: Resource) &#x3D;&gt; {
+      this.onDeleteResource.emit(result);
+    });
+  }
+
+  private initMap(): void {
+    let coordinateX: number &#x3D; this.resource.resource_characteristic[this.indexLocation].value.value[0];
+    let coordinateY: number &#x3D; this.resource.resource_characteristic[this.indexLocation].value.value[1];
+
+    this.map &#x3D; L.map(&quot;map-&quot; + this.counter, {
+      center: [coordinateX, coordinateY],
+      zoom: 16
+    });
+
+    const tiles &#x3D; L.tileLayer(&#x27;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#x27;, {
+      maxZoom: 20,
+      minZoom: 0,
+      attribution: &#x27;&amp;copy; &lt;a href&#x3D;&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#x27;
+    });
+
+    tiles.addTo(this.map);
+    const marker &#x3D; L.marker([coordinateX, coordinateY]).addTo(this.map);
+  }
+
+  ngOnInit(): void {
+    this.indexLocation &#x3D; this.resource.resource_characteristic.findIndex(e &#x3D;&gt; e.name &#x3D;&#x3D;&#x3D; &#x27;location&#x27;) || -1;
+    this.indexIP &#x3D; this.resource.resource_characteristic.findIndex(e &#x3D;&gt; e.name &#x3D;&#x3D;&#x3D; &#x27;IP&#x27;) || -1;
+  }
+
+  ngAfterViewInit(): void {
+    if (this.indexLocation !&#x3D; -1) {
+      this.initMap();
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;block&quot; [ngStyle]&#x3D;&quot;{&#x27;background-color&#x27;: resource.operational_state&#x3D;&#x3D;&#x27;disable&#x27; ? &#x27;#cbcbcb&#x27; : &#x27;&#x27; }&quot;&gt;
+    &lt;div class&#x3D;&quot;map-container&quot;&gt;
+        &lt;div class&#x3D;&quot;map-frame&quot;&gt;
+            &lt;div id&#x3D;&quot;map-{{counter}}&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;context&quot;&gt;
+        &lt;span class&#x3D;&quot;name&quot;&gt;Category: &lt;/span&gt;
+        &lt;span class&#x3D;&quot;value&quot;&gt;{{ resource.category ? resource.category : &quot;null&quot; }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;context&quot;&gt;
+        &lt;span class&#x3D;&quot;name&quot;&gt;Description: &lt;/span&gt;
+        &lt;span class&#x3D;&quot;value&quot;&gt;{{ resource.description ? resource.description : &quot;null&quot; }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;context&quot;&gt;
+        &lt;span class&#x3D;&quot;name&quot;&gt;Name: &lt;/span&gt;
+        &lt;span class&#x3D;&quot;value&quot;&gt;{{ resource.name ? resource.name : &quot;null&quot; }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;context&quot;&gt;
+        &lt;span class&#x3D;&quot;name&quot;&gt;IP: &lt;/span&gt;
+        &lt;span class&#x3D;&quot;value&quot;&gt;{{ indexIP !&#x3D; -1 ? resource.resource_characteristic[indexIP].value.value : &quot;null&quot; }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;context&quot;&gt;
+        &lt;span class&#x3D;&quot;name&quot;&gt;Resource Status: &lt;/span&gt;
+        &lt;span class&#x3D;&quot;value&quot; [ngStyle]&#x3D;&quot;{&#x27;color&#x27;: resource.resource_status&#x3D;&#x3D;&#x27;available&#x27; ? &#x27;green&#x27; : &#x27;&#x27; }&quot;&gt;
+            {{ resource.resource_status ? resource.resource_status : &quot;null&quot; }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;context&quot;&gt;
+        &lt;span class&#x3D;&quot;name&quot;&gt;Operational State: &lt;/span&gt;
+        &lt;span class&#x3D;&quot;value&quot; [ngStyle]&#x3D;&quot;{&#x27;color&#x27;: resource.operational_state&#x3D;&#x3D;&#x27;enable&#x27; ? &#x27;green&#x27; : &#x27;red&#x27; }&quot;&gt;
+            {{ resource.operational_state ? resource.operational_state : &quot;null&quot; }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;btn-container row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-7 col-md-6 pr-1&quot;&gt;
+            &lt;button [disabled]&#x3D;&quot;resource.operational_state&#x3D;&#x3D;&#x27;disable&#x27;&quot; [routerLink]&#x3D;&quot;[&#x27;/resource&#x27;, resource.id ]&quot;
+                class&#x3D;&quot;btn&quot;&gt;
+                &lt;fa-icon [icon]&#x3D;&#x27;faPencilAlt&#x27;&gt;&lt;/fa-icon&gt;
+                MORE
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-5 col-md-5 pl-1&quot; *ngIf&#x3D;&quot;isAdmin&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-delete&quot; (click)&#x3D;openDeleteModal()&gt;
+                &lt;fa-icon [icon]&#x3D;&#x27;faTrashAlt&#x27;&gt;&lt;/fa-icon&gt;
+                DELETE
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./resource-item-block.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;/src/variables&#x27;;
+
+.block{
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: $bgColor;
+    -webkit-box-shadow: 5px 3px 29px -8px rgba(0,0,0,0.41); 
+    box-shadow: 5px 3px 20px -8px rgba(0,0,0,0.41);
+    min-height: 335px;
+
+    &amp; .map-container {
+        height: 135px;
+        padding: 2px 0 5px;
+        // margin-bottom: 10px;
+    
+        &amp; .map-frame {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 1px;
+            height: 100%;
+    
+            &amp; [id*&#x3D;&quot;map&quot;] {
+                border-radius: 5px;
+                height: 100%;
+            }
+        }
+    }
+
+    &amp; .context{
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+
+        &amp; .name{
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        &amp; .value{
+            display: inline-block;
+        }
+    }
+    &amp; .btn-container{
+        justify-content: space-evenly;
+        padding-top: 10px;
+        &amp; .btn{
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 100%;
+            height: 36px;
+            margin-bottom: 6px;
+            padding: 0 10px;
+            transition: all 0.25s;
+            background-color: $secondaryBgColor;
+            &amp;:disabled{
+                pointer-events: none;
+            }
+            &amp;.btn-delete{
+                background-color: $reverseBgColor;
+                color: white;
+            }
+            &amp;:hover{
+                background-color: $reverseBgColor;
+                color: white;
+            }
+            &amp; fa-icon{
+                margin-right: 4px;
+                font-size: 15px;
+            }
+        }
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="block" [ngStyle]="{\'background-color\': resource.operational_state==\'disable\' ? \'#cbcbcb\' : \'\' }">    <div class="map-container">        <div class="map-frame">            <div id="map-{{counter}}">            </div>        </div>    </div>    <div class="context">        <span class="name">Category: </span>        <span class="value">{{ resource.category ? resource.category : "null" }}</span>    </div>    <div class="context">        <span class="name">Description: </span>        <span class="value">{{ resource.description ? resource.description : "null" }}</span>    </div>    <div class="context">        <span class="name">Name: </span>        <span class="value">{{ resource.name ? resource.name : "null" }}</span>    </div>    <div class="context">        <span class="name">IP: </span>        <span class="value">{{ indexIP != -1 ? resource.resource_characteristic[indexIP].value.value : "null" }}</span>    </div>    <div class="context">        <span class="name">Resource Status: </span>        <span class="value" [ngStyle]="{\'color\': resource.resource_status==\'available\' ? \'green\' : \'\' }">            {{ resource.resource_status ? resource.resource_status : "null" }}</span>    </div>    <div class="context">        <span class="name">Operational State: </span>        <span class="value" [ngStyle]="{\'color\': resource.operational_state==\'enable\' ? \'green\' : \'red\' }">            {{ resource.operational_state ? resource.operational_state : "null" }}</span>    </div>    <div class="btn-container row">        <div class="col-7 col-md-6 pr-1">            <button [disabled]="resource.operational_state==\'disable\'" [routerLink]="[\'/resource\', resource.id ]"                class="btn">                <fa-icon [icon]=\'faPencilAlt\'></fa-icon>                MORE            </button>        </div>        <div class="col-5 col-md-5 pl-1" *ngIf="isAdmin">            <button class="btn btn-delete" (click)=openDeleteModal()>                <fa-icon [icon]=\'faTrashAlt\'></fa-icon>                DELETE            </button>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesComponent', 'selector': 'app-modal-single-resources'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ResourceItemBlockComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ResourceItemBlockComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

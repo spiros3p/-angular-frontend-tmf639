@@ -9,6 +9,13 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {
 
+    /**
+     * HTTP interceptor that sets Angular to include cookies with each outgoing request.   
+     * By defualt Angular does not allow that due to CORS and security settings
+     * @param req 
+     * @param next 
+     * @returns 
+     */
     intercept(req: HttpRequest<any>, next: HttpHandler):
         Observable<HttpEvent<any>> {
 

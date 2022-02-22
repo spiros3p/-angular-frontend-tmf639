@@ -28,7 +28,7 @@ export class AuthGuardService {
             },
             error => {
               localStorage.clear();
-              this.uiService.toggleAuth();
+              this.uiService.checkAuth();
               this.router.navigate(['/login']);
               x.next(false);
             }

@@ -2,11 +2,18 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+/**
+ * Environment Variables for Production build.
+ * * **apiUrl**: is the target URL for the restAPI that serves the Resources (based on the TMF369 model)
+ * * **authUrl**: is the target URL for the restAPI that is being used for authentication for protecting the routes
+ * * **defaultListView**: setting it to `true` will load the resources on the homepage with the List View by default
+ */
+
 export const environment = {
   production: true,
   apiUrl: "http://localhost:5000",
   authUrl: "http://localhost:3000",
-  defaultListView: false // Default /resource display style in Home Page
+  defaultListView: false
 };
 
 /*
