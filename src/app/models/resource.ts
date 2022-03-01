@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 // import { AttachmentRefOrValue } from './attachmentRefOrValue';
+import { Any } from './any';
 import { Characteristic } from './characteristic';
 // import { Note } from './note';
 // import { RelatedParty } from './relatedParty';
@@ -58,6 +59,10 @@ export interface Resource {
      * A date time( DateTime). The date from which the resource is operating
      */
     // startOperatingDate?: Date;
+    /**
+     * Activation feature
+     */
+     activation_feature?: Array<any>;
     /**
      * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
      */

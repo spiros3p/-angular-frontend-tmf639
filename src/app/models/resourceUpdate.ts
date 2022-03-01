@@ -47,6 +47,10 @@ export interface ResourceUpdate {
      */
      resource_version?: string;
     /**
+     * Atcivation feature
+     */
+    activation_feature?: Array<any>;
+    /**
      * A date time( DateTime). The date from which the resource is operating
      */
     // startOperatingDate?: Date;

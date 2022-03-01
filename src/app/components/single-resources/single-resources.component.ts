@@ -59,7 +59,6 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
   noActionParametersSet!: boolean;
   parametersChanged: boolean = false;
 
-
   constructor(
     private resourceService: ResourceService,
     private _Activatedroute: ActivatedRoute,

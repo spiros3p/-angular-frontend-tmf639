@@ -25,7 +25,6 @@
     margin-bottom: 10px;
     padding: 0 18px 10px;
     font-size: 11px;
-    // color: rgb(0, 255, 242);
     border-bottom: 1px solid rgba(88, 88, 88, 0.7);
 
     & .generic-list-head {
@@ -34,7 +33,7 @@
         font-family: $titleFont;
         color: $titleColor;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
         padding-left: 6px;
         padding-right: 6px;
       }
@@ -44,119 +43,4 @@
       }
     }
   }
-
-
-
-
-  // & .generic-list-item-wrapper {
-  //   min-height: 50px;
-  //   padding: 5px 18px;
-  //   border: 1px solid $bgColor;
-  //   background-color: $secondaryBgColor;
-  //   margin-bottom: 7px;
-
-  //   &:nth-child(even) {
-  //     background-color: $bgColor;
-  //     border: none;
-  //   }
-
-  //   //this is.row
-  //   & .generic-list-item {
-  //     height: 100%;
-  //     align-items: center;
-  //     min-height: 40px;
-
-  //     & > div{
-  //       font-weight: 500;
-  //       color: $textColor;
-  //       font-weight: 400;
-  //       font-size: 14px;
-  //       word-break: break-all;
-  //       padding-left: 6px;
-  //       padding-right: 6px;
-
-  //       &[data-name='location']{
-  //         position: relative;
-  //         cursor: pointer;
-
-  //         &:hover{
-  //           & .tooltip-map{
-  //             opacity: 1;
-  //             transition: all 0.3s;
-  //             pointer-events: initial;
-  //           }
-  //         }
-
-  //         & .tooltip-map{
-  //           pointer-events: none;
-  //           opacity: 0;
-  //           position: absolute;
-  //           left: calc(100%);
-  //           top: -15px;
-  //           width: 200px;
-  //           height: 200px;
-  //           background-color: $bgColor;
-  //           z-index: 100;
-  //           transition: all 0.3s;
-  //           -webkit-box-shadow: 5px 3px 29px -8px rgba(0,0,0,0.41); 
-  //           box-shadow: 5px 3px 20px -8px rgba(0,0,0,0.41);
-  //           border: 1px solid black;
-  //           border-radius: 5px;
-  //         }
-  //       }
-        
-  //       &[data-name='actions']{
-  //         display: flex;
-  //         justify-content: space-evenly;
-
-  //         & fa-icon{
-  //           font-size: 16px;
-  //           cursor: pointer;
-  //           font-size: 16px;
-  //           cursor: pointer;
-  //           width: 33px;
-  //           height: 33px;
-  //           display: flex;
-  //           justify-content: center;
-  //           align-items: center;
-  //           border-radius: 5px;
-  //           border: 1px solid black;
-
-  //           &:hover{
-  //             color: white;
-  //             background-color: $reverseBgColor;
-  //           }
-
-  //           &.delete{
-  //             color: white;
-  //             background-color: $reverseBgColor;
-  //           }
-  //         }
-  //       }
-  //     }
-
-  //     & a:hover {
-  //       text-decoration: underline;
-  //     }
-
-  //     & i {
-  //       font-size: 14px;
-  //     }
-
-  //     & .centered {
-  //       text-align: center;
-  //     }
-
-  //     & .btn-col {
-  //       height: 100%;
-  //     }
-  //   }
-
-  //   // &:hover {
-  //   //   background-color: #3761ee38;
-  //   // }
-  // }
-
-
-
 }

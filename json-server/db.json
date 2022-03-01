@@ -9,6 +9,7 @@
       "resource_version": "MAr2021",
       "administrative_state": "locked",
       "operational_state": "enable",
+      "activation_feature":"null",
       "resource_characteristic": [
         {
           "id": "5741e23c-479a-11ec-85e9-0242ac150004",
@@ -64,6 +65,7 @@
       "resource_version": "MAr2021",
       "administrative_state": "unlocked",
       "operational_state": "enable",
+      "activation_feature":"null",
       "resource_characteristic": [
         {
           "id": "string",
@@ -138,6 +140,7 @@
       "resource_version": "MAr2021",
       "administrative_state": "locked",
       "operational_state": "disable",
+      "activation_feature":"null",
       "resource_characteristic": [
         {
           "id": "string",
@@ -205,6 +208,7 @@
       "resource_version": "MAr2021",
       "administrative_state": "shutdown",
       "operational_state": "enable",
+      "activation_feature":"null",
       "resource_characteristic": [
         {
           "id": "string",
@@ -271,6 +275,7 @@
       "resource_version": "MAr2021",
       "administrative_state": "unlocked",
       "operational_state": "disable",
+      "activation_feature":"null",
       "resource_characteristic": [
         {
           "id": "string",
@@ -343,6 +348,7 @@
       "resource_version": "MAr2021",
       "administrative_state": "shutdown",
       "operational_state": "disable",
+      "activation_feature":"null",
       "resource_characteristic": [
         {
           "id": "string",

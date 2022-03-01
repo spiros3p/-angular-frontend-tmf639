@@ -26,12 +26,12 @@
         <div class="col regular-weight" data-name="ip">
             {{ indexIP != -1 ? resource.resource_characteristic[indexIP].value.value : "null" }}
         </div>
-        <div class="col" data-name="resource status"
-            [ngStyle]="{'color': resource.resource_status=='available' ? 'green' : '' }">
+        <div class="col text-center" data-name="resource-status"
+            [ngStyle]="{'color': resource.resource_status=='available' ? '#00d300' : '' }">
             {{ resource.resource_status ? resource.resource_status : "null" }}
         </div>
-        <div class="col" data-name="usage status"
-            [ngStyle]="{'color': resource.operational_state=='enable' ? 'green' : 'red' }">
+        <div class="col text-center" data-name="operational-state"
+            [ngStyle]="{'color': resource.operational_state=='enable' ? '#00d300' : 'red' }">
             {{ resource.operational_state ? resource.operational_state : "null" }}
         </div>
         <div class="col-1 justify-content-end" data-name="actions">

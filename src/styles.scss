@@ -20,6 +20,15 @@ body{
         }
     }
 
+    & button{
+        &:hover{
+            outline-color: #7b7b7b;
+            outline-width: medium;
+            outline-style: solid;
+            transition: all 0.24s;
+        }
+    }
+
     & .modal-dialog{
         max-width: 780px !important;
     }
