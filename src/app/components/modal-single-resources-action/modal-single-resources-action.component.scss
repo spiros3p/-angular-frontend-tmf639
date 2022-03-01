@@ -1,0 +1,33 @@
+.modal-header{
+    & .modal-title{
+        & b.action{
+            // color: #2f83ca;
+            color: black;
+            border: 2px dashed rgb(255, 230, 0);
+            padding: 1px 5px;
+            background-color: #f1f1f1;
+            border-radius: 6px;
+        }
+    }
+}
+
+.modal-body{
+    & label{
+        margin-bottom: 3px;
+        font-weight: bold;
+    }
+    & input{
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 8px;
+    }
+    & .parameter{
+        padding: 0 10px;
+        & label{
+            font-size: 14px;
+        }
+        & input{
+            text-align: center;
+        }
+    }
+}

@@ -30,11 +30,11 @@ export class ModalSingleResourcesParametersComponent implements OnInit {
   }
 
   onChange($event: any, item: any) {
-    this.tempUpdate.resource_characteristic[this.indexActionParameters].value.value[item.key] = $event;
+    this.tempUpdate.resource_characteristic![this.indexActionParameters].value.value[item.key] = $event;
   }
 
   passBack() {
-    this.resourceUpdate.resource_characteristic[this.indexActionParameters] = this.tempUpdate.resource_characteristic[this.indexActionParameters];
+    this.resourceUpdate.resource_characteristic![this.indexActionParameters] = this.tempUpdate.resource_characteristic![this.indexActionParameters];
     this.activeModal.close(this.resourceUpdate);
   }
 

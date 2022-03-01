@@ -45,7 +45,7 @@ export interface ResourceUpdate {
     /**
      * A field that identifies the specific version of an instance of a resource.
      */
-     resource_version?: string;
+    resource_version?: string;
     /**
      * Atcivation feature
      */
@@ -68,7 +68,7 @@ export interface ResourceUpdate {
     // operationalState?: ResourceOperationalStateType;
     // place?: RelatedPlaceRefOrValue;
     // relatedParty?: Array<RelatedParty>;
-    resource_characteristic: Array<Characteristic>;   // ΜΑΥΒΕ ? -> any
+    resource_characteristic?: Array<Characteristic>;   // ΜΑΥΒΕ ? -> any
     // resourceRelationship?: Array<ResourceRelationship>;
     // resourceSpecification?: ResourceSpecificationRef;
     /**

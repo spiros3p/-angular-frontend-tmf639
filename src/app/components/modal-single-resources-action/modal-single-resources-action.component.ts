@@ -5,11 +5,11 @@ import { Resource } from 'src/app/models/resource';
 import { ResourceUpdate } from 'src/app/models/resourceUpdate';
 
 @Component({
-  selector: 'app-modal-single-resources',
-  templateUrl: './modal-single-resources.component.html',
-  styleUrls: ['./modal-single-resources.component.scss']
+  selector: 'app-modal-single-resources-action',
+  templateUrl: './modal-single-resources-action.component.html',
+  styleUrls: ['./modal-single-resources-action.component.scss']
 })
-export class ModalSingleResourcesComponent implements OnInit {
+export class ModalSingleResourcesActionComponent implements OnInit {
 
   @Input() public resource!: Resource;
   @Input() public action!: string;
@@ -22,12 +22,13 @@ export class ModalSingleResourcesComponent implements OnInit {
   indexAction: number = -1;
 
   passBack() {
-    this.resourceUpdate.resource_characteristic[this.indexActionParameters] = this.tempUpdate.resource_characteristic[this.indexActionParameters];
+    this.resourceUpdate.resource_characteristic![this.indexActionParameters] = this.tempUpdate.resource_characteristic![this.indexActionParameters];
+    this.resourceUpdate.resource_characteristic![this.indexAction].value.value = this.action;
     this.activeModal.close(this.resourceUpdate);
   }
 
   onChange($event: any, item: any) {
-    this.tempUpdate.resource_characteristic[this.indexActionParameters].value.value[item.key] = $event;
+    this.tempUpdate.resource_characteristic![this.indexActionParameters].value.value[item.key] = $event;
   }
 
   constructor(public activeModal: NgbActiveModal) { }
@@ -39,12 +40,12 @@ export class ModalSingleResourcesComponent implements OnInit {
     this.tempUpdate = {
       resource_characteristic: JSON.parse(JSON.stringify(this.resource.resource_characteristic))
     }
-    this.indexActionParameters = this.resource.resource_characteristic.findIndex(e => e.name === 'action_parameters')
-    this.indexAction = this.resource.resource_characteristic.findIndex(e => e.name === 'action');
+    this.indexActionParameters = this.resource.resource_characteristic!.findIndex(e => e.name === 'action_parameters')
+    this.indexAction = this.resource.resource_characteristic!.findIndex(e => e.name === 'action');
     if (this.indexAction == -1) {
-      this.resourceUpdate.resource_characteristic.push(
+      this.resourceUpdate.resource_characteristic!.push(
         {
-          "id": this.resource.resource_characteristic[0].id,
+          "id": this.resource.resource_characteristic![0].id,
           "name": "action",
           "value_type": "string",
           "value": {
@@ -52,7 +53,7 @@ export class ModalSingleResourcesComponent implements OnInit {
           }
         }
       )
-      this.indexAction = this.resourceUpdate.resource_characteristic.length - 1;
+      this.indexAction = this.resourceUpdate.resource_characteristic!.length - 1;
     };
   }
 

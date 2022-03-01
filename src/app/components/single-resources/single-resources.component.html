@@ -61,7 +61,7 @@
                 <div class="context">
                     <span class="name">IP: </span>
                     <span class="value">{{ indexIP != -1 ?
-                        resource.resource_characteristic[indexIP].value.value : "null" }}</span>
+                        resource.resource_characteristic![indexIP!].value.value : "null" }}</span>
                 </div>
                 <div class="context">
                     <span class="name">Resource Status: </span>
@@ -84,8 +84,8 @@
 
             <div class="actions-container row"
                 *ngIf="resource.resource_status==='available' && indexSupportedActions != -1">
-                <button *ngFor="let action of resource.resource_characteristic[indexSupportedActions].value.value;"
-                    class="btn mb-2 col-5 col-sm-3 col-lg-2 action" (click)="openPatchModal(action)" [ngStyle]="{'background': 
+                <button *ngFor="let action of resource.resource_characteristic![indexSupportedActions!].value.value;"
+                    class="btn mb-2 col-5 col-sm-3 col-lg-2 action" (click)="openActionModal(action)" [ngStyle]="{'background': 
                                     action=='start' ? 'green':
                                     action=='restart'? 'orange':
                                     action=='stop'? 'red':
@@ -117,7 +117,7 @@
 
                 <div *ngIf='!noActionParametersSet' class="row justify-content-start">
                     <div class="col-6 col-sm-4 col-lg-3 parameter"
-                        *ngFor="let item of resource.resource_characteristic[indexActionParameters].value.value | keyvalue">
+                        *ngFor="let item of resource.resource_characteristic![indexActionParameters!].value.value | keyvalue">
                         <div class="name">{{item.key}}</div>
                         <div class="value">{{item.value}}</div>
                     </div>

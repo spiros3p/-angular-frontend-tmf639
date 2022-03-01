@@ -62,7 +62,7 @@ export interface Resource {
     /**
      * Activation feature
      */
-     activation_feature?: Array<any>;
+    activation_feature?: Array<any>;
     /**
      * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
      */
@@ -75,7 +75,7 @@ export interface Resource {
     operational_state?: ResourceOperationalStateType;
     // place?: RelatedPlaceRefOrValue;
     // relatedParty?: Array<RelatedParty>;
-    resource_characteristic: Array<Characteristic>;
+    resource_characteristic?: Array<Characteristic>;
     // resourceRelationship?: Array<ResourceRelationship>;
     // resourceSpecification?: ResourceSpecificationRef;
     /**

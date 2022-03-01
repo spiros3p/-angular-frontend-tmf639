@@ -10,7 +10,7 @@ import { AlertifyService } from 'src/app/services/alertify.service';
 
 import { ModalSingleResourcesParametersComponent } from '../modal-single-resources-parameters/modal-single-resources-parameters.component';
 import { ModalSingleResourcesValuesComponent } from '../modal-single-resources-values/modal-single-resources-values.component';
-import { ModalSingleResourcesComponent } from '../modal-single-resources/modal-single-resources.component';
+import { ModalSingleResourcesActionComponent } from '../modal-single-resources-action/modal-single-resources-action.component';
 import { ModalDeleteResourceComponent } from '../modal-delete-resource/modal-delete-resource.component';
 
 import { Resource } from 'src/app/models/resource';
@@ -41,6 +41,12 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
 
   resource!: Resource;
   resourceCharacteristicUpdate!: Pick<ResourceUpdate, "resource_characteristic">;
+  activationFeaturePatch: Pick<ResourceUpdate, "activation_feature"> = {
+    "activation_feature" : [{
+      "name":"gNodeB_service",
+      "feature_characteristic":[]
+    }]
+  };;
 
   private map: any;
   subscriptionToIsAdmin!: Subscription;
@@ -51,13 +57,15 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
   faLongArrowAltLeft = faLongArrowAltLeft;
   faTrashAlt = faTrashAlt;
 
-  indexActionParameters!: number;
-  indexLocation!: number;
-  indexIP!: number;
-  indexSupportedActions!: number;
+  indexAction?: number;
+  indexActionParameters?: number;
+  indexLocation?: number;
+  indexIP?: number;
+  indexSupportedActions?: number;
 
   noActionParametersSet!: boolean;
   parametersChanged: boolean = false;
+
 
   constructor(
     private resourceService: ResourceService,
@@ -86,10 +94,10 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
             this.alertifyService.error("ERROR:<br> This Resource is not operational")
           }
           this.resource = resource;
-          this.indexLocation = this.resource.resource_characteristic.findIndex(e => e.name === 'location');
-          this.indexIP = this.resource.resource_characteristic.findIndex(e => e.name === 'IP');
-          this.indexSupportedActions = this.resource.resource_characteristic.findIndex(e => e.name === 'supported_actions');
-          this.indexActionParameters = this.resource.resource_characteristic.findIndex(e => e.name === 'action_parameters');
+          this.indexLocation = this.resource.resource_characteristic?.findIndex(e => e.name === 'location') || -1;
+          this.indexIP = this.resource.resource_characteristic?.findIndex(e => e.name === 'IP') || -1;
+          this.indexSupportedActions = this.resource.resource_characteristic?.findIndex(e => e.name === 'supported_actions') || -1;
+          this.indexActionParameters = this.resource.resource_characteristic?.findIndex(e => e.name === 'action_parameters') || -1;
           if (this.indexActionParameters == -1) { this.noActionParametersSet = true };
         }
       )
@@ -108,7 +116,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
     this.resourceService
       .retrieveResource(this._Activatedroute.snapshot.paramMap.get("id"))
       .subscribe(
-        (resource) => this.resource.resource_characteristic[this.indexActionParameters] = resource.resource_characteristic[this.indexActionParameters])
+        (resource) => this.resource.resource_characteristic![this.indexActionParameters!] = resource.resource_characteristic![this.indexActionParameters!])
   }
 
   openModifyModal() {
@@ -135,21 +143,36 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
   }
 
   openParametersModal() {
-    const modalRef = this.modalService.open(ModalSingleResourcesParametersComponent);
-    modalRef.componentInstance.resource = this.resource;
-    modalRef.componentInstance.indexActionParameters = this.indexActionParameters;
-    modalRef.result.then((result: Pick<ResourceUpdate, "resource_characteristic">) => {
-      if (JSON.stringify(this.resource.resource_characteristic[this.indexActionParameters].value.value) != JSON.stringify(result.resource_characteristic[this.indexActionParameters].value.value)) {
-        this.parametersChanged = true;
-      }
-      this.resourceCharacteristicUpdate = result;
-      this.resource.resource_characteristic = result.resource_characteristic;
-    });
+    try{
+      const modalRef = this.modalService.open(ModalSingleResourcesParametersComponent);
+      modalRef.componentInstance.resource = this.resource;
+      modalRef.componentInstance.indexActionParameters = this.indexActionParameters;
+      modalRef.result.then((result: Pick<ResourceUpdate, "resource_characteristic">) => {
+        if (JSON.stringify(this.resource.resource_characteristic![this.indexActionParameters!].value.value) != JSON.stringify(result.resource_characteristic![this.indexActionParameters!].value.value)) {
+          this.parametersChanged = true;
+        }
+        // console.log(result.resource_characteristic![this.indexActionParameters!].value.value);
+        this.activationFeaturePatch.activation_feature![0].feature_characteristic.push(
+          {
+            "name": "action_parameters",
+            "value":{
+              "value": result.resource_characteristic![this.indexActionParameters!].value.value
+            }
+          }
+        );
+        this.resourceCharacteristicUpdate = result;
+        this.resource.resource_characteristic = result.resource_characteristic;
+      });
+    } catch(err) {
+      console.error(err);
+    }
   }
 
   uploadParameters() {
+    console.log(this.activationFeaturePatch);
+    
     this.resourceService
-      .patchResource(this.resource.id, this.resourceCharacteristicUpdate)
+      .patchResource(this.resource.id, this.activationFeaturePatch)
       .subscribe(
         (val) => {
           this.resource = val;
@@ -164,19 +187,28 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
           console.debug("The PATCH observable is now completed.");
           this.resourceCharacteristicUpdate = <Pick<ResourceUpdate, "resource_characteristic">>{}
           this.parametersChanged = false;
+          this.activationFeaturePatch.activation_feature![0].feature_characteristic = [];
         }
       )
   }
 
-  openPatchModal(action: string) {
-    const modalRef = this.modalService.open(ModalSingleResourcesComponent);
+  openActionModal(action: string) {
+    const modalRef = this.modalService.open(ModalSingleResourcesActionComponent);
     modalRef.componentInstance.parametersChanged = this.parametersChanged;
     modalRef.componentInstance.action = action;
     modalRef.componentInstance.resource = this.resource;
     modalRef.result.then((result: ResourceUpdate) => {
-      console.error(result);
+      this.activationFeaturePatch.activation_feature![0].feature_characteristic.push(
+        {
+          "name": "action",
+          "value":{
+            "value": action
+          }
+        }
+      );
+      
       this.resourceService
-        .patchResource(this.resource.id, result)
+        .patchResource(this.resource.id, this.activationFeaturePatch)
         .subscribe(
           (val) => {
             this.resource = val;
@@ -187,10 +219,11 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
             console.debug("PATCH call in error", response);
           },
           () => {
-            this.alertifyService.success("SUCCESS:<br>ACTION: " + result.resource_characteristic[result.resource_characteristic.findIndex(e => e.name === 'action')].value.value + "<br> Changes Saved on the Server")
+            this.alertifyService.success("SUCCESS:<br>ACTION: " + result.resource_characteristic![result.resource_characteristic!.findIndex(e => e.name === 'action')].value.value + "<br> Changes Saved on the Server")
             console.debug("The PATCH observable is now completed.");
             this.resourceCharacteristicUpdate = <ResourceUpdate>{};
             this.parametersChanged = false;
+            this.activationFeaturePatch.activation_feature![0].feature_characteristic = [];
           }
         )
     });
@@ -219,8 +252,8 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
   }
 
   private initMap(): void {
-    let coordinateX: number = this.resource.resource_characteristic[this.indexLocation].value.value[0];
-    let coordinateY: number = this.resource.resource_characteristic[this.indexLocation].value.value[1];
+    let coordinateX: number = this.resource.resource_characteristic![this.indexLocation!].value.value[0];
+    let coordinateY: number = this.resource.resource_characteristic![this.indexLocation!].value.value[1];
 
     this.map = L.map("map", {
       center: [coordinateX, coordinateY],

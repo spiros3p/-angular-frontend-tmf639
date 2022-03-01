@@ -19,7 +19,7 @@
     </div>
     <div class="context">
         <span class="name">IP: </span>
-        <span class="value">{{ indexIP != -1 ? resource.resource_characteristic[indexIP].value.value : "null" }}</span>
+        <span class="value">{{ indexIP != -1 ? resource.resource_characteristic![indexIP!].value.value : "null" }}</span>
     </div>
     <div class="context">
         <span class="name">Resource Status: </span>

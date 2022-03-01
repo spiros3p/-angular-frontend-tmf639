@@ -24,7 +24,7 @@
             {{ resource.name ? resource.name : "null" }}
         </div>
         <div class="col regular-weight" data-name="ip">
-            {{ indexIP != -1 ? resource.resource_characteristic[indexIP].value.value : "null" }}
+            {{ indexIP != -1 ? resource.resource_characteristic![indexIP!].value.value : "null" }}
         </div>
         <div class="col text-center" data-name="resource-status"
             [ngStyle]="{'color': resource.resource_status=='available' ? '#00d300' : '' }">

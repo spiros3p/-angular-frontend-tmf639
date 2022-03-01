@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalSingleResourcesComponent } from './modal-single-resources.component';
+import { ModalSingleResourcesActionComponent } from './modal-single-resources-action.component';
 
 describe('ModalSingleResourcesComponent', () => {
-  let component: ModalSingleResourcesComponent;
-  let fixture: ComponentFixture<ModalSingleResourcesComponent>;
+  let component: ModalSingleResourcesActionComponent;
+  let fixture: ComponentFixture<ModalSingleResourcesActionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalSingleResourcesComponent ]
+      declarations: [ ModalSingleResourcesActionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalSingleResourcesComponent);
+    fixture = TestBed.createComponent(ModalSingleResourcesActionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

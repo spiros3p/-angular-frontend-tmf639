@@ -56,20 +56,29 @@ export class MapPageComponent implements AfterViewInit {
         let arrayOfMarkers=[];
         let indexLocation: number;
         for (const resource of resources){
-          indexLocation = resource.resource_characteristic.findIndex(e => e.name === 'location');
-          let coordinateX: number = resource.resource_characteristic[indexLocation].value.value[0];
-          let coordinateY: number = resource.resource_characteristic[indexLocation].value.value[1];
-          const marker = L.marker([coordinateX, coordinateY]).on('click', event=>{
-            this.selectedResources = [resource];
-          }).addTo(this.map);
-          marker.bindPopup(`<b>Name: </b>${resource.name}<br><b>Resource Status: </b>${resource.resource_status}<br><b>Operational state: </b>${resource.operational_state}`);
-          arrayOfMarkers.push([coordinateX, coordinateY]);
+          try{
+            indexLocation = resource.resource_characteristic?.findIndex(e => e.name === 'location') || -1;
+            let coordinateX: number = resource.resource_characteristic![indexLocation].value.value[0];
+            let coordinateY: number = resource.resource_characteristic![indexLocation].value.value[1];
+            const marker = L.marker([coordinateX, coordinateY]).on('click', event=>{
+              this.selectedResources = [resource];
+            }).addTo(this.map);
+            marker.bindPopup(`<b>Name: </b>${resource.name}<br><b>Resource Status: </b>${resource.resource_status}<br><b>Operational state: </b>${resource.operational_state}`);
+            arrayOfMarkers.push([coordinateX, coordinateY]);
+          }catch(err){
+            console.error(err);
+            
+          }
         }
         if (arrayOfMarkers.length > 1){
           this.map.fitBounds(arrayOfMarkers, {padding: [25,25]});
         }else{
-          indexLocation = resources[0].resource_characteristic.findIndex(e => e.name === 'location');
-          this.map.setView([resources[0].resource_characteristic[indexLocation].value.value[0], resources[0].resource_characteristic[indexLocation].value.value[1]], 16)
+          try{
+            indexLocation = resources[0].resource_characteristic?.findIndex(e => e.name === 'location') || -1;
+            this.map.setView([resources[0].resource_characteristic![indexLocation].value.value[0], resources[0].resource_characteristic![indexLocation].value.value[1]], 16)
+          }catch(err){
+            console.error(err);
+          }
         }
       });
   }

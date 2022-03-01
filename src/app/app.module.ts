@@ -17,7 +17,7 @@ import { ResourcesViewListComponent } from './components/resources-view-list/res
 import { ResourcesViewBlockComponent } from './components/resources-view-block/resources-view-block.component';
 import { ResourcesFilterComponent } from './components/resources-filter/resources-filter.component';
 import { MapPageComponent } from './components/map-page/map-page.component';
-import { ModalSingleResourcesComponent } from './components/modal-single-resources/modal-single-resources.component';
+import { ModalSingleResourcesActionComponent } from './components/modal-single-resources-action/modal-single-resources-action.component';
 import { ModalDeleteResourceComponent } from './components/modal-delete-resource/modal-delete-resource.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -43,7 +43,7 @@ import { UsersListComponent } from './components/users-list/users-list.component
     ResourcesViewBlockComponent,
     ResourcesFilterComponent,
     MapPageComponent,
-    ModalSingleResourcesComponent,
+    ModalSingleResourcesActionComponent,
     ModalDeleteResourceComponent,
     LoginComponent,
     SignupComponent,
@@ -66,6 +66,6 @@ import { UsersListComponent } from './components/users-list/users-list.component
     { provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ModalSingleResourcesComponent, ModalDeleteResourceComponent]
+  entryComponents: [ModalSingleResourcesActionComponent, ModalSingleResourcesParametersComponent, ModalSingleResourcesValuesComponent, ModalDeleteResourceComponent]
 })
 export class AppModule { }

@@ -61,8 +61,8 @@ export class ResourceItemListComponent implements AfterViewInit, OnInit {
   }
 
   private initMap(): void {
-    let coordinateX: number = this.resource.resource_characteristic[this.indexLocation].value.value[0];
-    let coordinateY: number = this.resource.resource_characteristic[this.indexLocation].value.value[1];
+    let coordinateX: number = this.resource.resource_characteristic![this.indexLocation].value.value[0];
+    let coordinateY: number = this.resource.resource_characteristic![this.indexLocation].value.value[1];
 
     this.map = L.map("map-" + this.counter, {
       center: [coordinateX, coordinateY],
@@ -80,8 +80,8 @@ export class ResourceItemListComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    this.indexLocation = this.resource.resource_characteristic.findIndex(e => e.name === 'location') || -1;
-    this.indexIP = this.resource.resource_characteristic.findIndex(e => e.name === 'IP') || -1;
+    this.indexLocation = this.resource.resource_characteristic?.findIndex(e => e.name === 'location') || -1;
+    this.indexIP = this.resource.resource_characteristic?.findIndex(e => e.name === 'IP') || -1;
   }
 
   ngAfterViewInit(): void {
