@@ -214,6 +214,8 @@ export class ResourceService {
     public patchResource(id: string, resource: ResourceUpdate, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Resource>>;
     public patchResource(id: string, resource: ResourceUpdate, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
+        console.log(resource);
+        
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling patchResource.');
         }

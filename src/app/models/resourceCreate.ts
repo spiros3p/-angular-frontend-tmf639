@@ -19,6 +19,7 @@ import { ResourceOperationalStateType } from './resourceOperationalStateType';
 import { ResourceRelationship } from './resourceRelationship';
 import { ResourceSpecificationRef } from './resourceSpecificationRef';
 import { ResourceStatusType } from './resourceStatusType';
+import { Feature } from './feature';
 import { ResourceUsageStateType } from './resourceUsageStateType';
 
 
@@ -54,6 +55,10 @@ export interface ResourceCreate {
      * A date time( DateTime). The date from which the resource is operating
      */
     // startOperatingDate?: Date;
+    /**
+    * Configuration features
+    */
+     activation_feature?: Array<Feature>;
     /**
      * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
      */

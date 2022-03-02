@@ -11,6 +11,7 @@
  */
 import { AttachmentRefOrValue } from './attachmentRefOrValue';
 import { Characteristic } from './characteristic';
+import { Feature } from './feature';
 // import { Note } from './note';
 // import { RelatedParty } from './relatedParty';
 // import { RelatedPlaceRefOrValue } from './relatedPlaceRefOrValue';
@@ -47,9 +48,9 @@ export interface ResourceUpdate {
      */
     resource_version?: string;
     /**
-     * Atcivation feature
+     * Configuration features
      */
-    activation_feature?: Array<any>;
+     activation_feature?: Array<Feature>;
     /**
      * A date time( DateTime). The date from which the resource is operating
      */

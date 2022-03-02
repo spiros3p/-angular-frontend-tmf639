@@ -12,6 +12,7 @@
 // import { AttachmentRefOrValue } from './attachmentRefOrValue';
 import { Any } from './any';
 import { Characteristic } from './characteristic';
+import { Feature } from './feature';
 // import { Note } from './note';
 // import { RelatedParty } from './relatedParty';
 // import { RelatedPlaceRefOrValue } from './relatedPlaceRefOrValue';
@@ -60,9 +61,9 @@ export interface Resource {
      */
     // startOperatingDate?: Date;
     /**
-     * Activation feature
+     * Configuration features
      */
-    activation_feature?: Array<any>;
+    activation_feature?: Array<Feature>;
     /**
      * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
      */

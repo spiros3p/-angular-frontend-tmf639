@@ -9,7 +9,19 @@
       "resource_version": "MAr2021",
       "administrative_state": "locked",
       "operational_state": "enable",
-      "activation_feature": "null",
+      "activation_feature": [
+        {
+          "name": "gNodeB_service",
+          "feature_characteristic": [
+            {
+              "name": "action",
+              "value": {
+                "value": "start"
+              }
+            }
+          ]
+        }
+      ],
       "resource_characteristic": [
         {
           "id": "5741e23c-479a-11ec-85e9-0242ac150004",
@@ -73,8 +85,8 @@
               "name": "action_parameters",
               "value": {
                 "value": {
-                  "PRMT_TDD": "1122",
-                  "PRMT_TDD_CONFIG": "21123",
+                  "PRMT_TDD": "11221",
+                  "PRMT_TDD_CONFIG": "2112",
                   "PRMT_N_ANTENNA_DL": "abcd14",
                   "PRMT_BANDWIDTH": "888",
                   "PRMT_PLMN": "abcdk",

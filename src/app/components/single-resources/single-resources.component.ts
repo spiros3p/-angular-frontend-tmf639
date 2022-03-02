@@ -151,7 +151,6 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
         if (JSON.stringify(this.resource.resource_characteristic![this.indexActionParameters!].value.value) != JSON.stringify(result.resource_characteristic![this.indexActionParameters!].value.value)) {
           this.parametersChanged = true;
         }
-        // console.log(result.resource_characteristic![this.indexActionParameters!].value.value);
         this.activationFeaturePatch.activation_feature![0].feature_characteristic.push(
           {
             "name": "action_parameters",
@@ -168,9 +167,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
     }
   }
 
-  uploadParameters() {
-    console.log(this.activationFeaturePatch);
-    
+  uploadParameters() {    
     this.resourceService
       .patchResource(this.resource.id, this.activationFeaturePatch)
       .subscribe(
