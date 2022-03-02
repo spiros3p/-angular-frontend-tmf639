@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { faTrashAlt, 	faPencilAlt, faEye } from '@fortawesome/free-solid-svg-icons';
 
 import { Resource } from 'src/app/models/resource';
@@ -8,7 +8,7 @@ import { Resource } from 'src/app/models/resource';
   templateUrl: './resources-view-list.component.html',
   styleUrls: ['./resources-view-list.component.scss']
 })
-export class ResourcesViewListComponent implements OnInit {
+export class ResourcesViewListComponent implements OnInit, OnChanges {
 
   @Input() isAdmin!: boolean;
   @Input() resources!: Resource[];
@@ -19,9 +19,15 @@ export class ResourcesViewListComponent implements OnInit {
   faPencilAlt = faPencilAlt;
   faEye = faEye;
   
+  page:number = 1;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.page = 1;
   }
 
   toDeleteTask(resource: Resource){

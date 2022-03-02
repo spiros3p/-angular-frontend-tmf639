@@ -1,12 +1,15 @@
 <!-- <p>resources-view-block works!</p> -->
 
 <div class="row mb-5">
-    <div class="col-sm-6 col-lg-4" *ngFor="let resource of resources; let counter = index;">
+    <div class="col-sm-6 col-lg-4" *ngFor="let resource of resources | paginate: { itemsPerPage: 6, currentPage: page }; let counter = index;">
         <app-resource-item-block
             (onDeleteResource)="toDeleteTask($event)"
             [resource]="resource"
             [counter]="counter"
             [isAdmin]="isAdmin">
         </app-resource-item-block>
+    </div>
+    <div class="text-center w-100 mt-3">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
     </div>
 </div>

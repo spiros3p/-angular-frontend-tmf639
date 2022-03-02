@@ -69,6 +69,142 @@
       "usage_state": "active"
     },
     {
+      "id": "1173",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150004",
+      "category": "gNodeB",
+      "description": "Big Black Box 23",
+      "name": "AmarisoftClassic_www1",
+      "resource_version": "MAr2021",
+      "administrative_state": "locked",
+      "operational_state": "enable",
+      "activation_feature": [
+        {
+          "name": "gNodeB_service",
+          "feature_characteristic": [
+            {
+              "name": "action",
+              "value": {
+                "value": "start"
+              }
+            }
+          ]
+        }
+      ],
+      "resource_characteristic": [
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190001"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.2880923964281,
+              21.789761781692505
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        },
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "restart"
+          }
+        }
+      ],
+      "resource_status": "available",
+      "usage_state": "active"
+    },
+    {
+      "id": "1173",
+      "href": "5741d8dc-479a-11ec-85e9-0242ac150004",
+      "category": "gNodeB",
+      "description": "Big Black Box 23",
+      "name": "AmarisoftClassic_www1",
+      "resource_version": "MAr2021",
+      "administrative_state": "locked",
+      "operational_state": "enable",
+      "activation_feature": [
+        {
+          "name": "gNodeB_service",
+          "feature_characteristic": [
+            {
+              "name": "action",
+              "value": {
+                "value": "start"
+              }
+            }
+          ]
+        }
+      ],
+      "resource_characteristic": [
+        {
+          "id": "5741e23c-479a-11ec-85e9-0242ac150004",
+          "name": "IP",
+          "value_type": "string",
+          "value": {
+            "value": "172.16.10.203:190001"
+          }
+        },
+        {
+          "id": "5741e548-479a-11ec-85e9-0242ac150004",
+          "name": "location",
+          "value_type": "array",
+          "value": {
+            "value": [
+              38.2880923964281,
+              21.789761781692505
+            ]
+          }
+        },
+        {
+          "id": "5741e750-479a-11ec-85e9-0242ac150004",
+          "name": "supported_actions",
+          "value_type": "list",
+          "value": {
+            "value": [
+              "start",
+              "restart",
+              "stop",
+              "status",
+              "touch"
+            ]
+          }
+        },
+        {
+          "id": "string",
+          "name": "action",
+          "value_type": "string",
+          "value": {
+            "value": "restart"
+          }
+        }
+      ],
+      "resource_status": "available",
+      "usage_state": "active"
+    },
+    {
       "id": "1174",
       "href": "5741d8dc-479a-11ec-85e9-0242ac140004",
       "category": "gNodeB",
