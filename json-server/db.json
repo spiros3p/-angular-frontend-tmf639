@@ -16,7 +16,7 @@
             {
               "name": "action",
               "value": {
-                "value": "start"
+                "value": "touch"
               }
             }
           ]
@@ -217,23 +217,6 @@
         {
           "name": "gNodeB_service",
           "feature_characteristic": [
-            {
-              "name": "action_parameters",
-              "value": {
-                "value": {
-                  "PRMT_TDD": "11221",
-                  "PRMT_TDD_CONFIG": "2112",
-                  "PRMT_N_ANTENNA_DL": "abcd14",
-                  "PRMT_BANDWIDTH": "888",
-                  "PRMT_PLMN": "abcdk",
-                  "PRMT_TAC": "abcd",
-                  "PRMT_MOD_UL": "a",
-                  "PRMT_MOD_DL": "abcd",
-                  "PRMT_BAND": "888",
-                  "PRMT_NR_ARFCN": "abcd"
-                }
-              }
-            },
             {
               "name": "action",
               "value": {

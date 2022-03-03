@@ -46,7 +46,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
       "name":"gNodeB_service",
       "feature_characteristic":[]
     }]
-  };;
+  };
 
   private map: any;
   subscriptionToIsAdmin!: Subscription;
@@ -218,6 +218,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
           () => {
             this.alertifyService.success("SUCCESS:<br>ACTION: " + result.resource_characteristic![result.resource_characteristic!.findIndex(e => e.name === 'action')].value.value + "<br> Changes Saved on the Server")
             console.debug("The PATCH observable is now completed.");
+            // maybe remove V
             this.resourceCharacteristicUpdate = <ResourceUpdate>{};
             this.parametersChanged = false;
             this.activationFeaturePatch.activation_feature![0].feature_characteristic = [];

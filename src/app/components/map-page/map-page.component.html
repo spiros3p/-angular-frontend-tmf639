@@ -11,6 +11,19 @@
         </div>
     </div>
 
+    <div class="justify-content-center my-3 row" *ngIf="showActions">
+        <div class="actions-title col-auto">ACTIONS : </div>
+        <button *ngFor="let action of selectedResources[0].resource_characteristic![indexSupportedActions!].value.value;"
+                    class="btn mb-2 mx-2 col-auto action" (click)="openActionModal(action)" [ngStyle]="{'background': 
+                                    action=='start' ? 'green':
+                                    action=='restart'? 'orange':
+                                    action=='stop'? 'red':
+                                    action=='status' ? '#00aaff':
+                                    action=='touch' ? 'blue':''}">
+                    {{action}}
+                </button>
+    </div>
+
     <app-resources-view-list
         [resources]="selectedResources"
         [mapPageCurrent]="true">

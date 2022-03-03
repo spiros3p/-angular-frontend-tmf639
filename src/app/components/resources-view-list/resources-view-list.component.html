@@ -21,7 +21,7 @@
             [mapPageCurrent]="mapPageCurrent" [isAdmin]="isAdmin">
         </app-resource-item-list>
 
-        <div class="mt-3">
+        <div class="mt-3" *ngIf="!mapPageCurrent">
             <pagination-controls (pageChange)="page = $event"></pagination-controls>
         </div>
     </div>
