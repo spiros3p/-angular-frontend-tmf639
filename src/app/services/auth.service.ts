@@ -13,7 +13,7 @@ import { signupResponse } from 'src/app/models/signupResponse';
 })
 export class AuthService {
 
-  private basePath = environment.authUrl + '/auth';
+  private basePath = environment.apiUrl + '/auth';
 
   httpOptions: { headers: HttpHeaders } = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }

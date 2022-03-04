@@ -30,7 +30,7 @@ import { environment } from 'src/environments/environment';
 
 export class ResourceService {
 
-    protected basePath = environment.apiUrl;
+    protected basePath = environment.apiUrl + '/proxy';
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 
@@ -213,7 +213,7 @@ export class ResourceService {
     public patchResource(id: string, resource: ResourceUpdate, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Resource>>;
     public patchResource(id: string, resource: ResourceUpdate, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Resource>>;
     public patchResource(id: string, resource: ResourceUpdate, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
-        
+
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling patchResource.');
         }

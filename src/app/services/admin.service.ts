@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AdminService {
 
-  private basePath = environment.authUrl + '/admin';
+  private basePath = environment.apiUrl + '/admin';
 
   httpOptions: { headers: HttpHeaders } = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }

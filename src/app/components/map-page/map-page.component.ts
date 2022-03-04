@@ -49,8 +49,8 @@ export class MapPageComponent implements AfterViewInit {
     private resourceService: ResourceService,
     private modalService: NgbModal,
     private alertifyService: AlertifyService
-    ) { }
-  
+  ) { }
+
   private map: any;
   resources!: Resource[];
   selectedResources!: Resource[];
@@ -59,22 +59,22 @@ export class MapPageComponent implements AfterViewInit {
   showActions!: boolean;
 
   activationFeaturePatch: Pick<ResourceUpdate, "activation_feature"> = {
-    "activation_feature" : [{
-      "name":"gNodeB_service",
-      "feature_characteristic":[]
+    "activation_feature": [{
+      "name": "gNodeB_service",
+      "feature_characteristic": []
     }]
   };
-  
-  layerGroup!:any;
+
+  layerGroup!: any;
 
   private initMap(): void {
     this.map = L.map('map', {
-      center: [ 0, 0 ],
+      center: [0, 0],
       zoom: 1
     });
 
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 20,
+      maxZoom: 18,
       minZoom: 0,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
@@ -82,24 +82,24 @@ export class MapPageComponent implements AfterViewInit {
     this.layerGroup = L.layerGroup().addTo(this.map);
   }
 
-  makeMarkers(): void{
+  makeMarkers(): void {
     this.resourceService
       .listResource()
       .subscribe((resources) => {
-        let arrayOfMarkers=[];
+        let arrayOfMarkers = [];
         let indexLocation: number;
-        for (const resource of resources){
-          try{
+        for (const resource of resources) {
+          try {
             indexLocation = resource.resource_characteristic?.findIndex(e => e.name === 'location') || -1;
             let coordinateX: number = resource.resource_characteristic![indexLocation].value.value[0];
             let coordinateY: number = resource.resource_characteristic![indexLocation].value.value[1];
-            const marker = L.marker([coordinateX, coordinateY], {icon: resource.operational_state=='disable' ? greyIcon : blueIcon})
-              .on('click', event=>{
+            const marker = L.marker([coordinateX, coordinateY], { icon: resource.operational_state == 'disable' ? greyIcon : blueIcon })
+              .on('click', event => {
                 this.selectedResources = [resource];
                 this.indexSupportedActions = resource.resource_characteristic?.findIndex(e => e.name === 'supported_actions') || -1;
-                if (this.indexSupportedActions!==-1 && resource.operational_state!='disable' && resource.resource_status=='available'){
+                if (this.indexSupportedActions !== -1 && resource.operational_state != 'disable' && resource.resource_status == 'available') {
                   this.showActions = true;
-                }else{
+                } else {
                   this.showActions = false;
                 }
 
@@ -107,17 +107,17 @@ export class MapPageComponent implements AfterViewInit {
               .addTo(this.layerGroup);
             marker.bindPopup(`<b>Name: </b>${resource.name}<br><b>Resource Status: </b>${resource.resource_status}<br><b>Operational state: </b>${resource.operational_state}`);
             arrayOfMarkers.push([coordinateX, coordinateY]);
-          }catch(err){
+          } catch (err) {
             console.error(err);
           }
         }
-        if (arrayOfMarkers.length > 1){
-          this.map.fitBounds(arrayOfMarkers, {padding: [25,25]});
-        }else{
-          try{
+        if (arrayOfMarkers.length > 1) {
+          this.map.fitBounds(arrayOfMarkers, { padding: [25, 25] });
+        } else {
+          try {
             indexLocation = resources[0].resource_characteristic?.findIndex(e => e.name === 'location') || -1;
             this.map.setView([resources[0].resource_characteristic![indexLocation].value.value[0], resources[0].resource_characteristic![indexLocation].value.value[1]], 16)
-          }catch(err){
+          } catch (err) {
             console.error(err);
           }
         }
@@ -138,12 +138,12 @@ export class MapPageComponent implements AfterViewInit {
       this.activationFeaturePatch.activation_feature![0].feature_characteristic.push(
         {
           "name": "action",
-          "value":{
+          "value": {
             "value": action
           }
         }
       );
-      
+
       this.resourceService
         .patchResource(this.selectedResources[0].id, this.activationFeaturePatch)
         .subscribe(
