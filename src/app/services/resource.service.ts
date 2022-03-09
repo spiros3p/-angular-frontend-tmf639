@@ -30,7 +30,8 @@ import { environment } from 'src/environments/environment';
 
 export class ResourceService {
 
-    protected basePath = environment.apiUrl + '/proxy';
+    protected basePath = environment.apiUrl ? environment.apiUrl : environment.authUrl + '/proxy';
+    // protected basePath = environment.apiUrl + '/proxy';
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 

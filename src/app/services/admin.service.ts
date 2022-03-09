@@ -10,11 +10,11 @@ import { environment } from 'src/environments/environment';
 })
 export class AdminService {
 
-  private basePath = environment.apiUrl + '/admin';
+  private basePath = environment.authUrl + '/admin';
 
   httpOptions: { headers: HttpHeaders } = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }
-    ),
+    )
   };
 
   constructor(
