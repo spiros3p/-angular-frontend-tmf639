@@ -11,8 +11,8 @@
 
 export const environment = {
   production: true,
-  // apiUrl: "http://192.168.2.x:5000",
   apiUrl: "",
+  // apiUrl: "http://192.168.2.x:5000",
   authUrl: "http://192.168.2.x:3000",
   defaultListView: false
 };

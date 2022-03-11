@@ -29,6 +29,7 @@ import { ModalSingleResourcesParametersComponent } from './components/modal-sing
 import { HttpRequestInterceptor } from 'src/app/interceptors/HttpInterceptor';
 import { AccountComponent } from './components/account/account.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { UsersListComponent } from './components/users-list/users-list.component
     UsersListComponent,
     ModalSingleResourcesValuesComponent,
     ModalSingleResourcesParametersComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
