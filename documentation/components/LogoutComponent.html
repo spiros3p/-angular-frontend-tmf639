@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  PagenotfoundComponent</li>
+  LogoutComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/components/pagenotfound/pagenotfound.component.ts</code>
+    <code>src/app/logout/logout.component.ts</code>
 </p>
 
 
@@ -95,19 +95,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-pagenotfound</code></td>
+                <td class="col-md-9"><code>app-logout</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./pagenotfound.component.scss</code></td>
+                <td class="col-md-9"><code>./logout.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./pagenotfound.component.html</code></td>
+                <td class="col-md-9"><code>./logout.component.html</code></td>
             </tr>
 
 
@@ -155,15 +155,69 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, uiService: <a href="../injectables/UiService.html" target="_self">UiService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/pagenotfound/pagenotfound.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/logout/logout.component.ts:12</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>uiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UiService.html" target="_self" >UiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -197,8 +251,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/components/pagenotfound/pagenotfound.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/logout/logout.component.ts:20</a></div>
                 </td>
             </tr>
 
@@ -221,17 +275,48 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+import { AuthService } from &#x27;src/app/services/auth.service&#x27;;
+import { UiService } from &#x27;src/app/services/ui.service&#x27;;
 
 @Component({
-  selector: &#x27;app-pagenotfound&#x27;,
-  templateUrl: &#x27;./pagenotfound.component.html&#x27;,
-  styleUrls: [&#x27;./pagenotfound.component.scss&#x27;]
+  selector: &#x27;app-logout&#x27;,
+  templateUrl: &#x27;./logout.component.html&#x27;,
+  styleUrls: [&#x27;./logout.component.scss&#x27;]
 })
-export class PagenotfoundComponent implements OnInit {
+export class LogoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private uiService: UiService
+  ) { }
 
   ngOnInit(): void {
+    this.authService
+      .logout()
+      .subscribe(
+        (response) &#x3D;&gt; {
+          console.debug(&quot;SUCCESFUL POST REQUEST: Message:&quot;, response.message);
+          localStorage.removeItem(&quot;currentUser&quot;);
+        },
+        errors &#x3D;&gt; {
+          if (typeof errors.error.errors &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+            console.error(errors.error)
+            if (errors.error.message &#x3D;&#x3D; &#x27;not authenticated&#x27;) {
+              this.router.navigate([&#x27;/login&#x27;]);
+            }
+          } else {
+            console.error(&quot;ERROR: &quot; + errors.error.errors.param + &quot; : &quot; + errors.error.errors.msg);
+          }
+        },
+        () &#x3D;&gt; {
+          console.debug(&quot;Succesfully Logged Out!&quot;);
+          this.router.navigate([&#x27;/login&#x27;]);
+          this.uiService.checkAuth();
+        }
+      )
   }
 
 }
@@ -239,20 +324,13 @@ export class PagenotfoundComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;div class&#x3D;&quot;row justify-content-center &quot;&gt;
-        &lt;div class&#x3D;&quot;mt-5 col-12 text-center&quot;&gt;
-            &lt;h3&gt;&lt;b&gt;404 Error&lt;/b&gt;&lt;/h3&gt;
-            &lt;h5&gt;Page Not Found&lt;/h5&gt;
-            &lt;a routerLink&#x3D;&quot;/&quot; class&#x3D;&quot;btn btn-info mt-5&quot;&gt;Back to Home&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;logout works!&lt;/p&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./pagenotfound.component.scss</code>
+                    <code>./logout.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -282,10 +360,10 @@ export class PagenotfoundComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">    <div class="row justify-content-center ">        <div class="mt-5 col-12 text-center">            <h3><b>404 Error</b></h3>            <h5>Page Not Found</h5>            <a routerLink="/" class="btn btn-info mt-5">Back to Home</a>        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><p>logout works!</p></div>'
     var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'PagenotfoundComponent'};
+    var ACTUAL_COMPONENT = {'name': 'LogoutComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -330,7 +408,7 @@ export class PagenotfoundComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'PagenotfoundComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'LogoutComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -12,7 +12,7 @@ import { CreateResourceComponent } from 'src/app/components/create-resource/crea
 import { SignupComponent } from 'src/app/components/signup/signup.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
 import { PagenotfoundComponent } from 'src/app/components/pagenotfound/pagenotfound.component';
-import { LogoutComponent } from '../logout/logout.component';
+import { LogoutComponent } from 'src/app/components/logout/logout.component';
 
 // AUTH Routes
 // canActivate: [AdminGuard]

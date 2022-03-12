@@ -5,6 +5,9 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { User } from 'src/app/models/User';
 import { environment } from 'src/environments/environment';
 
+/**
+ * This Service is used to send http request to the backend server to manage users
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +24,10 @@ export class AdminService {
     private http: HttpClient,
   ) { }
 
+  /**
+   * 
+   * @returns Observable - Array of U
+   */
   getUsers(): Observable<User[]> {
     const url = `${this.basePath}/users`;
     return this.http.get<User[]>(url, this.httpOptions);

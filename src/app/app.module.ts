@@ -4,8 +4,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule } from 'src/app/router/app-routing.module';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AppRoutingModule } from 'src/app/router/app-routing.module';
+import { HttpRequestInterceptor } from 'src/app/interceptors/HttpInterceptor';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,12 +26,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ModalSingleResourcesValuesComponent } from './components/modal-single-resources-values/modal-single-resources-values.component';
 import { ModalSingleResourcesParametersComponent } from './components/modal-single-resources-parameters/modal-single-resources-parameters.component';
-
-import { HttpRequestInterceptor } from 'src/app/interceptors/HttpInterceptor';
 import { AccountComponent } from './components/account/account.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
-import { LogoutComponent } from './logout/logout.component';
-
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [

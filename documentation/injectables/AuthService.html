@@ -62,6 +62,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This service is used to authenticate and authorize requests and routes with the backend web server</p>
+
+            </p>
 
 
 
@@ -134,7 +141,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/services/auth.service.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/services/auth.service.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -197,17 +204,26 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/services/auth.service.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/services/auth.service.ts:50</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sends POST request to check if the user has Admin rights to access certain routes
+Used in Adminguard for route protecting</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable</p>
 
                     </div>
                 </td>
@@ -234,17 +250,26 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/app/services/auth.service.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/services/auth.service.ts:41</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sends POST request to check if the user is authenticated or if the session is expired
+Used in Authguard for route protecting</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable</p>
 
                     </div>
                 </td>
@@ -271,14 +296,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/app/services/auth.service.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/services/auth.service.ts:66</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sends POST request with the user data to Login</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -326,7 +353,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an observable</p>
+
                     </div>
                 </td>
             </tr>
@@ -352,17 +380,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">src/app/services/auth.service.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/services/auth.service.ts:74</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sends POST request to log out the user from the session with the server</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="../interfaces/signupResponse.html" target="_self" >Observable&lt;signupResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable</p>
 
                     </div>
                 </td>
@@ -389,14 +425,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/services/auth.service.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/services/auth.service.ts:58</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sends POST request with the user data for signup</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -432,7 +470,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an observable</p>
+
                     </div>
                 </td>
             </tr>
@@ -463,10 +502,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/auth.service.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/services/auth.service.ts:22</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Angular environment variable. States the URL of the web server that the SPA connects for auth</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -497,10 +542,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/auth.service.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/services/auth.service.ts:27</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets the &quot;Content-Type&quot; headers for each request in this file</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -520,13 +571,22 @@ import { User } from &#x27;src/app/models/User&#x27;;
 import { loginResponse } from &#x27;src/app/models/loginResponse&#x27;;
 import { signupResponse } from &#x27;src/app/models/signupResponse&#x27;;
 
+/**
+ * This service is used to authenticate and authorize requests and routes with the backend web server
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class AuthService {
 
+  /**
+   * Angular environment variable. States the URL of the web server that the SPA connects for auth
+   */
   private basePath &#x3D; environment.authUrl + &#x27;/auth&#x27;;
 
+  /**
+   * Sets the &quot;Content-Type&quot; headers for each request in this file
+   */
   httpOptions: { headers: HttpHeaders } &#x3D; {
     headers: new HttpHeaders({ &quot;Content-Type&quot;: &quot;application/json&quot; }
     ),
@@ -536,22 +596,44 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
+  /**
+   * Sends POST request to check if the user is authenticated or if the session is expired
+   * Used in Authguard for route protecting
+   * @returns an observable
+   */
   isAuthenticated(): Observable&lt;any&gt; {
     return this.http.post&lt;any&gt;(&#x60;${this.basePath}/isAuthenticated&#x60;, this.httpOptions);
   }
 
+  /**
+   * Sends POST request to check if the user has Admin rights to access certain routes
+   * Used in Adminguard for route protecting
+   * @returns an observable
+   */
   isAdmin(): Observable&lt;any&gt; {
     return this.http.post&lt;any&gt;(&#x60;${this.basePath}/isAdmin&#x60;, this.httpOptions);
   }
 
+  /**
+   * Sends POST request with the user data for signup
+   * @returns an observable
+   */
   signup(user: Omit&lt;User, &quot;id&quot; | &quot;accepted&quot; | &quot;admin&quot;&gt;): Observable&lt;signupResponse&gt; {
     return this.http.post&lt;signupResponse&gt;(&#x60;${this.basePath}/signup&#x60;, user, this.httpOptions);
   }
 
+  /**
+   * Sends POST request with the user data to Login
+   * @returns an observable
+   */
   login(email: string, password: string): Observable&lt;loginResponse&gt; {
     return this.http.post&lt;loginResponse&gt;(&#x60;${this.basePath}/login&#x60;, { email, password }, this.httpOptions);
   }
 
+  /**
+   * Sends POST request to log out the user from the session with the server
+   * @returns an observable
+   */
   logout(): Observable&lt;signupResponse&gt; {
     return this.http.post&lt;signupResponse&gt;(&#x60;${this.basePath}/logout&#x60;, this.httpOptions);
   }

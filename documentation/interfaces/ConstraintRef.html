@@ -47,7 +47,7 @@
   <li>Interfaces</li>
   <li
   >
-  ResourceUpdate</li>
+  ConstraintRef</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/models/resourceUpdate.ts</code>
+            <code>src/app/models/constraintRef.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Resource is an abstract entity that describes the common set of attributes shared by all concrete resources (e.g. TPE, EQUIPMENT) in the inventory. Skipped properties: id,href</p>
+                <p>Constraint reference. The Constraint resource represents a policy/rule applied to an entity or entity spec.</p>
 
             </p>
 
@@ -92,23 +92,22 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#activation_feature" 
+                                        <a href="#baseType" 
 >
-                                            activation_feature
+                                            baseType
                                         </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#category" 
+                                        <a href="#href" 
 >
-                                            category
+                                            href
                                         </a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#description" 
+                                        <a href="#id" 
 >
-                                            description
+                                            id
                                         </a>
                                 </li>
                                 <li>
@@ -120,16 +119,30 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#resource_characteristic" 
+                                        <a href="#referredType" 
 >
-                                            resource_characteristic
+                                            referredType
                                         </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#resource_version" 
+                                        <a href="#schemaLocation" 
 >
-                                            resource_version
+                                            schemaLocation
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#type" 
+>
+                                            type
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#version" 
+>
+                                            version
                                         </a>
                                 </li>
                             </ul>
@@ -147,9 +160,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="activation_feature"></a>
-                                        <span class="name "><b>activation_feature</b>
-                                            <a href="#activation_feature">
+                                        <a name="baseType"></a>
+                                        <span class="name "><b>baseType</b>
+                                            <a href="#baseType">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -157,51 +170,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>activation_feature:         <code><a href="../interfaces/Feature.html" target="_self" >Array&lt;Feature&gt;</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Feature.html" target="_self" >Array&lt;Feature&gt;</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Configuration features</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="category"></a>
-                                        <span class="name "><b>category</b>
-                                            <a href="#category">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>category:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>baseType:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -225,7 +194,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Category of the concrete resource. e.g Gold, Silver for MSISDN concrete resource</p>
+                                    <div class="io-description"><p>When sub-classing, this defines the super-class</p>
 </div>
                                 </td>
                             </tr>
@@ -235,9 +204,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="description"></a>
-                                        <span class="name "><b>description</b>
-                                            <a href="#description">
+                                        <a name="href"></a>
+                                        <span class="name "><b>href</b>
+                                            <a href="#href">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -245,7 +214,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>description:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>href:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -269,7 +238,46 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>free-text description of the resource</p>
+                                    <div class="io-description"><p>Hyperlink reference</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="id"></a>
+                                        <span class="name "><b>id</b>
+                                            <a href="#id">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>id:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>unique identifier</p>
 </div>
                                 </td>
                             </tr>
@@ -313,7 +321,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>A string used to give a name to the resource</p>
+                                    <div class="io-description"><p>Name of the related entity.</p>
 </div>
                                 </td>
                             </tr>
@@ -323,9 +331,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="resource_characteristic"></a>
-                                        <span class="name "><b>resource_characteristic</b>
-                                            <a href="#resource_characteristic">
+                                        <a name="referredType"></a>
+                                        <span class="name "><b>referredType</b>
+                                            <a href="#referredType">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -333,51 +341,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>resource_characteristic:         <code><a href="../interfaces/Characteristic.html" target="_self" >Array&lt;Characteristic&gt;</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Characteristic.html" target="_self" >Array&lt;Characteristic&gt;</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="resource_version"></a>
-                                        <span class="name "><b>resource_version</b>
-                                            <a href="#resource_version">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>resource_version:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>referredType:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -401,7 +365,139 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>A field that identifies the specific version of an instance of a resource.</p>
+                                    <div class="io-description"><p>The actual type of the target instance when needed for disambiguation.</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="schemaLocation"></a>
+                                        <span class="name "><b>schemaLocation</b>
+                                            <a href="#schemaLocation">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>schemaLocation:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>A URI to a JSON-Schema file that defines additional attributes and relationships</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="type"></a>
+                                        <span class="name "><b>type</b>
+                                            <a href="#type">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>type:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>When sub-classing, this defines the sub-class Extensible name</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="version"></a>
+                                        <span class="name "><b>version</b>
+                                            <a href="#version">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>version:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>constraint version</p>
 </div>
                                 </td>
                             </tr>
@@ -412,91 +508,40 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AttachmentRefOrValue } from &#x27;./attachmentRefOrValue&#x27;;
-import { Characteristic } from &#x27;./characteristic&#x27;;
-import { Feature } from &#x27;./feature&#x27;;
-// import { Note } from &#x27;./note&#x27;;
-// import { RelatedParty } from &#x27;./relatedParty&#x27;;
-// import { RelatedPlaceRefOrValue } from &#x27;./relatedPlaceRefOrValue&#x27;;
-// import { ResourceAdministrativeStateType } from &#x27;./resourceAdministrativeStateType&#x27;;
-// import { ResourceOperationalStateType } from &#x27;./resourceOperationalStateType&#x27;;
-// import { ResourceRelationship } from &#x27;./resourceRelationship&#x27;;
-// import { ResourceSpecificationRef } from &#x27;./resourceSpecificationRef&#x27;;
-// import { ResourceStatusType } from &#x27;./resourceStatusType&#x27;;
-// import { ResourceUsageStateType } from &#x27;./resourceUsageStateType&#x27;;
-
-
-/**
- * Resource is an abstract entity that describes the common set of attributes shared by all concrete resources (e.g. TPE, EQUIPMENT) in the inventory. Skipped properties: id,href
- */
-export interface ResourceUpdate { 
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface ConstraintRef { 
     /**
-     * Category of the concrete resource. e.g Gold, Silver for MSISDN concrete resource
+     * unique identifier
      */
-    category?: string;
+    id: string;
     /**
-     * free-text description of the resource
+     * Hyperlink reference
      */
-    description?: string;
+    href?: string;
     /**
-     * A date time( DateTime). The date till the resource is operating
-     */
-    // endOperatingDate?: Date;
-    /**
-     * A string used to give a name to the resource
+     * Name of the related entity.
      */
     name?: string;
     /**
-     * A field that identifies the specific version of an instance of a resource.
+     * constraint version
      */
-    resource_version?: string;
-    /**
-     * Configuration features
-     */
-     activation_feature?: Array&lt;Feature&gt;;
-    /**
-     * A date time( DateTime). The date from which the resource is operating
-     */
-    // startOperatingDate?: Date;
-    /**
-     * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
-     */
-    // administrativeState?: ResourceAdministrativeStateType;
-// ////////////// ////////////// ////////////// ////////////// ////////////
-    // attachment?: Array&lt;AttachmentRefOrValue&gt;;
-// ////////////// ////////////// ////////////// ////////////// ////////////
-    // note?: Array&lt;Note&gt;;
-    /**
-     * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
-     */
-    // operationalState?: ResourceOperationalStateType;
-    // place?: RelatedPlaceRefOrValue;
-    // relatedParty?: Array&lt;RelatedParty&gt;;
-    resource_characteristic?: Array&lt;Characteristic&gt;;   // ΜΑΥΒΕ ? -&gt; any
-    // resourceRelationship?: Array&lt;ResourceRelationship&gt;;
-    // resourceSpecification?: ResourceSpecificationRef;
-    /**
-     * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
-     */
-    // resourceStatus?: ResourceStatusType;
-    /**
-     * Tracks the lifecycle status of the resource, such as planning, installing, opereating, retiring and so on.
-     */
-    // usageState?: ResourceUsageStateType;
+    version?: string;
     /**
      * When sub-classing, this defines the super-class
      */
-    // baseType?: string;
+    baseType?: string;
     /**
      * A URI to a JSON-Schema file that defines additional attributes and relationships
      */
-    // schemaLocation?: string;
+    schemaLocation?: string;
     /**
-     * When sub-classing, this defines the sub-class entity name
+     * When sub-classing, this defines the sub-class Extensible name
      */
-    // type?: string;
-}
-</code></pre>
+    type?: string;
+    /**
+     * The actual type of the target instance when needed for disambiguation.
+     */
+    referredType?: string;
+}</code></pre>
     </div>
 </div>
 
@@ -532,7 +577,7 @@ export interface ResourceUpdate {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'ResourceUpdate.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ConstraintRef.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

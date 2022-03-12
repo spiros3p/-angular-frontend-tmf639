@@ -244,7 +244,7 @@ export class AuthGuardService {
             },
             error &#x3D;&gt; {
               localStorage.clear();
-              this.uiService.toggleAuth();
+              this.uiService.checkAuth();
               this.router.navigate([&#x27;/login&#x27;]);
               x.next(false);
             }

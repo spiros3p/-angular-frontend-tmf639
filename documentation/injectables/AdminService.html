@@ -62,6 +62,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This Service is used to send http request to the backend server to manage users</p>
+
+            </p>
 
 
 
@@ -128,7 +135,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/admin.service.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/services/admin.service.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -191,8 +198,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/services/admin.service.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/services/admin.service.ts:32</a></div>
                 </td>
             </tr>
 
@@ -260,8 +267,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/services/admin.service.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/services/admin.service.ts:27</a></div>
                 </td>
             </tr>
 
@@ -297,8 +304,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/services/admin.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/services/admin.service.ts:37</a></div>
                 </td>
             </tr>
 
@@ -371,7 +378,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/services/admin.service.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/admin.service.ts:16</a></div>
                         </td>
                     </tr>
 
@@ -399,13 +406,13 @@
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
     headers: new HttpHeaders({ &quot;Content-Type&quot;: &quot;application/json&quot; }
-    ),
+    )
   }</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/admin.service.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/admin.service.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -425,6 +432,9 @@ import { HttpClient, HttpHeaders } from &quot;@angular/common/http&quot;;
 import { User } from &#x27;src/app/models/User&#x27;;
 import { environment } from &#x27;src/environments/environment&#x27;;
 
+/**
+ * This Service is used to send http request to the backend server to manage users
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
@@ -434,7 +444,7 @@ export class AdminService {
 
   httpOptions: { headers: HttpHeaders } &#x3D; {
     headers: new HttpHeaders({ &quot;Content-Type&quot;: &quot;application/json&quot; }
-    ),
+    )
   };
 
   constructor(

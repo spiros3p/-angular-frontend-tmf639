@@ -86,32 +86,34 @@ import { CreateResourceComponent } from &#x27;src/app/components/create-resource
 import { SignupComponent } from &#x27;src/app/components/signup/signup.component&#x27;;
 import { LoginComponent } from &#x27;src/app/components/login/login.component&#x27;;
 import { PagenotfoundComponent } from &#x27;src/app/components/pagenotfound/pagenotfound.component&#x27;;
+import { LogoutComponent } from &#x27;../logout/logout.component&#x27;;
 
 // AUTH Routes
 // canActivate: [AdminGuard]
 // canActivate: [AuthGuard]
-// const appRoutes: Routes &#x3D; [
-//   { path: &#x27;&#x27;, component: ResourcesComponent, canActivate: [AuthGuard] },
-//   { path: &#x27;map&#x27;, component: MapPageComponent, canActivate: [AuthGuard] },
-//   { path: &#x27;account&#x27;, component: AccountComponent, canActivate: [AuthGuard] },
-//   { path: &#x27;resource/:id&#x27;, component: SingleResourcesComponent, canActivate: [AuthGuard] },
-//   { path: &#x27;createResource&#x27;, component: CreateResourceComponent, canActivate: [AdminGuard] },
-//   { path: &#x27;signup&#x27;, component: SignupComponent },
-//   { path: &#x27;login&#x27;, component: LoginComponent },
-//   { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, component: PagenotfoundComponent, canActivate: [AuthGuard] },
-// ]
+const appRoutes: Routes &#x3D; [
+  { path: &#x27;&#x27;, component: ResourcesComponent, canActivate: [AuthGuard] },
+  { path: &#x27;map&#x27;, component: MapPageComponent, canActivate: [AuthGuard] },
+  { path: &#x27;account&#x27;, component: AccountComponent, canActivate: [AuthGuard] },
+  { path: &#x27;resource/:id&#x27;, component: SingleResourcesComponent, canActivate: [AuthGuard] },
+  { path: &#x27;createResource&#x27;, component: CreateResourceComponent, canActivate: [AdminGuard] },
+  { path: &#x27;signup&#x27;, component: SignupComponent },
+  { path: &#x27;login&#x27;, component: LoginComponent },
+  { path: &#x27;logout&#x27;, component: LogoutComponent },
+  { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, component: PagenotfoundComponent, canActivate: [AuthGuard] },
+]
 
 // No AUTH Routes
-const appRoutes: Routes &#x3D; [
-    { path: &#x27;&#x27;, component: ResourcesComponent },
-    { path: &#x27;map&#x27;, component: MapPageComponent },
-    { path: &#x27;account&#x27;, component: AccountComponent },
-    { path: &#x27;resource/:id&#x27;, component: SingleResourcesComponent },
-    { path: &#x27;createResource&#x27;, component: CreateResourceComponent },
-    { path: &#x27;signup&#x27;, component: SignupComponent },
-    { path: &#x27;login&#x27;, component: LoginComponent },
-    { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, component: PagenotfoundComponent },
-  ]
+// const appRoutes: Routes &#x3D; [
+//     { path: &#x27;&#x27;, component: ResourcesComponent },
+//     { path: &#x27;map&#x27;, component: MapPageComponent },
+//     { path: &#x27;account&#x27;, component: AccountComponent },
+//     { path: &#x27;resource/:id&#x27;, component: SingleResourcesComponent },
+//     { path: &#x27;createResource&#x27;, component: CreateResourceComponent },
+//     { path: &#x27;signup&#x27;, component: SignupComponent },
+//     { path: &#x27;login&#x27;, component: LoginComponent },
+//     { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, component: PagenotfoundComponent },
+//   ]
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes, { enableTracing: true })],

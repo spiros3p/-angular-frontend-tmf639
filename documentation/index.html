@@ -31,18 +31,110 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h2 id="angular-frontend-tmf639">angular-frontend-tmf639</h2>
-<p>This is an Angular project. This web application server as the front end of a restAPI that serve resources according to the <a href="https://www.tmforum.org/resources/specification/tmf639-resource-inventory-management-api-rest-specification-r17-0-1/">TMF639</a> model.
-This repo contains both the Angular Front End application and a fake restAPI found <a href="https://github.com/typicode/json-server">here</a>.</p>
+<h1 id="radio-management-server-thesis">Radio-Management-Server-thesis</h1>
+<h2 id="summary">Summary</h2>
+<p>This application has been developed for the purpose of a thesis of an undergraduate student studying at the department of Electrical and Computer Engineering of the University of Patras (UoP).<br>Its purpose is to serve a front-end application that communicates, through a protected Reverse-proxy server, with a Web Service that manages gNodeB (<em>5G antennas</em>) using the <a href="https://www.tmforum.org/resources/specification/tmf639-resource-inventory-management-api-rest-specification-r17-0-1/">TMF639</a> API model.<br>For that a reason the present Angular application (<em>/frontend</em>) along with the present Nodejs (<em>/backend</em>) for authorization and reverse-proxy have been developed.<br>The below infographic represents the whole system and the green bordered boxes address the applications developed for the purpose of the thesis.</p>
+<p><img src="https://user-images.githubusercontent.com/16209859/157956565-c61d4424-f23c-4b5c-9d6b-385a156ec430.png" alt="thesis-schematic" class="img-responsive"></p>
+<p>The present repository consists of 2 submodules (<em>repositories</em>)</p>
+<ul>
+<li>an Angular Frontend application found <a href="https://github.com/spiros3p/angular-frontend-tmf639">here</a> </li>
+<li>and a NodeJS - Express backend application found <a href="https://github.com/spiros3p/nodejs-AuthAPI/">here</a></li>
+<li>in order to have complete functionality, we use the <a href="https://github.com/typicode/json-server">JSON-SERVER</a> for a mock REST API server that serves the resources, since developing that backend application was not part of my work.</li>
+</ul>
+<h2 id="initialization">Initialization</h2>
+<ul>
+<li>Download/clone the repository on your local system using the flag --recursive (<em>to download the content of both submodules</em>)<br><code>git clone --recursive https://github.com/spiros3p/Radio-Management-Server-thesis.git</code></li>
+</ul>
 <h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li>Have <strong>Node.js</strong> and <strong>NPM</strong> <a href="https://nodejs.org/en/download/">installed</a> on your system.</li>
 <li>Have <strong>Angular (12.2.7)</strong> <a href="https://angular.io/guide/setup-local">installed</a> on your system: <code>npm install -g @angular/cli@12.2.7</code></li>
 <li>(<em>Optional</em>) Have <strong>Docker</strong> <a href="https://www.docker.com/get-started">installed</a> on your system.</li>
 </ul>
-<h3 id="before-starting-the-application">Before starting the Application</h3>
-<h3 id="starting-the-application">Starting the Application</h3>
-<h4 id="development-mode">Development mode</h4>
+<h3 id="manual-setup">Manual Setup</h3>
+<h4 id="angular-app---frontend">Angular app - Frontend</h4>
+<ol>
+<li>Navigate to <em><strong>./frontend</strong></em> directory</li>
+<li>RUN <code>npm install</code></li>
+<li>Edit file <em><strong>./frontend/src/app/router/app-routing.module.ts</strong></em><br>by commenting out the desired block of code that defines the <code>const appRoutes</code><br><code>canActivate: [AuthGuard]</code> protects the routes using  <em><strong>./backend</strong></em> server of this project.</li>
+<li>(<em>Optional</em>) RUN <code>npm run server</code> on <em><strong>./frontend</strong></em> directory</li>
+</ol>
+<p><strong>Starts</strong> a local <a href="https://github.com/typicode/json-server">JSON-SERVER</a> (fake RestAPI) at port 5000 that serves your <a href="https://www.tmforum.org/resources/specification/tmf639-resource-inventory-management-api-rest-specification-r17-0-1/">TMF639</a> specification based Resources.     </p>
+<ul>
+<li>Edit <em><strong>./frontend/package.json - line 10</strong></em> to change port or uninstall the module.</li>
+<li><em><strong>./frontend/json-server/db.json</strong></em> file contains the dummy Resources that are being served.</li>
+</ul>
+<ol start="5">
+<li>Edit files <ul>
+<li>For <strong>Development</strong> build <em><strong>./frontend/src/environments/environment.ts</strong></em> </li>
+<li>For <strong>Production</strong> build <em><strong>./frontend/src/environments/environment.prod.ts</strong></em>    <ul>
+<li><strong>Define</strong> the following variables according to your own servers and ports that RUN the server for the Resources (<em>here JSON-SERVER port 5000</em>) and the server for the user Authorization/reverse-proxy (<em>here the nodejs server in the ./backend directory at port 3000</em>).</li>
+<li>You can still use direct connection between the Front end and the Web Service serving the Resources by filling the apiURL variable or leaving it empty for the Reverse-Proxy to do the job.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Start the Angular application on the <em><strong>./frontend</strong></em> directory  <ul>
+<li>For <strong>Development</strong> RUN <code>ng serve</code> </li>
+<li>For <strong>Production</strong> RUN <code>ng build</code> (<a href="https://angular.io/cli/build">compiles</a> the angular app) and drop your build into your own production server</li>
+</ul>
+</li>
+<li>Angular app is ready and running at <a href="http://localhost:4200/">http://localhost:4200/</a><ul>
+<li>if you chose to use the <code>canActivate: [AuthGuard]</code> routes, at step  <strong>3.</strong>, you landed at a login page and you have to move to step <strong>8.</strong> to continue setup.<br><img src="https://user-images.githubusercontent.com/16209859/154483016-cf7180bb-2f24-4a16-a5c0-c8dbe3774333.png" alt="image" class="img-responsive"></li>
+<li>if you chose to <strong>NOT</strong> use the <code>canActivate: [AuthGuard]</code> routes you are <strong>DONE</strong><br><img src="https://user-images.githubusercontent.com/16209859/154483481-a650e98a-286d-4982-bebd-b65f1756774d.png" alt="image" class="img-responsive"><h4 id="nodejs-app-authorizationuser-restapi---backend">Nodejs app (authorization/user restAPI) - Backend</h4>
+</li>
+</ul>
+</li>
+<li>Navigate to <em><strong>./backend</strong></em> directory</li>
+<li>RUN <code>npm install</code> (<em>you may need to RUN <code>npm install bcrypt</code> separately in some occasions</em>)</li>
+<li>RENAME <em><strong>./backend/.env-example</strong></em> file to <em><strong>./backend/.env</strong></em></li>
+<li>EDIT the same <em><strong>./backend/.env</strong></em> file     <ul>
+<li>Define your existing <strong>MySQL</strong> database connection settings (<em>if you dont have one see the <strong>docker setup</strong> of the project further below to setup one</em>).</li>
+<li>Define SESSION_SECRET to protect the sessions created by <a href="https://www.passportjs.org/">PassportJS</a> in the present Express NodeJS app.</li>
+<li>Define FRONT_END_IP as the IP and Port where the <strong>Angular app - frontend</strong> is running (<em>this is needed to allow the certain IP to exchange cookies between the nodeJS app and the Angular app</em>)<br><img src="https://user-images.githubusercontent.com/16209859/157508498-66394a24-0f18-4d6e-8700-5a8199f4273f.png" alt="image" class="img-responsive"></li>
+</ul>
+</li>
+<li>Navigate to your MySQL db <em>(own or see docker setup to use one)</em> and copy the table <em><strong>./backend/db/tbl_users.sql</strong></em> inside the <strong>MySQL</strong> Database defined at <code>DB_DATABASE</code> previously.     </li>
+<li>Start the NodeJS application on the <em><strong>./backend</strong></em> directory (<em>Runs at Port 3000</em>) <ul>
+<li>For <strong>Development</strong> RUN <code>npm run watch</code> (<em>to run the app with Nodemon. This will restart the app at every save.</em>) </li>
+<li>For <strong>Production</strong> RUN <code>node app.js</code></li>
+</ul>
+</li>
+<li><strong>Voila!</strong> You can navigate to <a href="http://localhost:4200/">http://localhost:4200/</a> and login with the existing users (<em>admin</em> and <em>test</em> - found in the table file you copied at step 12.) or create a new one</li>
+</ol>
+<h3 id="setup-using-docker-docker-compose">Setup using Docker (docker-compose)</h3>
+<p>Using docker to run the app will start 5 different containers</p>
+<ul>
+<li><strong>Angular app</strong> running at port 4200</li>
+<li><strong>JSON-SERVER</strong> (<em>mock Resources server API</em>) running at port 5000</li>
+<li><strong>NodeJS app</strong> (<em>auth/user/reverse-proxy API</em>) running at port 3000</li>
+<li><strong>MySQL database</strong> running at defualt port 3306</li>
+<li><strong>phpMyAdmin app</strong> running at port 5001</li>
+</ul>
+<p>You can edit files and comment out any application you dont want the docker to run:</p>
+<ul>
+<li>For <strong>Development</strong> build <em><strong>./docker-compose.yml</strong></em> </li>
+<li>For <strong>Production</strong> build <em><strong>./docker-compose.prod.yml</strong></em></li>
+</ul>
+<ol>
+<li>RENAME <em><strong>./.env-example</strong></em> file to <em><strong>./.env</strong></em></li>
+<li>EDIT the same <em><strong>./.env</strong></em> file (like previously at step <strong>11.</strong>)<ul>
+<li>Default DB is using root user - MySQL Docker image is not creating another one.</li>
+<li>Define everything like before (<em>these variables will be used in the mysql docker image to setup the database and also in the nodejs app to connect to the db</em>)</li>
+<li><code>FRONT_END_IP</code> depends on whether you are running it on your local machine or remote server. In the case of a remote server you need to use the external IP of the machine.</li>
+<li><code>PROXY_IP</code> is used in the NodeJS application to target the Web Service that serves the resources. Even at development you may need to use the network&#39;s IP of your machine to target the application correctly.</li>
+</ul>
+</li>
+<li>Same like step <strong>3.</strong> before at manual setup</li>
+<li>Same like step <strong>5.</strong> before at manual setup</li>
+<li>RUN the docker-compose file in the root directory:     <ul>
+<li>For <strong>Development</strong> RUN <code>docker-compose -f docker-compose.yml up --build -d</code></li>
+<li>For <strong>Production</strong> RUN <code>docker-compose -f docker-compose.prod.yml up --build -d</code></li>
+</ul>
+</li>
+<li>Make sure you navigate to <a href="http://localhost:5001/">http://localhost:5001/</a> and copy the table <em><strong>./backend/db/tbl_users.sql</strong></em> inside the running MySQL application defined <code>DB_DATABASE</code></li>
+<li>Voila! The full application is app and running at <a href="http://localhost:4200/">http://localhost:4200/</a></li>
+</ol>
 
 
 

@@ -188,8 +188,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="96"
-                            class="link-to-prism">src/app/services/ui.service.ts:96</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/services/ui.service.ts:101</a></div>
                 </td>
             </tr>
 
@@ -198,7 +198,8 @@
                 <td class="col-md-4">
                     <div class="io-description"><p>This function works along onCheckAdmin function and handles the UI change (toggles) on Header compoenent displaying the Create Resource tab or not.
 It checks the local.storage (which we initiate after a Log In happens and clear after a Log out)
-You can choose to check Authentiaction - admin role straight from the Auth restAPI instead of the localStorage (commented ones)</p>
+You can choose to check Authentiaction - admin role straight from the Auth restAPI instead of the localStorage (commented ones)
+Fire that function when you want its coresponding observable to check for changes</p>
 </div>
 
                     <div class="io-description">
@@ -229,8 +230,8 @@ You can choose to check Authentiaction - admin role straight from the Auth restA
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/app/services/ui.service.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/services/ui.service.ts:68</a></div>
                 </td>
             </tr>
 
@@ -239,7 +240,8 @@ You can choose to check Authentiaction - admin role straight from the Auth restA
                 <td class="col-md-4">
                     <div class="io-description"><p>This function works along onCheckAuth function and handles the UI change (toggles) on Header compoenent displaying the tabs or not.
 It checks the local.storage (which we initiate after a Log In happens and clear after a Log out)
-You can choose to check Authentiaction straight from the Auth restAPI instead of the localStorage (commented ones)</p>
+You can choose to check Authentiaction straight from the Auth restAPI instead of the localStorage (commented ones)
+Fire that function when you want its coresponding observable to check for changes</p>
 </div>
 
                     <div class="io-description">
@@ -270,8 +272,8 @@ You can choose to check Authentiaction straight from the Auth restAPI instead of
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="88"
-                            class="link-to-prism">src/app/services/ui.service.ts:88</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/services/ui.service.ts:92</a></div>
                 </td>
             </tr>
 
@@ -315,15 +317,16 @@ You can choose to check Authentiaction straight from the Auth restAPI instead of
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/app/services/ui.service.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/services/ui.service.ts:59</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>This function works along checkAuth function and handles the UI change (toggles) on Header compoenent displaying the tabs or not.</p>
+                    <div class="io-description"><p>This function works along checkAuth function and handles the UI change (toggles) on Header compoenent displaying the tabs or not.
+Call it in the constructor and subscribe to it.</p>
 </div>
 
                     <div>
@@ -360,15 +363,16 @@ You can choose to check Authentiaction straight from the Auth restAPI instead of
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app/services/ui.service.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/services/ui.service.ts:42</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>This function works along toggleListView function and handles the UI change (toggles) on Viewing the Resources</p>
+                    <div class="io-description"><p>This function works along toggleListView function and handles the UI change (toggles) on Viewing the Resources
+Call it in the constructor and subscribe to it.</p>
 </div>
 
                     <div>
@@ -405,15 +409,16 @@ You can choose to check Authentiaction straight from the Auth restAPI instead of
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/services/ui.service.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/services/ui.service.ts:50</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>This function works along onToggleListView function and handles the UI change (toggles) on Viewing the Resources</p>
+                    <div class="io-description"><p>This function works along onToggleListView function and handles the UI change (toggles) on Viewing the Resources
+Fire that function when you want its coresponding observable to check for changes</p>
 </div>
 
                     <div class="io-description">
@@ -610,13 +615,15 @@ export class UiService {
 
   /**
    * This function works along toggleListView function and handles the UI change (toggles) on Viewing the Resources
+   * Call it in the constructor and subscribe to it.
    * @returns An angular observable that a components subscribes from its constructor
    */
-     onToggleListView(): Observable&lt;any&gt; {
-      return this.subjectToListView.asObservable();
-    }
+  onToggleListView(): Observable&lt;any&gt; {
+    return this.subjectToListView.asObservable();
+  }
   /**
    * This function works along onToggleListView function and handles the UI change (toggles) on Viewing the Resources
+   * Fire that function when you want its coresponding observable to check for changes
    * @param {boolean} currentListView This is a boolean that toggles between the 2 available views for Resources
    */
   toggleListView(currentListView: boolean): void {
@@ -625,6 +632,7 @@ export class UiService {
 
   /**
    * This function works along checkAuth function and handles the UI change (toggles) on Header compoenent displaying the tabs or not.
+   * Call it in the constructor and subscribe to it.
    * @returns An angular observable that a components subscribes from its constructor
    */
   onCheckAuth(): Observable&lt;any&gt; {
@@ -634,6 +642,7 @@ export class UiService {
    * This function works along onCheckAuth function and handles the UI change (toggles) on Header compoenent displaying the tabs or not.
    * It checks the local.storage (which we initiate after a Log In happens and clear after a Log out)
    * You can choose to check Authentiaction straight from the Auth restAPI instead of the localStorage (commented ones)
+   * Fire that function when you want its coresponding observable to check for changes
    */
   checkAuth(): void {
     // localStorage METHOD
@@ -666,6 +675,7 @@ export class UiService {
    * This function works along onCheckAdmin function and handles the UI change (toggles) on Header compoenent displaying the Create Resource tab or not.
    * It checks the local.storage (which we initiate after a Log In happens and clear after a Log out)
    * You can choose to check Authentiaction - admin role straight from the Auth restAPI instead of the localStorage (commented ones)
+   * Fire that function when you want its coresponding observable to check for changes
    */
   checkAdmin(): void {
     // localStorage METHOD

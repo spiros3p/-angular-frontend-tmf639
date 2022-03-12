@@ -59,13 +59,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link" >AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-bc04fe813efe28520045617b8fa4ca1051561b0942ffb2aa54e0d251cbdf611c7a1eb17ef74853d1e7cb41157f3e2e6904e2ba461ae0711d53d6dd42aaa94676"' : 'data-target="#xs-components-links-module-AppModule-bc04fe813efe28520045617b8fa4ca1051561b0942ffb2aa54e0d251cbdf611c7a1eb17ef74853d1e7cb41157f3e2e6904e2ba461ae0711d53d6dd42aaa94676"' }>
+                                            'data-target="#components-links-module-AppModule-56901468d34657ed2c3240dc7308918aaa3d4b7f2d3813ac46906c6803608989f5177db71b758f7b8c51ca8f42740fb4467d10c97cc09cdb2811b54590323f9d"' : 'data-target="#xs-components-links-module-AppModule-56901468d34657ed2c3240dc7308918aaa3d4b7f2d3813ac46906c6803608989f5177db71b758f7b8c51ca8f42740fb4467d10c97cc09cdb2811b54590323f9d"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-bc04fe813efe28520045617b8fa4ca1051561b0942ffb2aa54e0d251cbdf611c7a1eb17ef74853d1e7cb41157f3e2e6904e2ba461ae0711d53d6dd42aaa94676"' :
-                                            'id="xs-components-links-module-AppModule-bc04fe813efe28520045617b8fa4ca1051561b0942ffb2aa54e0d251cbdf611c7a1eb17ef74853d1e7cb41157f3e2e6904e2ba461ae0711d53d6dd42aaa94676"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-56901468d34657ed2c3240dc7308918aaa3d4b7f2d3813ac46906c6803608989f5177db71b758f7b8c51ca8f42740fb4467d10c97cc09cdb2811b54590323f9d"' :
+                                            'id="xs-components-links-module-AppModule-56901468d34657ed2c3240dc7308918aaa3d4b7f2d3813ac46906c6803608989f5177db71b758f7b8c51ca8f42740fb4467d10c97cc09cdb2811b54590323f9d"' }>
                                             <li class="link">
                                                 <a href="components/AccountComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AccountComponent</a>
                                             </li>
@@ -88,7 +88,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                                 <a href="components/ModalDeleteResourceComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ModalDeleteResourceComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/ModalSingleResourcesComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ModalSingleResourcesComponent</a>
+                                                <a href="components/ModalSingleResourcesActionComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ModalSingleResourcesActionComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/ModalSingleResourcesParametersComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ModalSingleResourcesParametersComponent</a>
@@ -199,10 +199,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/CharacteristicRelationship.html" data-type="entity-link" >CharacteristicRelationship</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/ConstraintRef.html" data-type="entity-link" >ConstraintRef</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EventSubscription.html" data-type="entity-link" >EventSubscription</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/EventSubscriptionInput.html" data-type="entity-link" >EventSubscriptionInput</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Feature.html" data-type="entity-link" >Feature</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/FeatureRelationship.html" data-type="entity-link" >FeatureRelationship</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/loginResponse.html" data-type="entity-link" >loginResponse</a>
