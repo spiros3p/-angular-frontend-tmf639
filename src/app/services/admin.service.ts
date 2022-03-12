@@ -38,9 +38,9 @@ export class AdminService {
     return this.http.delete<User>(url, this.httpOptions);
   }
 
-  toggleUserAccepted(user: User): Observable<User> {
-    const url = `${this.basePath}/users/${user.id}/accepted`;
-    return this.http.patch<User>(url, this.httpOptions);
+  toggleUserAccepted(id: number, data: boolean): Observable<User> {
+    const url = `${this.basePath}/users/${id}`;
+    return this.http.patch<User>(url,  { "accepted": data }, this.httpOptions);
   }
 
 }

@@ -41,7 +41,7 @@ export class AccountComponent implements OnInit {
 
   toToggleUser(user: User) {
     this.adminService
-      .toggleUserAccepted(user)
+      .toggleUserAccepted(user.id, !user.accepted)
       .subscribe(
         (val) => {
           console.log("PATCH call successful value returned in body", val.name);
