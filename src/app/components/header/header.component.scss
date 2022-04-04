@@ -32,6 +32,9 @@ section {
           align-self: flex-end;
 
           & .navbar-nav{
+            @media (max-width:767px){
+              max-width: 365px;
+            }
 
             & > a{
               padding-bottom: 12px;

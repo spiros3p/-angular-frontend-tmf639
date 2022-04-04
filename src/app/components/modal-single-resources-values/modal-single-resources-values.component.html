@@ -21,9 +21,6 @@
             <div class="col-12 col-sm-6">
                 <label for="description">
                     Description
-                    <span *ngIf="empty" style="color: red;">
-                        * Can not be empty!
-                    </span>
                 </label><br>
                 <input type="text" name="description" class="w-100" [(ngModel)]="resourceUpdate.description"
                     id="description">

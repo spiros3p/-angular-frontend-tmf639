@@ -4,6 +4,11 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { UiService } from 'src/app/services/ui.service';
 
+/** 
+ * Component is used for the Logout Action
+ * Contains only the logic of the action
+ * No html is displayed
+ */
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
@@ -17,6 +22,7 @@ export class LogoutComponent implements OnInit {
     private uiService: UiService
   ) { }
 
+  /** On init of the component, calls the logout service to send the request and end the session of the user with the aplication*/
   ngOnInit(): void {
     this.authService
       .logout()

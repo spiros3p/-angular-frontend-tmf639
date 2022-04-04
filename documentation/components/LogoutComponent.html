@@ -64,10 +64,19 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/logout/logout.component.ts</code>
+    <code>src/app/components/logout/logout.component.ts</code>
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component is used for the Logout Action
+Contains only the logic of the action
+No html is displayed</p>
+
+    </p>
 
 
     <p class="comment">
@@ -160,7 +169,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/logout/logout.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/logout/logout.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -251,14 +260,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/logout/logout.component.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/components/logout/logout.component.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>On init of the component, calls the logout service to send the request and end the session of the user with the aplication</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -280,6 +291,11 @@ import { Router } from &#x27;@angular/router&#x27;;
 import { AuthService } from &#x27;src/app/services/auth.service&#x27;;
 import { UiService } from &#x27;src/app/services/ui.service&#x27;;
 
+/** 
+ * Component is used for the Logout Action
+ * Contains only the logic of the action
+ * No html is displayed
+ */
 @Component({
   selector: &#x27;app-logout&#x27;,
   templateUrl: &#x27;./logout.component.html&#x27;,
@@ -293,6 +309,7 @@ export class LogoutComponent implements OnInit {
     private uiService: UiService
   ) { }
 
+  /** On init of the component, calls the logout service to send the request and end the session of the user with the aplication*/
   ngOnInit(): void {
     this.authService
       .logout()
@@ -361,7 +378,7 @@ export class LogoutComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><p>logout works!</p></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LogoutComponent'};
 </script>

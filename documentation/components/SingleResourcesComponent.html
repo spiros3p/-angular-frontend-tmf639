@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This component displays the single Resource page and containes all the logic</p>
+
+    </p>
 
 
     <p class="comment">
@@ -258,7 +265,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:67</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:79</a></div>
                             </td>
                         </tr>
 
@@ -387,14 +394,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="252"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:252</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:295</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Defines the Map method
+Check if there is &#39;location&#39; in the resource_characteristic array happens before triggering the method</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -424,14 +434,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="106"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:106</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:125</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Triggers the map method if the there is a &#39;name:location&#39; property in the array resource_characteristic of the resource object</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -461,8 +473,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="112"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:112</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:131</a></div>
                 </td>
             </tr>
 
@@ -498,14 +510,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="86"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:86</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:104</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>On init 2 things take place.
+a) Sends a request to the UI service to check for admin status.
+b) Sends a request to retrieve the single resource
+if the resource is &#39;operational_status = disable&#39; the router redirects to the homepage</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -535,14 +552,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="192"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:192</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="228"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:228</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method that calls the ModalSingleResourcesActionComponent
+And also sends the patchResource request when it gets the confirmation signal from the modal</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -604,14 +624,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="230"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:230</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="269"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:269</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method that calls the ModalDeleteResourceComponent
+And also sends the deleteResource request when it gets the confirmation signal from the modal</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -641,14 +664,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="122"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:122</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:146</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method that calls the ModalSingleResourcesValuesComponent
+And also sends the patchResource request when it gets the confirmation signal from the modal</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -678,14 +704,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="145"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:145</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:173</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method that calls the ModalSingleResourcesValuesComponent
+It sets both the activationFeaturePatch Property and the resource_characteristic Property on the modal confirmation signal</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -715,14 +744,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="114"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:114</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:134</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method that resets the parameter changes that have not been already sent with a patch request to the server</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -752,14 +783,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="170"
-                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:170</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:202</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method that sends the patchRequest
+It is triggered from the &quot;Save Changes&quot; button in the Parameters section</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -804,10 +838,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:44</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:49</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This property of Resource object is initialized here and is used to in the body of the PATCH requests for the Actions and Action parameters changes</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -829,7 +869,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:56</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:62</a></div>
                         </td>
                     </tr>
 
@@ -854,7 +894,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:57</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:63</a></div>
                         </td>
                     </tr>
 
@@ -879,7 +919,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:58</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:64</a></div>
                         </td>
                     </tr>
 
@@ -904,7 +944,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:55</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:61</a></div>
                         </td>
                     </tr>
 
@@ -931,10 +971,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:60</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:67</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable to hold the index for the object with name:action of the array resource_characteristic in the Resource Object</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -958,10 +1004,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:61</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:69</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable to hold the index for the object with name:action_parameter of the array resource_characteristic in the Resource Object</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -985,10 +1037,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:63</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:73</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable to hold the index for the object with name:ip of the array resource_characteristic in the Resource Object</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1012,10 +1070,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:62</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:71</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable to hold the index for the object with name:location of the array resource_characteristic in the Resource Object</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1039,10 +1103,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:64</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:75</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable to hold the index for the object with name:supported_action of the array resource_characteristic in the Resource Object</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1065,10 +1135,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:53</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:59</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Boolean variable used to show/hide the Delete Button of the resource</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1092,7 +1168,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:51</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:56</a></div>
                         </td>
                     </tr>
 
@@ -1118,7 +1194,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:66</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:77</a></div>
                         </td>
                     </tr>
 
@@ -1149,10 +1225,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:67</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:79</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Boolean variable to set when changes on Parameters happens and have not been sent with a patch request yet</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1175,7 +1257,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:42</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:46</a></div>
                         </td>
                     </tr>
 
@@ -1201,7 +1283,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:43</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:47</a></div>
                         </td>
                     </tr>
 
@@ -1227,7 +1309,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:52</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/components/single-resources/single-resources.component.ts:57</a></div>
                         </td>
                     </tr>
 
@@ -1259,6 +1341,7 @@ import { Resource } from &#x27;src/app/models/resource&#x27;;
 import { ResourceUpdate } from &#x27;src/app/models/resourceUpdate&#x27;;
 import * as L from &#x27;leaflet&#x27;;
 
+/** These variables are used to define the marker in the leaflet map */
 const iconRetinaUrl &#x3D; &#x27;assets/marker-icon-2x.png&#x27;;
 const iconUrl &#x3D; &#x27;assets/marker-icon.png&#x27;;
 const shadowUrl &#x3D; &#x27;assets/marker-shadow.png&#x27;;
@@ -1274,6 +1357,9 @@ const iconDefault &#x3D; L.icon({
 });
 L.Marker.prototype.options.icon &#x3D; iconDefault;
 
+/**
+ * This component displays the single Resource page and containes all the logic
+ */
 @Component({
   selector: &#x27;app-single-resources&#x27;,
   templateUrl: &#x27;./single-resources.component.html&#x27;,
@@ -1283,6 +1369,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
 
   resource!: Resource;
   resourceCharacteristicUpdate!: Pick&lt;ResourceUpdate, &quot;resource_characteristic&quot;&gt;;
+  /** This property of Resource object is initialized here and is used to in the body of the PATCH requests for the Actions and Action parameters changes */
   activationFeaturePatch: Pick&lt;ResourceUpdate, &quot;activation_feature&quot;&gt; &#x3D; {
     &quot;activation_feature&quot; : [{
       &quot;name&quot;:&quot;gNodeB_service&quot;,
@@ -1292,6 +1379,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
 
   private map: any;
   subscriptionToIsAdmin!: Subscription;
+  /** Boolean variable used to show/hide the Delete Button of the resource */
   isAdmin!: boolean;
 
   faUpload &#x3D; faUpload;
@@ -1299,15 +1387,20 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
   faLongArrowAltLeft &#x3D; faLongArrowAltLeft;
   faTrashAlt &#x3D; faTrashAlt;
 
+  /** Variable to hold the index for the object with name:action of the array resource_characteristic in the Resource Object */
   indexAction?: number;
+  /** Variable to hold the index for the object with name:action_parameter of the array resource_characteristic in the Resource Object */
   indexActionParameters?: number;
+  /** Variable to hold the index for the object with name:location of the array resource_characteristic in the Resource Object */
   indexLocation?: number;
+  /** Variable to hold the index for the object with name:ip of the array resource_characteristic in the Resource Object */
   indexIP?: number;
+  /** Variable to hold the index for the object with name:supported_action of the array resource_characteristic in the Resource Object */
   indexSupportedActions?: number;
 
   noActionParametersSet!: boolean;
+  /** Boolean variable to set when changes on Parameters happens and have not been sent with a patch request yet */
   parametersChanged: boolean &#x3D; false;
-
 
   constructor(
     private resourceService: ResourceService,
@@ -1317,6 +1410,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
     private alertifyService: AlertifyService,
     private uiService: UiService
   ) {
+    /** Subscribe to a UI Service that checks for admin status and sets a boolean value to use for interface uses */
     this.subscriptionToIsAdmin &#x3D;
       this.uiService
         .onCheckAdmin()
@@ -1325,6 +1419,12 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
         )
   }
 
+  /**
+   * On init 2 things take place.
+   * a) Sends a request to the UI service to check for admin status.
+   * b) Sends a request to retrieve the single resource 
+   * if the resource is &#x27;operational_status &#x3D; disable&#x27; the router redirects to the homepage
+   */
   ngOnInit(): void {
     this.uiService.checkAdmin();
     this.resourceService
@@ -1345,6 +1445,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
       )
   }
 
+  /** Triggers the map method if the there is a &#x27;name:location&#x27; property in the array resource_characteristic of the resource object */
   ngAfterViewInit(): void {
     if (this.indexLocation !&#x3D; -1) {
       this.initMap();
@@ -1353,6 +1454,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
 
   ngOnDestroy(): void { }
 
+  /** Method that resets the parameter changes that have not been already sent with a patch request to the server  */
   resetParameters() {
     this.parametersChanged &#x3D; false;
     this.resourceService
@@ -1361,6 +1463,10 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
         (resource) &#x3D;&gt; this.resource.resource_characteristic![this.indexActionParameters!] &#x3D; resource.resource_characteristic![this.indexActionParameters!])
   }
 
+  /** 
+   * Method that calls the ModalSingleResourcesValuesComponent 
+   * And also sends the patchResource request when it gets the confirmation signal from the modal
+   */
   openModifyModal() {
     const modalRef &#x3D; this.modalService.open(ModalSingleResourcesValuesComponent);
     modalRef.componentInstance.resource &#x3D; this.resource;
@@ -1384,6 +1490,10 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
     });
   }
 
+    /** 
+   * Method that calls the ModalSingleResourcesValuesComponent 
+   * It sets both the activationFeaturePatch Property and the resource_characteristic Property on the modal confirmation signal
+   */
   openParametersModal() {
     try{
       const modalRef &#x3D; this.modalService.open(ModalSingleResourcesParametersComponent);
@@ -1409,6 +1519,10 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
     }
   }
 
+  /** 
+   * Method that sends the patchRequest
+   * It is triggered from the &quot;Save Changes&quot; button in the Parameters section
+   */
   uploadParameters() {    
     this.resourceService
       .patchResource(this.resource.id, this.activationFeaturePatch)
@@ -1431,6 +1545,10 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
       )
   }
 
+  /** 
+   * Method that calls the ModalSingleResourcesActionComponent 
+   * And also sends the patchResource request when it gets the confirmation signal from the modal
+   */
   openActionModal(action: string) {
     const modalRef &#x3D; this.modalService.open(ModalSingleResourcesActionComponent);
     modalRef.componentInstance.parametersChanged &#x3D; this.parametersChanged;
@@ -1445,7 +1563,6 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
           }
         }
       );
-      
       this.resourceService
         .patchResource(this.resource.id, this.activationFeaturePatch)
         .subscribe(
@@ -1469,6 +1586,10 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
     });
   }
 
+  /** 
+  * Method that calls the ModalDeleteResourceComponent 
+  * And also sends the deleteResource request when it gets the confirmation signal from the modal
+  */
   openDeleteModal() {
     const modalRef &#x3D; this.modalService.open(ModalDeleteResourceComponent);
     modalRef.componentInstance.resource &#x3D; this.resource;
@@ -1491,6 +1612,10 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
     });
   }
 
+  /** 
+   * Defines the Map method 
+   * Check if there is &#x27;location&#x27; in the resource_characteristic array happens before triggering the method
+   */
   private initMap(): void {
     let coordinateX: number &#x3D; this.resource.resource_characteristic![this.indexLocation!].value.value[0];
     let coordinateY: number &#x3D; this.resource.resource_characteristic![this.indexLocation!].value.value[1];
@@ -1829,7 +1954,7 @@ export class SingleResourcesComponent implements OnInit, AfterViewInit, OnDestro
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="container-xl">    <a routerLink="/" class="back-btn-container">        <fa-icon [icon]=\'faLongArrowAltLeft\'></fa-icon>        Back    </a>    <div class="row justify-content-center">        <div class="section-title col-11">            <h2>RESOURCE:                <br>{{ resource.name }}            </h2>        </div>        <div class="col-md-5 mb-3 text-center">            <div class="w-100 map-container">                <div class="map-frame">                    <div id="map"></div>                </div>            </div>            <button class="btn-delete modify" (click)=openModifyModal() *ngIf="resource.resource_status===\'available\'">                <fa-icon [icon]=\'faEdit\'></fa-icon>                MODIFY            </button>            <button class="btn-delete" (click)=openDeleteModal() *ngIf="isAdmin">                <fa-icon [icon]=\'faTrashAlt\'></fa-icon>                DELETE            </button>        </div>        <div class="col-md-6">            <div class="context-container">                <div class="context">                    <span class="name">Category: </span>                    <span class="value">{{ resource.category ? resource.category : "null" }}</span>                </div>                <div class="context">                    <span class="name">Description: </span>                    <span class="value">{{ resource.description ? resource.description : "null" }}</span>                </div>                <div class="context">                    <span class="name">Name: </span>                    <span class="value">{{ resource.name ? resource.name : "null" }}</span>                </div>                <div class="context">                    <span class="name">Resource Version: </span>                    <span class="value">{{ resource.resource_version ? resource.resource_version : "null" }}</span>                </div>                <div class="context">                    <span class="name">Administrative State: </span>                    <span class="value">{{ resource.administrative_state ? resource.administrative_state : "null"                        }}</span>                </div>                <div class="context">                    <span class="name">Operational State: </span>                    <span class="value">{{ resource.operational_state ? resource.operational_state : "null" }}</span>                </div>                <div class="context">                    <span class="name">IP: </span>                    <span class="value">{{ indexIP != -1 ?                        resource.resource_characteristic![indexIP!].value.value : "null" }}</span>                </div>                <div class="context">                    <span class="name">Resource Status: </span>                    <span class="value">{{ resource.resource_status ? resource.resource_status : "null" }}</span>                </div>                <div class="context">                    <span class="name">Operetional State: </span>                    <span class="value">{{ resource.operational_state ? resource.operational_state : "null" }}</span>                </div>            </div>        </div>        <div class="col-12 col-md-11">            <div class="section-title">                <h2>ACTIONS</h2>            </div>            <div *ngIf="resource.resource_status!==\'available\'">Resource not available to perform actions at the moment            </div>            <div class="actions-container row"                *ngIf="resource.resource_status===\'available\' && indexSupportedActions != -1">                <button *ngFor="let action of resource.resource_characteristic![indexSupportedActions!].value.value;"                    class="btn mb-2 col-5 col-sm-3 col-lg-2 action" (click)="openActionModal(action)" [ngStyle]="{\'background\':                                     action==\'start\' ? \'green\':                                    action==\'restart\'? \'orange\':                                    action==\'stop\'? \'red\':                                    action==\'status\' ? \'#00aaff\':                                    action==\'touch\' ? \'blue\':\'\'}">                    {{action}}                </button>            </div>        </div>        <div class="col-12 col-md-11">            <div class="section-title">                <h2>PARAMETERS</h2>            </div>            <button *ngIf="!parametersChanged && resource.resource_status===\'available\' && !noActionParametersSet"                class="btn-delete modify mt-0 mb-3" (click)=openParametersModal()>                <fa-icon [icon]=\'faEdit\'></fa-icon>                MODIFY            </button>            <button *ngIf=\'parametersChanged\' class="btn-delete modify mt-0 mb-3" (click)=resetParameters()>                RESET            </button>            <button *ngIf=\'parametersChanged\' class="btn-delete save mt-0 mb-3" (click)=uploadParameters()>                <fa-icon [icon]=\'faUpload\'></fa-icon>                SAVE CHANGES            </button>            <div class="parameters-container">                <div *ngIf=\'noActionParametersSet\'>No Parameters set.</div>                <div *ngIf=\'!noActionParametersSet\' class="row justify-content-start">                    <div class="col-6 col-sm-4 col-lg-3 parameter"                        *ngFor="let item of resource.resource_characteristic![indexActionParameters!].value.value | keyvalue">                        <div class="name">{{item.key}}</div>                        <div class="value">{{item.value}}</div>                    </div>                </div>            </div>        </div>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SingleResourcesComponent'};
 </script>

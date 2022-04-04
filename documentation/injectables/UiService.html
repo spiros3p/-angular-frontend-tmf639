@@ -66,7 +66,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>This service is used to handle UI changes that need be communicated between different components/modules</p>
+                <p>This service is used to handle UI changes that need be communicated between different components/modules with observables and subscriptions</p>
 
             </p>
 
@@ -286,7 +286,7 @@ Fire that function when you want its coresponding observable to check for change
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -583,7 +583,7 @@ import { Observable, Subject } from &#x27;rxjs&#x27;;
 // import { AuthService } from &#x27;./auth.service&#x27;;
 
 /**
- * This service is used to handle UI changes that need be communicated between different components/modules
+ * This service is used to handle UI changes that need be communicated between different components/modules with observables and subscriptions
  */
 
 @Injectable({
@@ -668,7 +668,7 @@ export class UiService {
    * This function works along checkAdmin function and handles the UI change (toggles) on Header compoenent displaying the Create Resource tab or not.
    * @returns An angular observable that a components subscribes from its constructor
    */
-  onCheckAdmin(): Observable&lt;any&gt; {
+  onCheckAdmin(): Observable&lt;boolean&gt; {
     return this.subjectIsAdmin.asObservable();
   }
   /**

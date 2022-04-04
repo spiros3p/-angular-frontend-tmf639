@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+/** Page Not Found - Error 404 */
 @Component({
   selector: 'app-pagenotfound',
   templateUrl: './pagenotfound.component.html',
@@ -11,5 +12,4 @@ export class PagenotfoundComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

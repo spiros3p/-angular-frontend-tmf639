@@ -7,6 +7,7 @@ import { ModalDeleteResourceComponent } from '../modal-delete-resource/modal-del
 import { Resource } from 'src/app/models/resource';
 import * as L from 'leaflet';
 
+/** Marker icon for leaflet map use  */
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
 const shadowUrl = 'assets/marker-shadow.png';
@@ -22,6 +23,7 @@ const iconDefault = L.icon({
 });
 L.Marker.prototype.options.icon = iconDefault;
 
+/** Component of resource item displaying as a block item */
 @Component({
   selector: 'app-resource-item-block',
   templateUrl: './resource-item-block.component.html',
@@ -31,11 +33,14 @@ export class ResourceItemBlockComponent implements OnInit, AfterViewInit {
 
   @Input() isAdmin!: boolean;
   @Input() resource!: Resource;
+  /** Used to give different IDs to all list items for leaflet map use */
   @Input() counter!: number;
+  /** Emit delete event to parent component that runs the logic */
   @Output() onDeleteResource: EventEmitter<Resource> = new EventEmitter();
 
   faTrashAlt = faTrashAlt;
   faPencilAlt = faPencilAlt;
+  /** Needed for leaflet use in angular */
   public map: any;
   indexIP!: number;
   indexLocation!: number;

@@ -68,6 +68,15 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This modal is displayed as a confirmation
+1)of the delete action for a resource, either from the home page or single resource page
+2)of the delete or toggle action of a user from the account page - admin role only component</p>
+
+    </p>
 
 
     <p class="comment">
@@ -173,6 +182,9 @@
                             <li>
                                 <a href="#toggleType" >toggleType</a>
                             </li>
+                            <li>
+                                <a href="#user" >user</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -195,7 +207,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -251,9 +263,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:20</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>variable of type resource passed by the component that the modals is called</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -272,9 +290,43 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:27</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>variable of type boolean passed by the component that the modals is called
+either &#39;delete&#39;=false or &#39;toggle&#39;=true</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <b>user</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:22</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>variable of type user passed by the component that the modals is called</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -306,8 +358,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:43</a></div>
                 </td>
             </tr>
 
@@ -343,17 +395,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:35</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Confirmation function</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the resource or user to be deleted or updated</p>
 
                     </div>
                 </td>
@@ -386,7 +446,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/modal-delete-resource/modal-delete-resource.component.ts:29</a></div>
                         </td>
                     </tr>
 
@@ -403,7 +463,13 @@
 import { NgbActiveModal } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
 
 import { Resource } from &#x27;src/app/models/resource&#x27;;
+import { User } from &#x27;src/app/models/User&#x27;;
 
+/**
+ * This modal is displayed as a confirmation
+ * 1)of the delete action for a resource, either from the home page or single resource page
+ * 2)of the delete or toggle action of a user from the account page - admin role only component
+ */
 @Component({
   selector: &#x27;app-modal-delete-resource&#x27;,
   templateUrl: &#x27;./modal-delete-resource.component.html&#x27;,
@@ -411,13 +477,28 @@ import { Resource } from &#x27;src/app/models/resource&#x27;;
 })
 export class ModalDeleteResourceComponent implements OnInit {
 
+  /** variable of type resource passed by the component that the modals is called */
   @Input() public resource!: Resource;
+  /** variable of type user passed by the component that the modals is called */
+  @Input() public user!: User;
+  /** 
+   * variable of type boolean passed by the component that the modals is called 
+   * either &#x27;delete&#x27;&#x3D;false or &#x27;toggle&#x27;&#x3D;true
+  */
   @Input() public toggleType!: boolean;
 
   constructor(public activeModal: NgbActiveModal) { }
 
+  /**
+   * Confirmation function
+   * @returns the resource or user to be deleted or updated
+   */
   passBack() {
-    this.activeModal.close(this.resource);
+    if (this.user){
+      this.activeModal.close(this.user);
+    }else if(this.resource){
+      this.activeModal.close(this.resource);
+    }
   }
 
   ngOnInit(): void {
@@ -434,10 +515,15 @@ export class ModalDeleteResourceComponent implements OnInit {
             &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
         &lt;/button&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;w-100 text-center py-5&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;!user&quot; class&#x3D;&quot;w-100 text-center py-5&quot;&gt;
         &lt;b&gt;ID:&lt;/b&gt; {{resource.id}}
         &lt;br&gt;&lt;br&gt;
         &lt;b&gt;NAME:&lt;/b&gt; {{resource.name}}
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;user&quot; class&#x3D;&quot;w-100 text-center py-5&quot;&gt;
+        &lt;b&gt;ID:&lt;/b&gt; {{user.id}}
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;NAME:&lt;/b&gt; {{user.name}}
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
         &lt;button (click)&#x3D;&quot;activeModal.dismiss(&#x27;Cross click&#x27;)&quot; type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-secondary&quot;&gt;No&lt;/button&gt;
@@ -453,9 +539,9 @@ export class ModalDeleteResourceComponent implements OnInit {
         &lt;/button&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;w-100 text-center py-5&quot;&gt;
-        &lt;b&gt;ID:&lt;/b&gt; {{resource.id}}
+        &lt;b&gt;ID:&lt;/b&gt; {{user.id}}
         &lt;br&gt;&lt;br&gt;
-        &lt;b&gt;NAME:&lt;/b&gt; {{resource.name}}
+        &lt;b&gt;NAME:&lt;/b&gt; {{user.name}}
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
         &lt;button (click)&#x3D;&quot;activeModal.dismiss(&#x27;Cross click&#x27;)&quot; type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-secondary&quot;&gt;No&lt;/button&gt;
@@ -496,8 +582,8 @@ export class ModalDeleteResourceComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div *ngIf="!toggleType">    <div class="modal-header">        <h4 class="modal-title" id="modal-basic-title">Are you sure you want to delete this?</h4>        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(\'Cross click\')">            <span aria-hidden="true">&times;</span>        </button>    </div>    <div class="w-100 text-center py-5">        <b>ID:</b> {{resource.id}}        <br><br>        <b>NAME:</b> {{resource.name}}    </div>    <div class="modal-footer">        <button (click)="activeModal.dismiss(\'Cross click\')" type="submit" class="btn btn-secondary">No</button>        <button (click)="passBack()" type="submit" class="btn btn-danger">Yes, DELETE</button>    </div></div><div *ngIf="toggleType">    <div class="modal-header">        <h4 class="modal-title" id="modal-basic-title">Toggle the Acceptance of this user?</h4>        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(\'Cross click\')">            <span aria-hidden="true">&times;</span>        </button>    </div>    <div class="w-100 text-center py-5">        <b>ID:</b> {{resource.id}}        <br><br>        <b>NAME:</b> {{resource.name}}    </div>    <div class="modal-footer">        <button (click)="activeModal.dismiss(\'Cross click\')" type="submit" class="btn btn-secondary">No</button>        <button (click)="passBack()" type="submit" class="btn btn-primary px-4">Yes</button>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="!toggleType">    <div class="modal-header">        <h4 class="modal-title" id="modal-basic-title">Are you sure you want to delete this?</h4>        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(\'Cross click\')">            <span aria-hidden="true">&times;</span>        </button>    </div>    <div *ngIf="!user" class="w-100 text-center py-5">        <b>ID:</b> {{resource.id}}        <br><br>        <b>NAME:</b> {{resource.name}}    </div>    <div *ngIf="user" class="w-100 text-center py-5">        <b>ID:</b> {{user.id}}        <br><br>        <b>NAME:</b> {{user.name}}    </div>    <div class="modal-footer">        <button (click)="activeModal.dismiss(\'Cross click\')" type="submit" class="btn btn-secondary">No</button>        <button (click)="passBack()" type="submit" class="btn btn-danger">Yes, DELETE</button>    </div></div><div *ngIf="toggleType">    <div class="modal-header">        <h4 class="modal-title" id="modal-basic-title">Toggle the Acceptance of this user?</h4>        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(\'Cross click\')">            <span aria-hidden="true">&times;</span>        </button>    </div>    <div class="w-100 text-center py-5">        <b>ID:</b> {{user.id}}        <br><br>        <b>NAME:</b> {{user.name}}    </div>    <div class="modal-footer">        <button (click)="activeModal.dismiss(\'Cross click\')" type="submit" class="btn btn-secondary">No</button>        <button (click)="passBack()" type="submit" class="btn btn-primary px-4">Yes</button>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ModalDeleteResourceComponent'};
 </script>

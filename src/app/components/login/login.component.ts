@@ -5,6 +5,10 @@ import { AuthService } from 'src/app/services/auth.service';
 import { AlertifyService } from 'src/app/services/alertify.service';
 import { UiService } from 'src/app/services/ui.service';
 
+/**
+ * Displayes the login page
+ * Contains the logic of the login action
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,8 +29,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Method that is triggered from the login button
+   * Checks for email and password certain format
+   * Calls the authService to send the login post request and 
+   * if succesful allows acces to the protected routs and sets the localstorage 'currentUser' with the user info
+   * @returns Void on the wrong input controls
+   */
   login() {
-    if (!this.email) {
+    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email))) {
       this.alertifyService.warning("Please enter an email!")
       return
     }

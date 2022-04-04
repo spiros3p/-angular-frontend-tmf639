@@ -8,10 +8,11 @@ import { ModalSingleResourcesActionComponent } from '../modal-single-resources-a
 import { Resource } from 'src/app/models/resource';
 import { ResourceUpdate } from 'src/app/models/resourceUpdate';
 
-
-
+/** 
+ * Importes Leaflet
+ * Defines the marker icons
+ */
 import * as L from 'leaflet';
-
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
 const shadowUrl = 'assets/marker-shadow.png';
@@ -35,9 +36,11 @@ const greyIcon = L.icon({
   tooltipAnchor: [16, -28],
   shadowSize: [41, 41]
 })
-
 L.Marker.prototype.options.icon = greyIcon;
 
+/**
+ * This component displays the map page and its functions
+ */
 @Component({
   selector: 'app-map-page',
   templateUrl: './map-page.component.html',
@@ -53,11 +56,19 @@ export class MapPageComponent implements AfterViewInit {
 
   private map: any;
   resources!: Resource[];
+  /** Array that holds only the selected (clicked) resource object */
   selectedResources!: Resource[];
+  /** Variable to hold the index for the object with name:location of the array resource_characteristic in the Resource Object */
   indexLocation!: number;
+  /** Variable to hold the index for the object with name:supported_action of the array resource_characteristic in the Resource Object */
   indexSupportedActions!: number;
+  /** 
+   * Boolean to use for interface use
+   * When clicking on a marker, displays its available action buttons
+   */
   showActions!: boolean;
 
+  /** This property of Resource object is initialized here and is used to in the body of the PATCH requests for the Actions and Action parameters changes */
   activationFeaturePatch: Pick<ResourceUpdate, "activation_feature"> = {
     "activation_feature": [{
       "name": "gNodeB_service",
@@ -65,8 +76,10 @@ export class MapPageComponent implements AfterViewInit {
     }]
   };
 
+  /** Layer used in leaflet map */
   layerGroup!: any;
 
+  /** Defines the method of the leaflet map */
   private initMap(): void {
     this.map = L.map('map', {
       center: [0, 0],
@@ -82,6 +95,7 @@ export class MapPageComponent implements AfterViewInit {
     this.layerGroup = L.layerGroup().addTo(this.map);
   }
 
+  /** Method that defines all the markers of the resources objects to add and display in the map */
   makeMarkers(): void {
     this.resourceService
       .listResource()
@@ -129,10 +143,14 @@ export class MapPageComponent implements AfterViewInit {
     this.makeMarkers();
   }
 
+  /** 
+  * Method that calls the ModalSingleResourcesActionComponent 
+  * And also sends the patchResource request when it gets the confirmation signal from the modal
+  */
   openActionModal(action: string) {
     const modalRef = this.modalService.open(ModalSingleResourcesActionComponent);
     modalRef.componentInstance.parametersChanged = false;
-    modalRef.componentInstance.action = action;
+    modalRef.componentInstance.action = action;    
     modalRef.componentInstance.resource = this.selectedResources[0];
     modalRef.result.then((result: ResourceUpdate) => {
       this.activationFeaturePatch.activation_feature![0].feature_characteristic.push(

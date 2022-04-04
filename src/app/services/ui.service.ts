@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 // import { AuthService } from './auth.service';
 
 /**
- * This service is used to handle UI changes that need be communicated between different components/modules
+ * This service is used to handle UI changes that need be communicated between different components/modules with observables and subscriptions
  */
 
 @Injectable({
@@ -89,7 +89,7 @@ export class UiService {
    * This function works along checkAdmin function and handles the UI change (toggles) on Header compoenent displaying the Create Resource tab or not.
    * @returns An angular observable that a components subscribes from its constructor
    */
-  onCheckAdmin(): Observable<any> {
+  onCheckAdmin(): Observable<boolean> {
     return this.subjectIsAdmin.asObservable();
   }
   /**

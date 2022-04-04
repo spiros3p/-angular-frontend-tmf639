@@ -62,6 +62,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This service is used to protect Angular routes (views) by authorizing a logged in users</p>
+
+            </p>
 
 
 
@@ -104,7 +111,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/guards/auth-guard.service.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/guards/auth-guard.service.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -191,17 +198,26 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/guards/auth-guard.service.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/guards/auth-guard.service.ts:28</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>It is called in the app.routing.module.ts file
+It calls the authservice.isAuthenticated and gets a boolean answer whether the user (session) is authenticated with the server or not.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable of type boolean to let Angular Router know whether to authorize access to the particular component(view) or not</p>
 
                     </div>
                 </td>
@@ -222,6 +238,9 @@ import { Observable } from &#x27;rxjs&#x27;;
 import { AuthService } from &#x27;src/app/services/auth.service&#x27;;
 import { UiService } from &#x27;src/app/services/ui.service&#x27;;
 
+/**
+* This service is used to protect Angular routes (views) by authorizing a logged in users
+*/
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
@@ -233,6 +252,11 @@ export class AuthGuardService {
     private uiService: UiService
   ) { }
 
+  /**
+  * It is called in the app.routing.module.ts file
+  * It calls the authservice.isAuthenticated and gets a boolean answer whether the user (session) is authenticated with the server or not.
+  * @returns An observable of type boolean to let Angular Router know whether to authorize access to the particular component(view) or not
+  */
   canActivate() {
     return new Observable&lt;boolean&gt;(
       x &#x3D;&gt; {

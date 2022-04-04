@@ -68,6 +68,16 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This is a modal displayed when pressing one of the Action Buttons from the single resource page.
+Displays a confirmation message for the action
+and
+the parameters if they were previously changed and not already sent before this action.</p>
+
+    </p>
 
 
     <p class="comment">
@@ -216,7 +226,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:49</a></div>
                             </td>
                         </tr>
 
@@ -272,7 +282,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:21</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -293,7 +303,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:22</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -314,7 +324,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:20</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -348,14 +358,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:58</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Initializes the resource_update object and its temp instance to fill the input values with the existing ones.
+Retrieves the required property indexes from the original object
+If there is no &#39;action&#39; property, one is action object is created and pushed in the new updated object that is returned</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -385,14 +399,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:47</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>A temp object is used to save the property.
+That because the parameters property is a nested object inside the resource_chracteristic property.
+Therefore in every input change (keystroke) it would update the whole outside property malfunctioning the display of the component.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -403,6 +421,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -417,6 +436,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>the input change event</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>item</td>
@@ -429,6 +452,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>the parameter key-value pair of the object that is changing value from the input</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -466,17 +493,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:34</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Confirmation Function</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an object with the new values of the resource</p>
 
                     </div>
                 </td>
@@ -509,7 +544,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:34</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:51</a></div>
                         </td>
                     </tr>
 
@@ -540,7 +575,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:24</a></div>
                         </td>
                     </tr>
 
@@ -571,7 +606,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:28</a></div>
                         </td>
                     </tr>
 
@@ -602,7 +637,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:27</a></div>
                         </td>
                     </tr>
 
@@ -628,7 +663,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -654,7 +689,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/modal-single-resources-action/modal-single-resources-action.component.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -673,6 +708,12 @@ import { NgbActiveModal } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
 import { Resource } from &#x27;src/app/models/resource&#x27;;
 import { ResourceUpdate } from &#x27;src/app/models/resourceUpdate&#x27;;
 
+/**
+ * This is a modal displayed when pressing one of the Action Buttons from the single resource page.
+ * Displays a confirmation message for the action
+ * and
+ * the parameters if they were previously changed and not already sent before this action.
+ */
 @Component({
   selector: &#x27;app-modal-single-resources-action&#x27;,
   templateUrl: &#x27;./modal-single-resources-action.component.html&#x27;,
@@ -690,18 +731,34 @@ export class ModalSingleResourcesActionComponent implements OnInit {
   indexActionParameters: number &#x3D; -1;
   indexAction: number &#x3D; -1;
 
+  /**
+   * Confirmation Function
+   * @returns an object with the new values of the resource
+   */
   passBack() {
     this.resourceUpdate.resource_characteristic![this.indexActionParameters] &#x3D; this.tempUpdate.resource_characteristic![this.indexActionParameters];
     this.resourceUpdate.resource_characteristic![this.indexAction].value.value &#x3D; this.action;
     this.activeModal.close(this.resourceUpdate);
   }
 
+   /**
+   * A temp object is used to save the property. 
+   * That because the parameters property is a nested object inside the resource_chracteristic property.
+   * Therefore in every input change (keystroke) it would update the whole outside property malfunctioning the display of the component.
+   * @param $event the input change event
+   * @param item the parameter key-value pair of the object that is changing value from the input
+   */
   onChange($event: any, item: any) {
     this.tempUpdate.resource_characteristic![this.indexActionParameters].value.value[item.key] &#x3D; $event;
   }
 
   constructor(public activeModal: NgbActiveModal) { }
 
+  /**
+    * Initializes the resource_update object and its temp instance to fill the input values with the existing ones.
+    * Retrieves the required property indexes from the original object 
+    * If there is no &#x27;action&#x27; property, one is action object is created and pushed in the new updated object that is returned
+   */
   ngOnInit(): void {
     this.resourceUpdate &#x3D; {
       resource_characteristic: JSON.parse(JSON.stringify(this.resource.resource_characteristic))
@@ -714,7 +771,7 @@ export class ModalSingleResourcesActionComponent implements OnInit {
     if (this.indexAction &#x3D;&#x3D; -1) {
       this.resourceUpdate.resource_characteristic!.push(
         {
-          &quot;id&quot;: this.resource.resource_characteristic![0].id,
+          &quot;id&quot;: this.resource.resource_characteristic![0].id || &quot;-1&quot;,
           &quot;name&quot;: &quot;action&quot;,
           &quot;value_type&quot;: &quot;string&quot;,
           &quot;value&quot;: {
@@ -827,7 +884,7 @@ export class ModalSingleResourcesActionComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><form>    <div class="modal-header">        <h4 class="modal-title" id="modal-basic-title">Send Action:             <b class="action" >{{action.toUpperCase()}}</b>            <span *ngIf="parametersChanged"> & <br> Submit Action Parameter changes ?</span>        </h4>        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(\'Cross click\')">            <span aria-hidden="true">&times;</span>        </button>    </div>    <div class="modal-body" *ngIf="parametersChanged">        <div class="row">            <div class="col-6 col-sm-4 col-lg-3 parameter"                *ngFor="let item of resourceUpdate.resource_characteristic![indexActionParameters!].value.value | keyvalue; let i=index;">                <label for="{{item.key}}">{{item.key}}</label><br>                <input type="text" name="{{item.key}}" class="w-100" [(ngModel)]="item.value"                    (ngModelChange)="onChange($event, item)" id="{{item.key}}">            </div>        </div>    </div>    <div class="modal-footer">        <button (click)="activeModal.dismiss(\'Cross click\')" type="submit" class="btn btn-danger">Close</button>        <button (click)="passBack()" type="submit" class="btn btn-primary">Send Action</button>    </div></form></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ModalSingleResourcesActionComponent'};
 </script>

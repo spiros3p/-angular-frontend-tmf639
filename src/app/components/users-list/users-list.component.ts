@@ -1,18 +1,21 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { faTrashAlt, faPencilAlt, faUserAltSlash, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faUserAltSlash, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AlertifyService } from 'src/app/services/alertify.service';
 
 import { ModalDeleteResourceComponent } from '../modal-delete-resource/modal-delete-resource.component';
 import { User } from 'src/app/models/User';
 
+/**
+ * The List component that appears on the /Admin Route showing all the registered users
+ */
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
+
 
   @Input() user!: User;
   @Output() onDeleteUser: EventEmitter<User> = new EventEmitter();
@@ -28,17 +31,27 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  /**
+   * Triggered when the delete button gets clicked
+   * Calls a modal to verify the Delete action
+   * Passes the result to the parent component
+   */
   openDeleteModal() {
     const modalRef = this.modalService.open(ModalDeleteResourceComponent);
-    modalRef.componentInstance.resource = this.user;
+    modalRef.componentInstance.user = this.user;
     modalRef.result.then((result: User) => {
       this.onDeleteUser.emit(result);
     });
   }
 
+   /**
+   * Triggered when the user allow/disa button gets clicked
+   * Calls a modal to verify the Delete action
+   * Passes the result to the parent component
+   */
   openToggleModal() {
     const modalRef = this.modalService.open(ModalDeleteResourceComponent);
-    modalRef.componentInstance.resource = this.user;
+    modalRef.componentInstance.user = this.user;
     modalRef.componentInstance.toggleType = true;
     modalRef.result.then((result: User) => {
       this.onToggleUser.emit(result);

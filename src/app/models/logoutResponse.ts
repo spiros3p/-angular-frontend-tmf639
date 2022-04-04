@@ -1,7 +1,7 @@
 /**
- * HTTP response object from signup request
+ * HTTP response object from Logout request
  */
-export interface signupResponse{
+ export interface logoutResponse{
     /** string message contained in the response object  */
     message: string;
 }

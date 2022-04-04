@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 import { AuthGuardService as AuthGuard } from 'src/app/guards/auth-guard.service';
-import { AuthGuardService as AdminGuard } from 'src/app/guards/admin-guard.service';
+import { AdminGuardService as AdminGuard } from 'src/app/guards/admin-guard.service';
 
 import { MapPageComponent } from 'src/app/components/map-page/map-page.component';
 import { ResourcesComponent } from 'src/app/components/resources/resources.component';

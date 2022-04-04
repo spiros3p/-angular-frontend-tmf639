@@ -69,6 +69,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User object</p>
+
+            </p>
 
 
         <section>
@@ -161,6 +168,13 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>States if user has been authorized to access through the login page of the application
+takes 0 or 1 as a value representing true or false for the SQL table</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -194,6 +208,13 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>States if user has admin role
+takes 0 or 1 as a value representing true or false for the SQL table</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -338,7 +359,15 @@
     name: string;
     email: string;
     password: string;
+    /**
+     * States if user has been authorized to access through the login page of the application 
+     * takes 0 or 1 as a value representing true or false for the SQL table 
+     * */
     accepted: number;
+    /** 
+     * States if user has admin role
+     * takes 0 or 1 as a value representing true or false for the SQL table 
+     * */
     admin: number;
 }</code></pre>
     </div>

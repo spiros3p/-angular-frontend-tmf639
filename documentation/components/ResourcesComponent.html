@@ -68,6 +68,14 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Main component of the / Route page
+Where the Resource HTTP requests to the API happen</p>
+
+    </p>
 
 
     <p class="comment">
@@ -220,12 +228,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/resources/resources.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/resources/resources.component.ts:52</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>The constructor</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -234,6 +244,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -248,6 +259,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The service for the Resources calls</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>uiService</td>
@@ -260,6 +275,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The service for the UI changes</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>alertifyService</td>
@@ -272,6 +291,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The service for using Alertify</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -311,14 +334,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="104"
-                            class="link-to-prism">src/app/components/resources/resources.component.ts:104</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">src/app/components/resources/resources.component.ts:154</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method to delete a resource
+Calls the delete request on the service
+Filters the diplayed resources removing the deleted one</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -380,14 +407,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">src/app/components/resources/resources.component.ts:74</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/app/components/resources/resources.component.ts:104</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Unsubscribe when the component is removed from view</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -417,14 +446,20 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">src/app/components/resources/resources.component.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/components/resources/resources.component.ts:83</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p> On initialization</p>
+<ol>
+<li>calls the UI service .checkAdmin() which shows/hides the menu tabs</li>
+<li>fetches the resources one time and then every 10 seconds</li>
+</ol>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -454,14 +489,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="79"
-                            class="link-to-prism">src/app/components/resources/resources.component.ts:79</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/components/resources/resources.component.ts:112</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method to filter the displayed resources according to the selected 3 variables/filters</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -491,14 +528,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="94"
-                            class="link-to-prism">src/app/components/resources/resources.component.ts:94</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">src/app/components/resources/resources.component.ts:134</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>When the select input changes it updates the stored value and calls the filter function to filter the resources</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -509,6 +548,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -523,6 +563,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The operational state select value</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -560,14 +604,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="99"
-                            class="link-to-prism">src/app/components/resources/resources.component.ts:99</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="143"
+                            class="link-to-prism">src/app/components/resources/resources.component.ts:143</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>When the select input changes it updates the stored value and calls the filter function to filter the resources</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -578,6 +624,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -592,6 +639,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The resource status select value</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -629,14 +680,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="89"
-                            class="link-to-prism">src/app/components/resources/resources.component.ts:89</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">src/app/components/resources/resources.component.ts:125</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>When text is typed in the search box it updates the stored value and calls the filter function to filter the resources</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -647,6 +700,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -661,6 +715,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>the input string typed in the search box</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -703,10 +761,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/resources/resources.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/resources/resources.component.ts:32</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Second local reference of Resource array
+It is used to keep a copy of the total resources while the &#39;resources&#39; is manipulated by included methods</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -729,10 +794,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/resources/resources.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/resources/resources.component.ts:35</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Used in show/hide the Delete Button on each Resource item</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -755,7 +826,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/resources/resources.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/resources/resources.component.ts:44</a></div>
                         </td>
                     </tr>
 
@@ -781,10 +852,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/resources/resources.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/resources/resources.component.ts:27</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Local reference of Resource array
+It is passed to children components to display the resources</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -812,10 +890,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/resources/resources.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/resources/resources.component.ts:48</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Stores the last Operation State selection</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -843,10 +927,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/resources/resources.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/resources/resources.component.ts:50</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Stores the last Resource Status selection</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -874,10 +964,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/resources/resources.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/resources/resources.component.ts:52</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Stores the last string typed in the search box</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -905,10 +1001,17 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/resources/resources.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/resources/resources.component.ts:40</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Used in toggling between list view and grid view of the displayed resources.
+Each view has its own children component</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -931,10 +1034,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/resources/resources.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/resources/resources.component.ts:43</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Subscription</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -957,7 +1066,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/resources/resources.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/resources/resources.component.ts:45</a></div>
                         </td>
                     </tr>
 
@@ -982,6 +1091,10 @@ import { AlertifyService } from &#x27;src/app/services/alertify.service&#x27;;
 import { Resource } from &#x27;src/app/models/resource&#x27;;
 import { environment } from &#x27;src/environments/environment&#x27;;
 
+/**
+ * Main component of the / Route page
+ * Where the Resource HTTP requests to the API happen
+ */
 @Component({
   selector: &#x27;app-resources&#x27;,
   templateUrl: &#x27;./resources.component.html&#x27;,
@@ -989,20 +1102,42 @@ import { environment } from &#x27;src/environments/environment&#x27;;
 })
 export class ResourcesComponent implements OnInit, OnDestroy {
 
+  /** Local reference of Resource array 
+   * It is passed to children components to display the resources
+  */
   resources!: Resource[];
+  /** 
+   * Second local reference of Resource array 
+   * It is used to keep a copy of the total resources while the &#x27;resources&#x27; is manipulated by included methods
+  */
   allResources!: Resource[];
 
+  /** Used in show/hide the Delete Button on each Resource item */
   isAdmin!: boolean;
+  /** 
+   * Used in toggling between list view and grid view of the displayed resources.
+   * Each view has its own children component
+   */
   showListView: boolean &#x3D; environment.defaultListView;
 
+  /** Subscription */
   subscriptionToListView!: Subscription;
   isAdminSubscription!: Subscription;
   timeInterval!: Subscription;
 
+  /** Stores the last Operation State selection */
   selectedOpState: string &#x3D; &quot;null&quot;;
+  /** Stores the last Resource Status selection */
   selectedResourceStatus: string &#x3D; &quot;null&quot;;
+  /** Stores the last string typed in the search box */
   selectedSearchTerm: string &#x3D; &quot;&quot;;
 
+  /**
+   * The constructor
+   * @param {ResourceService} resourceService The service for the Resources calls
+   * @param {UiService} uiService The service for the UI changes
+   * @param {alertifyService} alertifyService  The service for using Alertify
+   */
   constructor(
     private resourceService: ResourceService,
     private uiService: UiService,
@@ -1021,35 +1156,41 @@ export class ResourcesComponent implements OnInit, OnDestroy {
         )
   }
 
+  /**
+   *  On initialization 
+   *  1. calls the UI service .checkAdmin() which shows/hides the menu tabs
+   *  2. fetches the resources one time and then every 10 seconds
+  */
   ngOnInit(): void {
     this.uiService.checkAdmin();
-    // GET /resource - 1 time - the first time
+    /** GET /resource - 1 time - the first time */
     this.resourceService
       .listResource()
-      .subscribe((resources) &#x3D;&gt; {
-        this.resources &#x3D; resources;
-        this.allResources &#x3D; resources;
+      .subscribe((response) &#x3D;&gt; {
+          this.resources &#x3D; response;
+          this.allResources &#x3D; response;
       });
-    // angular polling - refreshing /resource every 10sec - after first 10sec
+    /** Angular Polling - refreshing /resource every 10sec - after first 10sec */
     this.timeInterval &#x3D; timer(10000, 10000)
       .pipe(
         switchMap(() &#x3D;&gt; this.resourceService.listResource())
       )
-      .subscribe(
-        (resources) &#x3D;&gt; {
-          this.allResources &#x3D; resources;
+      .subscribe((response) &#x3D;&gt; {
+          this.allResources &#x3D; response;
           this.onFilterChange()
-        }
-      )
+      })
   }
 
+  /** Unsubscribe when the component is removed from view */
   ngOnDestroy(): void {
     this.timeInterval.unsubscribe();
   }
 
-  // filtering function that is being called at every filter change and polling refresh
+  /** 
+   * Method to filter the displayed resources according to the selected 3 variables/filters 
+   * 
+  */
   onFilterChange() {
-    console.error()
     this.resources &#x3D; this.allResources.filter(
       t &#x3D;&gt;
         (this.selectedOpState &#x3D;&#x3D; &quot;null&quot; || t.operational_state &#x3D;&#x3D; this.selectedOpState) &amp;&amp;
@@ -1058,21 +1199,39 @@ export class ResourcesComponent implements OnInit, OnDestroy {
     )
   }
 
+  /**
+   * When text is typed in the search box it updates the stored value and calls the filter function to filter the resources
+   * @param {string} value the input string typed in the search box
+   */
   onSearchTermChange(value: string) {
     this.selectedSearchTerm &#x3D; value;
     this.onFilterChange();
   }
 
+  /**
+   * When the select input changes it updates the stored value and calls the filter function to filter the resources
+   * @param {string|any} value The operational state select value
+   */
   onOpStateFilterChange(value: any) {
     this.selectedOpState &#x3D; value;
     this.onFilterChange();
   }
 
+  /**
+   * When the select input changes it updates the stored value and calls the filter function to filter the resources
+   * @param {string|any} value The resource status select value
+   */
   onResourceStatusFilterChange(value: any) {
     this.selectedResourceStatus &#x3D; value;
     this.onFilterChange();
   }
 
+  /**
+   * Method to delete a resource 
+   * Calls the delete request on the service
+   * Filters the diplayed resources removing the deleted one
+   * @param {Resource} resource 
+   */
   deleteResource(resource: Resource) {
     this.resourceService
       .deleteResource(resource.id)
@@ -1146,7 +1305,7 @@ export class ResourcesComponent implements OnInit, OnDestroy {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="container-xl">		<app-resources-filter [resources]="resources" (searchTermChange)="onSearchTermChange($event)"		(resourceStatusFilterChange)="onResourceStatusFilterChange($event)" (opStateFilterChange)="onOpStateFilterChange($event)">	</app-resources-filter>	<app-resources-view-block (onDeleteResource)="deleteResource($event)" *ngIf="!showListView" [resources]="resources"		[isAdmin]="isAdmin">	</app-resources-view-block>	<app-resources-view-list (onDeleteResource)="deleteResource($event)" *ngIf="showListView" [resources]="resources"		[mapPageCurrent]="false" [isAdmin]="isAdmin">	</app-resources-view-list></div></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ResourcesComponent'};
 </script>

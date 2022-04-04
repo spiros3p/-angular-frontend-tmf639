@@ -40,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li >AuthGuardService</li>
+  <li >AdminGuardService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,7 +58,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/guards/auth-guard.service.ts</code>
+            <code>src/app/guards/admin-guard.service.ts</code>
         </p>
 
 
@@ -66,7 +66,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>This service is used to protect Angular routes (views) by authorizing a logged in users</p>
+                <p>This service is used to protect Angular routes (views) by authorizing logged in users that have Admin Role</p>
 
             </p>
 
@@ -106,12 +106,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, uiService: <a href="../injectables/UiService.html" target="_self">UiService</a>)</code>
+<code>constructor(authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/guards/auth-guard.service.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/guards/admin-guard.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -145,18 +145,6 @@
                                                   
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>uiService</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/UiService.html" target="_self" >UiService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -198,8 +186,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/guards/auth-guard.service.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/guards/admin-guard.service.ts:25</a></div>
                 </td>
             </tr>
 
@@ -207,7 +195,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>It is called in the app.routing.module.ts file
-It calls the authservice.isAuthenticated and gets a boolean answer whether the user (session) is authenticated with the server or not.</p>
+It calls the authservice.isAdmin and gets a boolean answer whether the user has Admin role or not.</p>
 </div>
 
                     <div>
@@ -231,52 +219,46 @@ It calls the authservice.isAuthenticated and gets a boolean answer whether the u
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-
-import { CanActivate, Router } from &#x27;@angular/router&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 
-import { AuthService } from &#x27;src/app/services/auth.service&#x27;;
-import { UiService } from &#x27;src/app/services/ui.service&#x27;;
+import { CanActivate, Router } from &#x27;@angular/router&#x27;;
+import {AuthService} from &#x27;src/app/services/auth.service&#x27;;
 
-/**
-* This service is used to protect Angular routes (views) by authorizing a logged in users
+/** 
+ * This service is used to protect Angular routes (views) by authorizing logged in users that have Admin Role
 */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
-export class AuthGuardService {
+export class AdminGuardService {
 
   constructor(
-    private authService: AuthService,
-    private router: Router,
-    private uiService: UiService
+    private authService : AuthService, 
+    private router: Router
   ) { }
 
   /**
-  * It is called in the app.routing.module.ts file
-  * It calls the authservice.isAuthenticated and gets a boolean answer whether the user (session) is authenticated with the server or not.
-  * @returns An observable of type boolean to let Angular Router know whether to authorize access to the particular component(view) or not
-  */
-  canActivate() {
+   * It is called in the app.routing.module.ts file
+   * It calls the authservice.isAdmin and gets a boolean answer whether the user has Admin role or not.
+   * @returns An observable of type boolean to let Angular Router know whether to authorize access to the particular component(view) or not
+   */
+  canActivate(){
     return new Observable&lt;boolean&gt;(
       x &#x3D;&gt; {
         this.authService
-          .isAuthenticated()
+          .isAdmin()
           .subscribe(
-            (msg) &#x3D;&gt; {
+            (msg) &#x3D;&gt; { 
               x.next(true);
             },
             error &#x3D;&gt; {
-              localStorage.clear();
-              this.uiService.checkAuth();
-              this.router.navigate([&#x27;/login&#x27;]);
+              this.router.navigate([&#x27;/&#x27;]);
               x.next(false);
             }
           )
       }
     )
   }
-
 }
 </code></pre>
     </div>
@@ -320,7 +302,7 @@ export class AuthGuardService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthGuardService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AdminGuardService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

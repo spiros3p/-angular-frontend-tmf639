@@ -1,11 +1,11 @@
 <section id="header">
-  <div class="container navbar-container">
-    <nav class="navbar navbar-expand-md navbar-light">
+  <div class="container-lg px-2 px-md-0 px-lg-2 navbar-container">
+    <nav class="navbar navbar-expand-md navbar-light justify-content-around justify-content-md-between">
       <button (click)="isMenuCollapsed = !isMenuCollapsed" *ngIf="isAuthenticated" class="navbar-toggler" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div [ngbCollapse]="isMenuCollapsed" *ngIf="isAuthenticated" class="collapse navbar-collapse">
-        <div class="navbar-nav">
+        <div class="navbar-nav mx-auto mx-md-0">
           <a class="nav-item nav-link" (click)="isMenuCollapsed = true" routerLinkActive="active"
             [routerLinkActiveOptions]="{exact:true}" routerLink="/">
             <fa-icon [icon]='faHome'></fa-icon>

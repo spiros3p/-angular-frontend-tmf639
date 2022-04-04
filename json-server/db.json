@@ -4,7 +4,7 @@
       "id": "1173",
       "href": "5741d8dc-479a-11ec-85e9-0242ac150004",
       "category": "gNodeB",
-      "description": "Big Black Box 23",
+      "description": "Big Black Box 431",
       "name": "AmarisoftClassic_www1",
       "resource_version": "MAr2021",
       "administrative_state": "locked",
@@ -16,7 +16,7 @@
             {
               "name": "action",
               "value": {
-                "value": "touch"
+                "value": "stop"
               }
             }
           ]
@@ -218,9 +218,20 @@
           "name": "gNodeB_service",
           "feature_characteristic": [
             {
-              "name": "action",
+              "name": "action_parameters",
               "value": {
-                "value": "status"
+                "value": {
+                  "PRMT_TDD": "1122",
+                  "PRMT_TDD_CONFIG": "21113",
+                  "PRMT_N_ANTENNA_DL": "abcd14",
+                  "PRMT_BANDWIDTH": "888",
+                  "PRMT_PLMN": "abcdk",
+                  "PRMT_TAC": "abcd",
+                  "PRMT_MOD_UL": "a",
+                  "PRMT_MOD_DL": "abcd",
+                  "PRMT_BAND": "888",
+                  "PRMT_NR_ARFCN": "abcd"
+                }
               }
             }
           ]
@@ -565,6 +576,16 @@
       ],
       "resource_status": "suspended",
       "usage_state": "busy"
+    },
+    {
+      "email": "test@test.com",
+      "password": "password",
+      "id": "YYMz4GJ"
+    },
+    {
+      "email": "test@test.com",
+      "password": "password",
+      "id": "Cf7s4bY"
     }
   ]
 }

@@ -23,6 +23,10 @@ const iconDefault = L.icon({
 });
 L.Marker.prototype.options.icon = iconDefault;
 
+/**
+ * Displayes the Create Resource tab Page 
+ * Contains all its logic
+ */
 @Component({
   selector: 'app-create-resource',
   templateUrl: './create-resource.component.html',
@@ -30,14 +34,19 @@ L.Marker.prototype.options.icon = iconDefault;
 })
 export class CreateResourceComponent implements OnInit, AfterViewInit {
 
+  /** Interface is produced from the tmf-639 OpenAPI spec */
   resourceCreate!: ResourceCreate;
+  /** Define variable type of each input in the form */
   category!: string;
   description!: string;
   name!: string;
   resource_version!: string;
   IP!: string;
+  /** Default coordinates to UP area */
   latitude: number = 38.2891609656397;
   longitude: number = 21.789008070018838;
+
+  /** Default supported action - random choice */
   supportedActions: string[] = ['touch'];
   start: string = 'start';
   restart: string = 'restart';
@@ -54,6 +63,10 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
     private router: Router
   ) { }
 
+  /** 
+   * Method called when user clicks on an action button
+   * Either removes or adds the action to the list property supported_actions
+   */
   toggleAction(action: string) {
     if (this.supportedActions.includes(action)) {
       this.removeItem(this.supportedActions, action);
@@ -62,6 +75,10 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
     }
   }
 
+  /** 
+   * Method called on clear button click
+   * Clears the form inputs
+   */
   clear() {
     this.category = '';
     this.description = '';
@@ -74,6 +91,11 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
     this.map.panTo([this.latitude, this.longitude]);
   }
 
+  /**
+   * Method called on submit of the form
+   * Sets the resourceCreate object with its coresponding input values
+   * Calls the resourceService to send the post request for the resource
+   */
   onSubmit() {
     this.resourceCreate.category = this.category;
     this.resourceCreate.description = this.description;
@@ -103,6 +125,10 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
       )
   }
 
+  /** 
+   * Method called On focus out from the coordinate Inputs
+   * sets the marker coordinate on the map according to the input
+  */
   setMap(event: any, coordinate: string) {
     if (coordinate == 'longitude') {
       this.marker.setLatLng([this.latitude, event.target.value]);
@@ -113,10 +139,12 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
     }
   }
 
+  /** easter egg - can't remember why this might be in here */
   getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }
 
+  /** Method called from the Toggle method for the actions to remove them from the list if they exist there */
   removeItem<T>(arr: Array<T>, value: T): Array<T> {
     const index = arr.indexOf(value);
     if (index > -1) {
@@ -125,11 +153,10 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
     return arr;
   }
 
+  /** Defines the leaflet map method */
   private initMap(): void {
-
     let latCenter = this.latitude;
     let longCenter = this.longitude;
-
     this.map = L.map("map", {
       center: [latCenter, longCenter],
       zoom: 15
@@ -150,10 +177,12 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
     this.marker.addTo(this.map);
   }
 
+  /** Calls the leaflet Map method */
   ngAfterViewInit(): void {
     this.initMap();
   }
 
+  /** On init, initialazes the resourceCreate Object - random - change according to needs*/
   ngOnInit(): void {
     this.resourceCreate =
     {

@@ -5,10 +5,15 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="w-100 text-center py-5">
+    <div *ngIf="!user" class="w-100 text-center py-5">
         <b>ID:</b> {{resource.id}}
         <br><br>
         <b>NAME:</b> {{resource.name}}
+    </div>
+    <div *ngIf="user" class="w-100 text-center py-5">
+        <b>ID:</b> {{user.id}}
+        <br><br>
+        <b>NAME:</b> {{user.name}}
     </div>
     <div class="modal-footer">
         <button (click)="activeModal.dismiss('Cross click')" type="submit" class="btn btn-secondary">No</button>
@@ -24,9 +29,9 @@
         </button>
     </div>
     <div class="w-100 text-center py-5">
-        <b>ID:</b> {{resource.id}}
+        <b>ID:</b> {{user.id}}
         <br><br>
-        <b>NAME:</b> {{resource.name}}
+        <b>NAME:</b> {{user.name}}
     </div>
     <div class="modal-footer">
         <button (click)="activeModal.dismiss('Cross click')" type="submit" class="btn btn-secondary">No</button>

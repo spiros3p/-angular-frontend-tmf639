@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import { User } from 'src/app/models/User';
 import { loginResponse } from 'src/app/models/loginResponse';
 import { signupResponse } from 'src/app/models/signupResponse';
+import { logoutResponse } from '../models/logoutResponse';
 
 /**
  * This service is used to authenticate and authorize requests and routes with the backend web server
@@ -71,9 +72,7 @@ export class AuthService {
    * Sends POST request to log out the user from the session with the server
    * @returns an observable
    */
-  logout(): Observable<signupResponse> {
-    return this.http.post<signupResponse>(`${this.basePath}/logout`, this.httpOptions);
+  logout(): Observable<logoutResponse> {
+    return this.http.post<logoutResponse>(`${this.basePath}/logout`, this.httpOptions);
   }
-
-
 }

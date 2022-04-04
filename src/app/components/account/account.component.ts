@@ -8,6 +8,9 @@ import { UiService } from 'src/app/services/ui.service';
 
 import { User } from 'src/app/models/User';
 
+/**
+ * Displays the Account tab Page and contains its logic
+ */
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
@@ -16,6 +19,7 @@ import { User } from 'src/app/models/User';
 export class AccountComponent implements OnInit {
 
   users: User[] = [];
+  /** Boolean used to control interface according to admin status */
   isAdmin: boolean = false;
 
   constructor(
@@ -26,6 +30,7 @@ export class AccountComponent implements OnInit {
     private uiService: UiService
   ) { }
 
+  /** On init checks from local storage about admin status and calls admin servie to get the user list (server protected request) */
   ngOnInit(): void {
     if (JSON.parse(localStorage.getItem("currentUser") || '{}').admin == 1) {
       this.isAdmin = true;
@@ -39,6 +44,10 @@ export class AccountComponent implements OnInit {
     }
   }
 
+  /**
+   * Method that calls the admin service to send patch request and change the 'accepted' status of the selected user
+   * @param {user} user user object
+   */
   toToggleUser(user: User) {
     this.adminService
       .toggleUserAccepted(user.id, !user.accepted)
@@ -61,6 +70,10 @@ export class AccountComponent implements OnInit {
       )
   }
 
+    /**
+   * Method that calls the admin service to send delete request for the selected user
+   * @param {user} user user object
+   */
   toDeleteUser(user: User) {
     console.log(user);
     this.adminService
@@ -80,6 +93,7 @@ export class AccountComponent implements OnInit {
       )
   }
 
+  /** Method that logs out the user from the app and the session */
   logout(): void {
     this.authService
       .logout()

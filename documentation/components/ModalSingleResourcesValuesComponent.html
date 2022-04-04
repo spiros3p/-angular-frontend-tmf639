@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This is a modal displayed when modifying the values (Description, Category, Resource version) from the single resource page</p>
+
+    </p>
 
 
     <p class="comment">
@@ -201,7 +208,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -291,14 +298,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:27</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>It is initiated with the values from the resource</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -328,17 +337,26 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:40</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Confirmation function
+requires Category and Resource Version to not be empty</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an object with the new values of the resource</p>
 
                     </div>
                 </td>
@@ -371,7 +389,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:22</a></div>
                         </td>
                     </tr>
 
@@ -402,7 +420,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -427,7 +445,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -453,7 +471,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/modal-single-resources-values/modal-single-resources-values.component.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -468,13 +486,13 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
 import { NgbActiveModal } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
-
 import { faUpload } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
-
-
 import { Resource } from &#x27;src/app/models/resource&#x27;;
 import { ResourceUpdate } from &#x27;src/app/models/resourceUpdate&#x27;;
 
+/**
+ * This is a modal displayed when modifying the values (Description, Category, Resource version) from the single resource page
+ */
 @Component({
   selector: &#x27;app-modal-single-resources-values&#x27;,
   templateUrl: &#x27;./modal-single-resources-values.component.html&#x27;,
@@ -483,13 +501,15 @@ import { ResourceUpdate } from &#x27;src/app/models/resourceUpdate&#x27;;
 export class ModalSingleResourcesValuesComponent implements OnInit {
 
   @Input() public resource!: Resource;
-
   faUpload &#x3D; faUpload;
   empty: boolean &#x3D; false;
   resourceUpdate!: Omit&lt;ResourceUpdate, &quot;name&quot; | &quot;resource_characteristic&quot;&gt;;
 
   constructor(public activeModal: NgbActiveModal) { }
 
+  /**
+   * It is initiated with the values from the resource
+   */
   ngOnInit(): void {
     this.resourceUpdate &#x3D; {
       category: this.resource.category,
@@ -498,6 +518,11 @@ export class ModalSingleResourcesValuesComponent implements OnInit {
     }
   }
 
+  /** 
+   * Confirmation function 
+   * requires Category and Resource Version to not be empty
+   * @returns an object with the new values of the resource
+   */
   passBack() {
     if (this.resourceUpdate.category &#x3D;&#x3D; &quot;&quot;) {
       this.empty &#x3D; true;
@@ -538,9 +563,6 @@ export class ModalSingleResourcesValuesComponent implements OnInit {
             &lt;div class&#x3D;&quot;col-12 col-sm-6&quot;&gt;
                 &lt;label for&#x3D;&quot;description&quot;&gt;
                     Description
-                    &lt;span *ngIf&#x3D;&quot;empty&quot; style&#x3D;&quot;color: red;&quot;&gt;
-                        * Can not be empty!
-                    &lt;/span&gt;
                 &lt;/label&gt;&lt;br&gt;
                 &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;description&quot; class&#x3D;&quot;w-100&quot; [(ngModel)]&#x3D;&quot;resourceUpdate.description&quot;
                     id&#x3D;&quot;description&quot;&gt;
@@ -624,8 +646,8 @@ export class ModalSingleResourcesValuesComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><form>    <div class="modal-header">        <h4 class="modal-title" id="modal-basic-title">Modify Resource</h4>        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(\'Cross click\')">            <span aria-hidden="true">&times;</span>        </button>    </div>    <div class="modal-body">        <div class="row">            <div class="col-12 col-sm-6">                <label for="category">                    Category                    <span *ngIf="empty" style="color: red;">                        * Can not be empty!                    </span>                </label><br>                <input type="text" name="category" class="w-100" [(ngModel)]="resourceUpdate.category" id="category">            </div>            <div class="col-12 col-sm-6">                <label for="description">                    Description                    <span *ngIf="empty" style="color: red;">                        * Can not be empty!                    </span>                </label><br>                <input type="text" name="description" class="w-100" [(ngModel)]="resourceUpdate.description"                    id="description">            </div>            <!-- <div class="col-12 col-sm-6">                <label for="name">                    Name                    <span *ngIf="empty" style="color: red;">                        * Can not be empty!                    </span>                </label><br>                <input type="text" name="name" class="w-100" [(ngModel)]="resourceUpdate.name" id="name">            </div> -->            <div class="col-12 col-sm-6">                <label for="resource_version">                    Resource Version                    <span *ngIf="empty" style="color: red;">                        * Can not be empty!                    </span>                </label><br>                <input type="text" name="resource_version" class="w-100" [(ngModel)]="resourceUpdate.resource_version"                    id="resource_version">            </div>        </div>    </div>    <div class="modal-footer">        <button (click)="activeModal.dismiss(\'Cross click\')" type="submit" class="btn btn-danger">Close</button>        <button (click)="passBack()" type="submit" class="btn btn-primary">            <fa-icon [icon]=\'faUpload\'></fa-icon>            Save Cahnges & Upload        </button>    </div></form></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
+        var COMPONENT_TEMPLATE = '<div><form>    <div class="modal-header">        <h4 class="modal-title" id="modal-basic-title">Modify Resource</h4>        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(\'Cross click\')">            <span aria-hidden="true">&times;</span>        </button>    </div>    <div class="modal-body">        <div class="row">            <div class="col-12 col-sm-6">                <label for="category">                    Category                    <span *ngIf="empty" style="color: red;">                        * Can not be empty!                    </span>                </label><br>                <input type="text" name="category" class="w-100" [(ngModel)]="resourceUpdate.category" id="category">            </div>            <div class="col-12 col-sm-6">                <label for="description">                    Description                </label><br>                <input type="text" name="description" class="w-100" [(ngModel)]="resourceUpdate.description"                    id="description">            </div>            <!-- <div class="col-12 col-sm-6">                <label for="name">                    Name                    <span *ngIf="empty" style="color: red;">                        * Can not be empty!                    </span>                </label><br>                <input type="text" name="name" class="w-100" [(ngModel)]="resourceUpdate.name" id="name">            </div> -->            <div class="col-12 col-sm-6">                <label for="resource_version">                    Resource Version                    <span *ngIf="empty" style="color: red;">                        * Can not be empty!                    </span>                </label><br>                <input type="text" name="resource_version" class="w-100" [(ngModel)]="resourceUpdate.resource_version"                    id="resource_version">            </div>        </div>    </div>    <div class="modal-footer">        <button (click)="activeModal.dismiss(\'Cross click\')" type="submit" class="btn btn-danger">Close</button>        <button (click)="passBack()" type="submit" class="btn btn-primary">            <fa-icon [icon]=\'faUpload\'></fa-icon>            Save Cahnges & Upload        </button>    </div></form></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateResourceComponent', 'selector': 'app-create-resource'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MapPageComponent', 'selector': 'app-map-page'},{'name': 'ModalDeleteResourceComponent', 'selector': 'app-modal-delete-resource'},{'name': 'ModalSingleResourcesActionComponent', 'selector': 'app-modal-single-resources-action'},{'name': 'ModalSingleResourcesParametersComponent', 'selector': 'app-modal-single-resources-parameters'},{'name': 'ModalSingleResourcesValuesComponent', 'selector': 'app-modal-single-resources-values'},{'name': 'PagenotfoundComponent', 'selector': 'app-pagenotfound'},{'name': 'ResourceItemBlockComponent', 'selector': 'app-resource-item-block'},{'name': 'ResourceItemListComponent', 'selector': 'app-resource-item-list'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResourcesFilterComponent', 'selector': 'app-resources-filter'},{'name': 'ResourcesViewBlockComponent', 'selector': 'app-resources-view-block'},{'name': 'ResourcesViewListComponent', 'selector': 'app-resources-view-list'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SingleResourcesComponent', 'selector': 'app-single-resources'},{'name': 'UsersListComponent', 'selector': 'app-users-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ModalSingleResourcesValuesComponent'};
 </script>
