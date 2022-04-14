@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server --watch ./json-server/db.json --port 5000",
-    "compodoc": "compodoc -p tsconfig.doc.json -w -s"
+    "compodoc": "compodoc -p tsconfig.doc.json -w -s",
+    "compodoc-build": "compodoc -p tsconfig.doc.json"
   },
   "private": true,
   "dependencies": {
