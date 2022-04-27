@@ -5,12 +5,14 @@
 /**
  * Environment Variables for Production build.
  * * **apiUrl**: is the target URL for the restAPI that serves the Resources (based on the TMF369 model)
+ * * _configure apiUrl variable as empty string "" to send resources request to nodejs server and use its proxy service to connect to the resources server_
  * * **authUrl**: is the target URL for the restAPI that is being used for authentication for protecting the routes
  * * **defaultListView**: setting it to `true` will load the resources on the homepage with the List View by default
  */
 
 export const environment = {
   production: true,
+  // * _configure apiUrl variable as empty string "" to send resources request to nodejs server and use its proxy service to connect to the resources server_
   apiUrl: "",
   // apiUrl: "http://192.168.2.x:5000",
   authUrl: "http://192.168.2.x:3000",

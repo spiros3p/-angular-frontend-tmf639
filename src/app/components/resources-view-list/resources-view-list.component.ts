@@ -33,7 +33,13 @@ export class ResourcesViewListComponent implements OnInit, OnChanges {
 
   /** Pagination use to change pages */
   ngOnChanges(changes: SimpleChanges): void {
-    this.page = 1;
+    try {
+      if (this.page > Math.ceil(changes.resources.currentValue.length / 6)) {
+        this.page = 1;
+      }
+    }catch(e){
+      console.error(e);
+    }
   }
 
   /**
