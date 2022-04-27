@@ -576,16 +576,6 @@
       ],
       "resource_status": "suspended",
       "usage_state": "busy"
-    },
-    {
-      "email": "test@test.com",
-      "password": "password",
-      "id": "YYMz4GJ"
-    },
-    {
-      "email": "test@test.com",
-      "password": "password",
-      "id": "Cf7s4bY"
     }
   ]
 }
