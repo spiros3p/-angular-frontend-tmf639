@@ -13,9 +13,13 @@
     & .search-option-container{
         padding: 0 5px;
 
-        @media (max-width: 611px){
+        @media (max-width: 629px){
             width: 100%;
             padding-right: 80px;
+
+            & .search-option{
+                width: 100%;
+            }
         }
 
         & .search-option {
@@ -25,7 +29,7 @@
             padding-left: 10px;
             padding-right: 8px;
             // max-width: 200px;
-            width: 100%;
+            width: 200px;
             margin-bottom: 5px;
             &:focus{
                 outline: $babyblue solid 1px;
