@@ -3,8 +3,8 @@
 .filter-container {
     border: 1px solid black;
     border-radius: 5px;
-    padding: 5px 80px 0 0;
-    // padding-top: 5px;
+    // padding: 5px 80px 0 0;
+    padding-top: 5px;
     margin-bottom: 20px;
     min-height: 46px;
     background-color: $bgColor;
@@ -12,6 +12,16 @@
 
     & .search-option-container{
         padding: 0 5px;
+
+        @media (max-width: 629px){
+            width: 100%;
+            padding-right: 80px;
+
+            & .search-option{
+                width: 100% !important;
+            }
+        }
+
         & .search-option {
             height: 33px;
             border: 1px solid black;
@@ -19,7 +29,7 @@
             padding-left: 10px;
             padding-right: 8px;
             // max-width: 200px;
-            width: 100%;
+            width: 200px;
             margin-bottom: 5px;
             &:focus{
                 outline: $babyblue solid 1px;
