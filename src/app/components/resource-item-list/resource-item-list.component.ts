@@ -93,8 +93,13 @@ export class ResourceItemListComponent implements AfterViewInit, OnInit {
 
   /** On Init, gets the indexes for the required objects that exist or not in the resource_characteristic array property of the resource object */
   ngOnInit(): void {
-    this.indexLocation = this.resource.resource_characteristic?.findIndex(e => e.name === 'location') || -1;
-    this.indexIP = this.resource.resource_characteristic?.findIndex(e => e.name === 'IP') || -1;
+    if (this.resource.resource_characteristic) {
+      this.indexLocation = this.resource.resource_characteristic.findIndex(e => e.name === 'location');
+      this.indexIP = this.resource.resource_characteristic.findIndex(e => e.name === 'IP');
+    } else {
+      this.indexLocation = -1;
+      this.indexIP = -1;
+    }
   }
 
   /** Calls the map method */
