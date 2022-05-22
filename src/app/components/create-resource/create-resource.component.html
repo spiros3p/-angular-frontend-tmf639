@@ -15,7 +15,11 @@
                 <input type="text" name="description" class="w-100" [(ngModel)]="description" id="description">
             </div>
             <div class="col-12 col-sm-6">
-                <label for="name">Name</label><br>
+                <label for="name">
+                    Name
+                    <span [ngStyle]="{'color': invalidInput? 'red':'' }">*</span>
+                </label>
+                <br>
                 <input type="text" name="name" required class="w-100" [(ngModel)]="name" id="name">
             </div>
             <div class="col-12 col-sm-6">
@@ -30,20 +34,32 @@
             <div class="col-12 col-sm-6 actions-container">
                 <label for="IP">Supported Actions</label><br>
                 <div class="row m-0 justify-content-around" style="gap: 8px 4px;">
-                    <button type='button' class="col-auto btn green" [ngClass]="{'outline': !supportedActions.includes(start)}" (click)=toggleAction(start)>START</button>
-                    <button type='button' class="col-auto btn orange" [ngClass]="{'outline': !supportedActions.includes(restart)}" (click)=toggleAction(restart)>RESTART</button>
-                    <button type='button' class="col-auto btn red" [ngClass]="{'outline': !supportedActions.includes(stop)}" (click)=toggleAction(stop)>STOP</button>
-                    <button type='button' class="col-auto btn lightblue" [ngClass]="{'outline': !supportedActions.includes(status)}" (click)=toggleAction(status)>STATUS</button>
-                    <button type='button' class="col-auto btn blue" [ngClass]="{'outline': !supportedActions.includes(touch)}" (click)=toggleAction(touch)>TOUCH</button>
+                    <button type='button' class="col-auto btn green"
+                        [ngClass]="{'outline': !supportedActions.includes(start)}"
+                        (click)=toggleAction(start)>START</button>
+                    <button type='button' class="col-auto btn orange"
+                        [ngClass]="{'outline': !supportedActions.includes(restart)}"
+                        (click)=toggleAction(restart)>RESTART</button>
+                    <button type='button' class="col-auto btn red"
+                        [ngClass]="{'outline': !supportedActions.includes(stop)}"
+                        (click)=toggleAction(stop)>STOP</button>
+                    <button type='button' class="col-auto btn lightblue"
+                        [ngClass]="{'outline': !supportedActions.includes(status)}"
+                        (click)=toggleAction(status)>STATUS</button>
+                    <button type='button' class="col-auto btn blue"
+                        [ngClass]="{'outline': !supportedActions.includes(touch)}"
+                        (click)=toggleAction(touch)>TOUCH</button>
                 </div>
             </div>
             <div class="col-6 col-sm-3 location">
                 <label for="latitude">Latitude</label>
-                <input type="number" name="latitude" class="w-100" [(ngModel)]="latitude" id="latitude" (focusout)="setMap($event, 'latitude')">
+                <input type="number" name="latitude" class="w-100" [(ngModel)]="latitude" id="latitude"
+                    (focusout)="setMap($event, 'latitude')">
             </div>
             <div class="col-6 col-sm-3">
                 <label for="longitude">Longitude</label>
-                <input type="number" name="longitude" class="w-100" [(ngModel)]="longitude" id="longitude" (focusout)="setMap($event, 'longitude')">
+                <input type="number" name="longitude" class="w-100" [(ngModel)]="longitude" id="longitude"
+                    (focusout)="setMap($event, 'longitude')">
             </div>
             <div class="col-12 col-sm-6">
                 <label for="map">Drag the Marker to select coordinates for the Resource</label>

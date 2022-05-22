@@ -56,6 +56,8 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
   private map: any;
   marker!: L.Marker<any>;
 
+  /** helper boolean variable to flag invalid inputs */
+  invalidInput: boolean = false;
 
   constructor(
     private resourceService: ResourceService,
@@ -97,6 +99,11 @@ export class CreateResourceComponent implements OnInit, AfterViewInit {
    * Calls the resourceService to send the post request for the resource
    */
   onSubmit() {
+    if (!this.name) {
+      this.alertifyService.warning('Form inputs with * are mandatory');
+      this.invalidInput = true;
+      return
+    }
     this.resourceCreate.category = this.category;
     this.resourceCreate.description = this.description;
     this.resourceCreate.name = this.name;
