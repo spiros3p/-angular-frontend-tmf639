@@ -15,7 +15,7 @@ export const environment = {
   // * _configure apiUrl variable as empty string "" to send resources request to nodejs server and use its proxy service to connect to the resources server_
   apiUrl: "",
   // apiUrl: "http://192.168.2.x:5000",
-  authUrl: "http://192.168.2.x:3000",
+  authUrl: "http://localhost:3000",
   defaultListView: false
 };
 
